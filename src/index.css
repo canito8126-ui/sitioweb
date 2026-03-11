@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800;900&family=Space+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Wild Path Brand Colors from Logo */
+    --wp-green: 132 165 110;
+    --wp-green-dark: 85 120 70;
+    --wp-yellow: 212 175 55;
+    --wp-yellow-light: 240 210 120;
+    --wp-cream: 250 248 244;
+    --wp-forest: 35 55 40;
+    
+    --background: 45 20% 97%;
+    --foreground: 0 0% 7%;
+    --card: 45 20% 97%;
+    --card-foreground: 0 0% 7%;
+    --popover: 45 20% 97%;
+    --popover-foreground: 0 0% 7%;
+    --primary: 0 0% 7%;
+    --primary-foreground: 45 20% 97%;
+    --secondary: 100 25% 25%;
+    --secondary-foreground: 45 20% 97%;
+    --muted: 45 15% 92%;
+    --muted-foreground: 0 0% 43%;
+    --accent: 45 60% 52%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 45 60% 52%;
+    --radius: 0px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Typography */
+.font-display {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-mono {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Headline styles */
+.headline-xl {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: clamp(44px, 6vw, 84px);
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+.headline-lg {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: clamp(34px, 4.2vw, 64px);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.headline-md {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3vw, 48px);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* Body text */
+.body-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.6;
+}
+
+/* Micro label */
+.micro-label {
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Grain overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Button styles - Updated with brand colors */
+.btn-primary {
+  @apply px-8 py-4 font-display font-semibold text-sm tracking-wide transition-all duration-300;
+  background-color: #D4AF37;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #B8942E;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  @apply px-8 py-4 font-display font-semibold text-sm tracking-wide transition-all duration-300;
+  background-color: #84A56E;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #6B8E5E;
+  transform: translateY(-2px);
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* Pinned section base */
+.section-pinned {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image cover */
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #557846;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3D5A32;
+}
+
+/* Form styles */
+input, textarea, select {
+  @apply bg-transparent border-b py-3 px-0 focus:outline-none transition-colors;
+  border-color: #111;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #D4AF37;
+}
+
+/* Checkbox styles */
+.checkbox-custom {
+  @apply w-5 h-5 border rounded-none appearance-none cursor-pointer relative;
+  border-color: #111;
+}
+
+.checkbox-custom:checked {
+  background-color: #D4AF37;
+  border-color: #D4AF37;
+}
+
+.checkbox-custom:checked::after {
+  content: '✓';
+  @apply absolute inset-0 flex items-center justify-center text-white text-sm;
+}
+
+/* Language selector */
+.lang-selector {
+  @apply flex items-center gap-2 text-sm font-medium;
+}
+
+.lang-selector button {
+  @apply px-2 py-1 transition-colors;
+}
+
+.lang-selector button.active {
+  @apply font-bold;
+  color: #D4AF37;
+}
+
+/* Map styles */
+.province-path {
+  @apply cursor-pointer transition-all duration-300;
+  fill: #84A56E;
+  stroke: #557846;
+  stroke-width: 1;
+}
+
+.province-path:hover {
+  fill: #D4AF37;
+}
+
+.province-path.selected {
+  fill: #D4AF37;
+  stroke: #B8942E;
+  stroke-width: 2;
+}
+
+/* Package card */
+.package-card {
+  @apply relative overflow-hidden transition-all duration-500;
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+}
+
+.package-card:hover .package-overlay {
+  opacity: 1;
+}
+
+/* Blog card */
+.blog-card {
+  @apply transition-all duration-300;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Review widget */
+.review-widget {
+  @apply bg-white rounded-lg shadow-lg p-4;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

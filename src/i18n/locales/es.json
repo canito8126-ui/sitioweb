@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "experiences": "Experiencias",
+    "inspiration": "Inspiración",
+    "gallery": "Galería",
+    "blog": "Blog",
+    "testimonials": "Testimonios",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "cta": "DISEÑA TU EXPERIENCIA"
+  },
+  "hero": {
+    "badge": "EXPERIENCIAS 100% PERSONALIZADAS",
+    "title1": "DISEÑA TU",
+    "title2": "EXPERIENCIA",
+    "subtitle": "Itinerarios hechos a tu medida en Costa Rica. Desde la primera llamada hasta tu último día de viaje.",
+    "ctaPrimary": "RESERVA TU AVENTURA",
+    "ctaSecondary": "VER EXPERIENCIAS"
+  },
+  "process": {
+    "badge": "CÓMO FUNCIONA",
+    "title": "Diseña tu experiencia a la medida",
+    "subtitle": "Un proceso simple y transparente para crear tu viaje perfecto en Costa Rica",
+    "step1": {
+      "number": "01",
+      "title": "Primera Llamada",
+      "description": "Nos conectamos contigo para conocer tus gustos, el tipo de experiencias que buscas, actividades deseadas, hospedaje preferido, y tu nivel de aventura y comodidad.",
+      "details": ["Gustos personales", "Tipo de experiencias", "Actividades deseadas", "Nivel de aventura"]
+    },
+    "step2": {
+      "number": "02",
+      "title": "Propuesta Personalizada",
+      "description": "Creamos un borrador de itinerario 100% adaptado a tus intereses. Lo ajustamos tantas veces como sea necesario hasta que sea perfecto.",
+      "details": ["Itinerario a tu medida", "Ajustes ilimitados", "Adaptado a tu ritmo", "Presupuesto claro"]
+    },
+    "step3": {
+      "number": "03",
+      "title": "Ejecución de la Experiencia",
+      "description": "Una vez aprobado, ejecutamos tu viaje en las fechas acordadas, garantizando una experiencia auténtica, sostenible y real.",
+      "details": ["Viaje en fechas acordadas", "Guías locales expertos", "Experiencia auténtica", "Soporte 24/7"]
+    },
+    "cta": "AGENDA TU LLAMADA GRATIS"
+  },
+  "map": {
+    "title": "Explora Costa Rica por Provincia",
+    "subtitle": "Selecciona las provincias que te interesan visitar y diseñaremos tu ruta ideal",
+    "selected": "Provincias seleccionadas:",
+    "cta": "DISEÑAR MI RUTA PERSONALIZADA"
+  },
+  "dayExperiences": {
+    "badge": "BAJOS DEL TORO Y ALREDEDORES",
+    "title": "Experiencias de un día",
+    "viewAll": "Ver todas las experiencias",
+    "experiences": {
+      "nocturnal": {
+        "title": "Caminatas Nocturnas",
+        "description": "Descubre la vida silvestre que despierta cuando cae el sol."
+      },
+      "birds": {
+        "title": "Avistamiento de Aves",
+        "description": "Observa especies endémicas en su hábitat natural."
+      },
+      "waterfalls": {
+        "title": "Cataratas Escondidas",
+        "description": "Explora cascadas vírgenes en medio de la selva."
+      },
+      "forest": {
+        "title": "Bosque Maduro",
+        "description": "Sumérgete en ecosistemas primarios milenarios."
+      }
+    }
+  },
+  "inspiration": {
+    "badge": "PAQUETES COMPLETOS",
+    "title": "Inspiración para tu viaje",
+    "subtitle": "7 experiencias temáticas diseñadas según lo que los viajeros buscan en Costa Rica",
+    "packages": {
+      "adventure": {
+        "title": "Aventura Extrema",
+        "duration": "7 días",
+        "description": "Rafting, canopy, rappel y caminatas desafiantes para los amantes de la adrenalina."
+      },
+      "wildlife": {
+        "title": "Vida Silvestre",
+        "duration": "8 días",
+        "description": "Observación de fauna en Corcovado, Tortuguero y Monteverde."
+      },
+      "wellness": {
+        "title": "Bienestar & Naturaleza",
+        "duration": "6 días",
+        "description": "Yoga, spa natural, aguas termales y meditación en la selva."
+      },
+      "family": {
+        "title": "Aventura Familiar",
+        "duration": "10 días",
+        "description": "Actividades educativas y divertidas para toda la familia."
+      },
+      "romantic": {
+        "title": "Escapada Romántica",
+        "duration": "5 días",
+        "description": "Playas paradisíacas, atardeceres y cenas privadas."
+      },
+      "culture": {
+        "title": "Cultura & Tradición",
+        "duration": "7 días",
+        "description": "Pueblos típicos, café, chocolate y gastronomía local."
+      },
+      "photography": {
+        "title": "Fotografía de Naturaleza",
+        "duration": "9 días",
+        "description": "Los mejores spots para capturar la biodiversidad de Costa Rica."
+      }
+    },
+    "cta": "PERSONALIZAR ESTE PAQUETE"
+  },
+  "testimonials": {
+    "badge": "TESTIMONIOS",
+    "title": "Lo que dicen nuestros viajeros",
+    "cta": "Ver más testimonios"
+  },
+  "reviews": {
+    "title": "Lo que dicen sobre nosotros",
+    "google": "Reviews de Google",
+    "tripadvisor": "Reviews de TripAdvisor"
+  },
+  "footer": {
+    "description": "Experiencias personalizadas en Costa Rica. Diseñamos tu aventura perfecta, paso a paso.",
+    "links": "Enlaces",
+    "contact": "Contacto",
+    "followUs": "Síguenos",
+    "rights": "© 2025 Wild Path Costa Rica. Todos los derechos reservados.",
+    "terms": "Términos y Condiciones",
+    "cancellation": "Política de Cancelación"
+  },
+  "contact": {
+    "phone": "+506 8985 7750",
+    "email": "wildpathcr@gmail.com",
+    "location": "Bajos del Toro, Costa Rica",
+    "hours": "Lunes a Domingo: 7:00 AM - 8:00 PM"
+  }
+}
