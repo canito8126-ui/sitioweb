@@ -9,10 +9,8 @@ import {
   Compass, 
   ArrowRight,
   Calendar,
-  CheckCircle2,
-  MapPin
+  CheckCircle2
 } from 'lucide-react'
-import CostaRicaMap from '../components/CostaRicaMap'
 import ReviewWidgets from '../components/ReviewWidgets'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -22,8 +20,6 @@ export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null)
   const processRef = useRef<HTMLDivElement>(null)
   const experiencesRef = useRef<HTMLDivElement>(null)
-  const [selectedProvinces, setSelectedProvinces] = useState<string[]>([])
-
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Hero animations
@@ -63,19 +59,6 @@ export default function Home() {
           }
         )
       })
-
-      // Map section
-      gsap.fromTo('.map-section', 
-        { y: 50, opacity: 0 }, 
-        { 
-          y: 0, opacity: 1, duration: 0.8, ease: 'power3.out',
-          scrollTrigger: {
-            trigger: '.map-section',
-            start: 'top 80%',
-            toggleActions: 'play none none reverse'
-          }
-        }
-      )
     })
 
     return () => ctx.revert()
@@ -128,13 +111,6 @@ export default function Home() {
     }
   ]
 
-  const handleProvinceSelect = (province: string) => {
-    setSelectedProvinces(prev => 
-      prev.includes(province) 
-        ? prev.filter(p => p !== province)
-        : [...prev, province]
-    )
-  }
 
   return (
     <div className="relative">
@@ -256,74 +232,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Interactive Map Section */}
-      <section className="map-section py-24 lg:py-32 px-6 lg:px-12 bg-wp-forest">
-        <div className="max-w-7xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-12">
-            <p className="micro-label text-wp-yellow mb-4 tracking-[0.15em]">
-              EXPLORA COSTA RICA
-            </p>
-            <h2 className="headline-lg text-white mb-6">
-              {t('map.title')}
-            </h2>
-            <p className="body-text text-white/70 max-w-2xl mx-auto">
-              {t('map.subtitle')}
-            </p>
-          </div>
-
-          {/* Map Component */}
-          <div className="grid lg:grid-cols-3 gap-8 items-start">
-            {/* Map */}
-            <div className="lg:col-span-2">
-              <CostaRicaMap 
-                selectedProvinces={selectedProvinces}
-                onProvinceSelect={handleProvinceSelect}
-              />
-            </div>
-
-            {/* Selected Provinces */}
-            <div className="bg-white/5 backdrop-blur-sm p-6">
-              <h3 className="font-display font-semibold text-white mb-4 flex items-center gap-2">
-                <MapPin size={18} className="text-wp-yellow" />
-                {t('map.selected')}
-              </h3>
-              
-              {selectedProvinces.length === 0 ? (
-                <p className="text-white/50 text-sm">
-                  Haz clic en las provincias del mapa para seleccionarlas
-                </p>
-              ) : (
-                <div className="space-y-2 mb-6">
-                  {selectedProvinces.map(province => (
-                    <div 
-                      key={province}
-                      className="flex items-center justify-between bg-wp-yellow/20 px-3 py-2"
-                    >
-                      <span className="text-white text-sm">{province}</span>
-                      <button 
-                        onClick={() => handleProvinceSelect(province)}
-                        className="text-white/60 hover:text-white"
-                      >
-                        ×
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {selectedProvinces.length > 0 && (
-                <Link 
-                  to={`/contacto?provinces=${selectedProvinces.join(',')}`}
-                  className="btn-primary w-full text-center block"
-                >
-                  {t('map.cta')}
-                </Link>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Day Experiences Preview */}
       <section ref={experiencesRef} className="py-24 lg:py-32 px-6 lg:px-12 bg-wp-forest">

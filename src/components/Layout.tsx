@@ -9,7 +9,8 @@ import {
   Menu, 
   X,
   MessageCircle,
-  Globe
+  Globe,
+  MapPinned
 } from 'lucide-react'
 
 const TikTokIcon = () => (
@@ -254,6 +255,17 @@ export default function Layout() {
                   >
                     <Mail size={14} />
                     wildpathcr@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://www.google.com/maps/place/Wild+Path/@10.2332253,-84.3037033,17z/data=!3m1!4b1!4m6!3m5!1s0x8fa061136b4852f3:0xfcd6099c2483f145!8m2!3d10.2332253!4d-84.3037033!16s%2Fg%2F11wb9_lzfs?entry=ttu&g_ep=EgoyMDI2MDMxMC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/60 text-sm hover:text-wp-yellow transition-colors flex items-center gap-2"
+                  >
+                    <MapPinned size={14} />
+                    {t('contact.findUs')}
                   </a>
                 </li>
               </ul>

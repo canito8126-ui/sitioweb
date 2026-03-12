@@ -209,164 +209,33 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Google Forms Embed */}
             <div className="bg-white p-8 lg:p-10 shadow-card">
-              {isSubmitted ? (
-                <div className="text-center py-12">
-                  <div className="w-20 h-20 bg-wp-yellow/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 size={40} className="text-wp-yellow" />
-                  </div>
-                  <h3 className="font-display font-bold text-2xl text-wp-forest mb-4">
-                    ¡Mensaje enviado!
-                  </h3>
-                  <p className="text-graytext mb-6">
-                    Gracias por contactarnos. Te responderemos en menos de 24 horas 
-                    para agendar tu llamada gratuita.
-                  </p>
-                  <a 
-                    href="https://wa.me/50689857750"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary bg-[#25D366] hover:bg-[#128C7E]"
-                  >
-                    <MessageCircle size={18} className="inline mr-2" />
-                    ESCRÍBENOS POR WHATSAPP
-                  </a>
-                </div>
-              ) : (
-                <>
-                  <h3 className="font-display font-bold text-xl text-wp-forest mb-6">
-                    Cuéntanos sobre tu viaje soñado
-                  </h3>
-
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    {/* Name & Email */}
-                    <div className="grid sm:grid-cols-2 gap-6">
-                      <div>
-                        <label className="micro-label text-wp-forest mb-2 block">
-                          NOMBRE
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          placeholder="Tu nombre"
-                          className="w-full border-b border-wp-forest/30 py-3 focus:outline-none focus:border-wp-yellow transition-colors"
-                          value={formData.name}
-                          onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        />
-                      </div>
-                      <div>
-                        <label className="micro-label text-wp-forest mb-2 block">
-                          EMAIL
-                        </label>
-                        <input
-                          type="email"
-                          required
-                          placeholder="tu@email.com"
-                          className="w-full border-b border-wp-forest/30 py-3 focus:outline-none focus:border-wp-yellow transition-colors"
-                          value={formData.email}
-                          onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        />
-                      </div>
-                    </div>
-
-                    {/* Phone & Travel Dates */}
-                    <div className="grid sm:grid-cols-2 gap-6">
-                      <div>
-                        <label className="micro-label text-wp-forest mb-2 block">
-                          TELÉFONO
-                        </label>
-                        <input
-                          type="tel"
-                          placeholder="+506 0000 0000"
-                          className="w-full border-b border-wp-forest/30 py-3 focus:outline-none focus:border-wp-yellow transition-colors"
-                          value={formData.phone}
-                          onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                        />
-                      </div>
-                      <div>
-                        <label className="micro-label text-wp-forest mb-2 block">
-                          FECHAS APROXIMADAS
-                        </label>
-                        <input
-                          type="text"
-                          placeholder="Ej: Marzo 2025"
-                          className="w-full border-b border-wp-forest/30 py-3 focus:outline-none focus:border-wp-yellow transition-colors"
-                          value={formData.travelDates}
-                          onChange={(e) => setFormData({...formData, travelDates: e.target.value})}
-                        />
-                      </div>
-                    </div>
-
-                    {/* Number of Travelers */}
-                    <div>
-                      <label className="micro-label text-wp-forest mb-2 block">
-                        NÚMERO DE VIAJEROS
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Ej: 2 adultos, 1 niño"
-                        className="w-full border-b border-wp-forest/30 py-3 focus:outline-none focus:border-wp-yellow transition-colors"
-                        value={formData.travelers}
-                        onChange={(e) => setFormData({...formData, travelers: e.target.value})}
-                      />
-                    </div>
-
-                    {/* Interests */}
-                    <div>
-                      <label className="micro-label text-wp-forest mb-4 block">
-                        ¿QUÉ TE INTERESA? (Selecciona varios)
-                      </label>
-                      <div className="flex flex-wrap gap-3">
-                        {interests.map((interest) => (
-                          <button
-                            key={interest}
-                            type="button"
-                            onClick={() => handleInterestChange(interest)}
-                            className={`px-4 py-2 text-sm border transition-colors ${
-                              formData.interests.includes(interest)
-                                ? 'bg-wp-yellow border-wp-yellow text-white'
-                                : 'border-wp-forest/30 text-wp-forest hover:border-wp-yellow'
-                            }`}
-                          >
-                            {interest}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Message */}
-                    <div>
-                      <label className="micro-label text-wp-forest mb-2 block">
-                        CUÉNTANOS MÁS
-                      </label>
-                      <textarea
-                        rows={4}
-                        placeholder="Describe tu viaje ideal, experiencias previas, o cualquier detalle importante..."
-                        className="w-full border-b border-wp-forest/30 py-3 focus:outline-none focus:border-wp-yellow transition-colors resize-none"
-                        value={formData.message}
-                        onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      />
-                    </div>
-
-                    {/* Submit */}
-                    <button
-                      type="submit"
-                      className="btn-primary w-full flex items-center justify-center gap-2"
-                    >
-                      <Send size={18} />
-                      ENVIAR MENSAJE
-                    </button>
-
-                    <p className="text-xs text-graytext text-center">
-                      Al enviar, aceptas nuestra{' '}
-                      <a href="/privacidad" className="text-wp-yellow hover:underline">
-                        política de privacidad
-                      </a>
-                    </p>
-                  </form>
-                </>
-              )}
+              <h3 className="font-display font-bold text-xl text-wp-forest mb-6">
+                Cuéntanos sobre tu viaje soñado
+              </h3>
+              
+              <div className="w-full h-[800px]">
+                <iframe 
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSfYOUR_FORM_ID/viewform?embedded=true"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                  className="w-full h-full"
+                  title="Formulario de Contacto"
+                >
+                  Cargando…
+                </iframe>
+              </div>
+              
+              <p className="text-xs text-graytext text-center mt-4">
+                Este formulario está alojado en Google Forms. Al enviar, aceptas nuestra{' '}
+                <a href="/privacidad" className="text-wp-yellow hover:underline">
+                  política de privacidad
+                </a>
+              </p>
             </div>
           </div>
         </div>
