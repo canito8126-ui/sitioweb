@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { 
   Phone, 
   Mail, 
@@ -6,9 +5,7 @@ import {
   MessageCircle,
   Instagram,
   Facebook,
-  Send,
   Clock,
-  CheckCircle2
 } from 'lucide-react'
 
 const TikTokIcon = () => (
@@ -18,42 +15,6 @@ const TikTokIcon = () => (
 )
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    travelDates: '',
-    travelers: '',
-    interests: [] as string[],
-    message: ''
-  })
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const interests = [
-    'Aventura',
-    'Fauna y flora',
-    'Aves',
-    'Cataratas',
-    'Cultura local',
-    'Gastronomía',
-    'Fotografía',
-    'Relax'
-  ]
-
-  const handleInterestChange = (interest: string) => {
-    setFormData(prev => ({
-      ...prev,
-      interests: prev.interests.includes(interest)
-        ? prev.interests.filter(i => i !== interest)
-        : [...prev.interests, interest]
-    }))
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitted(true)
-  }
-
   return (
     <div className="pt-24 lg:pt-32">
       {/* Hero */}
@@ -217,7 +178,7 @@ export default function Contact() {
               
               <div className="w-full h-[800px]">
                 <iframe 
-                  src="https://docs.google.com/forms/d/e/1FAIpQLSfYOUR_FORM_ID/viewform?embedded=true"
+                  src="https://docs.google.com/forms/d/1wNqCCFoEeOMogzWQwIFHBuj_vqq-VrYlNQuB_vBCO_s/viewform?embedded=true"
                   width="100%"
                   height="100%"
                   frameBorder="0"
