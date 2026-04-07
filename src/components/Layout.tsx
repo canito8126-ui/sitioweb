@@ -50,12 +50,13 @@ export default function Layout() {
   ]
 
   const isActive = (path: string) => location.pathname === path
+  const useLightHeader = isScrolled || location.pathname !== '/'
 
   return (
     <div className="min-h-screen bg-wp-cream">
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-wp-forest/95 backdrop-blur-sm py-2' : 'bg-transparent py-4'
+        useLightHeader ? 'bg-white/95 backdrop-blur-sm py-2 shadow-md' : 'bg-transparent py-4'
       }`}>
         <div className="px-4 lg:px-8 flex justify-between items-center">
           {/* Logo */}
@@ -74,9 +75,11 @@ export default function Layout() {
                 key={link.path}
                 to={link.path}
                 className={`text-sm font-medium transition-colors ${
-                  isActive(link.path) 
-                    ? 'text-wp-yellow' 
-                    : 'text-white/80 hover:text-white'
+                  isActive(link.path)
+                    ? 'text-wp-yellow'
+                    : (useLightHeader
+                        ? 'text-wp-forest/80 hover:text-wp-forest'
+                        : 'text-white/80 hover:text-white')
                 }`}
               >
                 {link.label}
@@ -89,7 +92,9 @@ export default function Layout() {
             {/* Language Selector */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-1 text-white/80 hover:text-white transition-colors text-sm"
+              className={`flex items-center gap-1 transition-colors text-sm ${
+                useLightHeader ? 'text-wp-forest/80 hover:text-wp-forest' : 'text-white/80 hover:text-white'
+              }`}
             >
               <Globe size={16} />
               <span className="uppercase">{i18n.language}</span>
@@ -105,7 +110,9 @@ export default function Layout() {
 
             {/* Mobile Menu Button */}
             <button 
-              className="xl:hidden text-white p-2"
+              className={`xl:hidden p-2 ${
+                useLightHeader ? 'text-wp-forest' : 'text-white'
+              }`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
