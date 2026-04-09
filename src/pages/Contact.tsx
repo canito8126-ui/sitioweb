@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { 
   Phone, 
   Mail, 
@@ -15,46 +16,42 @@ const TikTokIcon = () => (
 )
 
 export default function Contact() {
+  const { t } = useTranslation()
+
   return (
     <div className="pt-24 lg:pt-32">
-      {/* Hero */}
       <section className="relative py-24 lg:py-32 px-6 lg:px-12 bg-wp-forest overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img 
             src="/images/contact-hero.jpg" 
-            alt="Contacto" 
+            alt={t('pages.contact.hero.alt')} 
             className="w-full h-full object-cover"
           />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <p className="micro-label text-wp-yellow mb-4 tracking-[0.15em]">
-            EMPIEZA TU AVENTURA
+            {t('pages.contact.hero.badge')}
           </p>
           <h1 className="headline-xl text-white mb-6">
-            Contacto
+            {t('pages.contact.hero.title')}
           </h1>
           <p className="body-text text-white/70 max-w-2xl mx-auto">
-            Agenda tu llamada gratuita y descubre cómo podemos diseñar 
-            tu experiencia perfecta en Costa Rica.
+            {t('pages.contact.hero.subtitle')}
           </p>
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="py-24 lg:py-32 px-6 lg:px-12 bg-wp-cream">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Contact Info */}
             <div>
               <h2 className="headline-lg text-wp-forest mb-8">
-                Hablemos de tu viaje
+                {t('pages.contact.sectionTitle')}
               </h2>
               <p className="body-text text-graytext mb-10">
-                Estamos aquí para escuchar tus ideas y convertirlas en una experiencia 
-                inolvidable. Contáctanos por el medio que prefieras.
+                {t('pages.contact.sectionIntro')}
               </p>
 
-              {/* Contact Methods */}
               <div className="space-y-6 mb-10">
                 <a 
                   href="https://wa.me/50689857750"
@@ -67,7 +64,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-display font-semibold text-wp-forest group-hover:text-wp-yellow transition-colors">
-                      WhatsApp
+                      {t('pages.contact.whatsapp')}
                     </p>
                     <p className="text-graytext">+506 8985 7750</p>
                   </div>
@@ -82,7 +79,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-display font-semibold text-wp-forest group-hover:text-wp-yellow transition-colors">
-                      Llámanos
+                      {t('pages.contact.callUs')}
                     </p>
                     <p className="text-graytext">+506 8985 7750</p>
                   </div>
@@ -97,49 +94,46 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-display font-semibold text-wp-forest group-hover:text-wp-yellow transition-colors">
-                      Email
+                      {t('pages.contact.email')}
                     </p>
                     <p className="text-graytext">wildpathcr@gmail.com</p>
                   </div>
                 </a>
               </div>
 
-              {/* Location */}
               <div className="flex items-start gap-4 mb-10">
                 <MapPin size={24} className="text-wp-yellow flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-display font-semibold text-wp-forest mb-1">
-                    Ubicación
+                    {t('pages.contact.locationTitle')}
                   </p>
                   <p className="text-graytext">
-                    Bajos del Toro, Costa Rica
+                    {t('pages.contact.locationLine')}
                   </p>
                   <p className="text-sm text-graytext/70 mt-1">
-                    Operamos en toda Costa Rica con base en la zona central
+                    {t('pages.contact.locationNote')}
                   </p>
                 </div>
               </div>
 
-              {/* Hours */}
               <div className="flex items-start gap-4 mb-10">
                 <Clock size={24} className="text-wp-yellow flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-display font-semibold text-wp-forest mb-1">
-                    Horario de atención
+                    {t('pages.contact.hoursTitle')}
                   </p>
                   <p className="text-graytext">
-                    Lunes a Domingo: 7:00 AM - 8:00 PM
+                    {t('contact.hours')}
                   </p>
                   <p className="text-sm text-graytext/70 mt-1">
-                    Respondemos en menos de 24 horas
+                    {t('pages.contact.hoursNote')}
                   </p>
                 </div>
               </div>
 
-              {/* Social */}
               <div>
                 <p className="font-display font-semibold text-wp-forest mb-4">
-                  Síguenos
+                  {t('pages.contact.followUs')}
                 </p>
                 <div className="flex gap-3">
                   <a
@@ -170,10 +164,9 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Google Forms Embed */}
             <div className="bg-white p-8 lg:p-10 shadow-card">
               <h3 className="font-display font-bold text-xl text-wp-forest mb-6">
-                Cuéntanos sobre tu viaje soñado
+                {t('pages.contact.formTitle')}
               </h3>
               
               <div className="w-full h-[800px]">
@@ -185,16 +178,16 @@ export default function Contact() {
                   marginHeight={0}
                   marginWidth={0}
                   className="w-full h-full"
-                  title="Formulario de Contacto"
+                  title={t('pages.contact.formTitle')}
                 >
-                  Cargando…
+                  {t('pages.contact.formLoading')}
                 </iframe>
               </div>
               
               <p className="text-xs text-graytext text-center mt-4">
-                Este formulario está alojado en Google Forms. Al enviar, aceptas nuestra{' '}
+                {t('pages.contact.formDisclaimer')}{' '}
                 <a href="/privacidad" className="text-wp-yellow hover:underline">
-                  política de privacidad
+                  {t('pages.contact.privacyLink')}
                 </a>
               </p>
             </div>

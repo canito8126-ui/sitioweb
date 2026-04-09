@@ -75,44 +75,92 @@
     "badge": "COMPLETE PACKAGES",
     "title": "Inspiration for your trip",
     "subtitle": "7 themed experiences designed based on what travelers seek in Costa Rica",
+    "heroImageAlt": "Inspiration packages",
     "packages": {
       "adventure": {
         "title": "Extreme Adventure",
         "duration": "7 days",
-        "description": "Rafting, canopy, rappel and challenging hikes for adrenaline lovers."
+        "description": "Rafting, canopy, rappel and challenging hikes for adrenaline lovers.",
+        "highlights": [
+          "Pacuare River rafting",
+          "Monteverde canopy",
+          "Waterfall rappelling",
+          "Volcano hiking"
+        ]
       },
       "wildlife": {
         "title": "Wildlife",
         "duration": "8 days",
-        "description": "Wildlife observation in Corcovado, Tortuguero and Monteverde."
+        "description": "Wildlife observation in Corcovado, Tortuguero and Monteverde.",
+        "highlights": [
+          "Corcovado: Costa Rica’s Amazon",
+          "Tortuguero turtle nesting",
+          "Monteverde: quetzals and hummingbirds",
+          "Cahuita coral reefs"
+        ]
       },
       "wellness": {
         "title": "Wellness & Nature",
         "duration": "6 days",
-        "description": "Yoga, natural spa, hot springs and meditation in the jungle."
+        "description": "Yoga, natural spa, hot springs and meditation in the jungle.",
+        "highlights": [
+          "Ocean-view yoga",
+          "Natural hot springs",
+          "Spa with local products",
+          "Jungle meditation"
+        ]
       },
       "family": {
         "title": "Family Adventure",
         "duration": "10 days",
-        "description": "Educational and fun activities for the whole family."
+        "description": "Educational and fun activities for the whole family.",
+        "highlights": [
+          "Wildlife viewing",
+          "Kid-friendly beaches",
+          "Educational activities",
+          "Family-friendly hotels"
+        ]
       },
       "romantic": {
         "title": "Romantic Getaway",
         "duration": "5 days",
-        "description": "Paradise beaches, sunsets and private dinners."
+        "description": "Paradise beaches, sunsets and private dinners.",
+        "highlights": [
+          "Private beach dinner",
+          "Sunset catamaran",
+          "Boutique hotel views",
+          "Chocolate & wine tour"
+        ]
       },
       "culture": {
         "title": "Culture & Tradition",
         "duration": "7 days",
-        "description": "Typical towns, coffee, chocolate and local gastronomy."
+        "description": "Typical towns, coffee, chocolate and local gastronomy.",
+        "highlights": [
+          "Coffee plantation tour",
+          "Artisan chocolate",
+          "Traditional towns",
+          "Local gastronomy"
+        ]
       },
       "photography": {
         "title": "Nature Photography",
         "duration": "9 days",
-        "description": "The best spots to capture Costa Rica's biodiversity."
+        "description": "The best spots to capture Costa Rica's biodiversity.",
+        "highlights": [
+          "Best light windows for photos",
+          "Local photographer hideouts",
+          "Expert photographer guide",
+          "Editing workshops"
+        ]
       }
     },
-    "cta": "CUSTOMIZE THIS PACKAGE"
+    "cta": "CUSTOMIZE THIS PACKAGE",
+    "customCta": {
+      "title": "None of these packages exactly what you want?",
+      "subtitle": "We can build a fully custom itinerary—mixing elements from different packages or designing something new around your interests.",
+      "button": "CREATE MY CUSTOM ITINERARY"
+    }
   },
   "testimonials": {
     "badge": "TESTIMONIALS",
