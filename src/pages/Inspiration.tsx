@@ -43,120 +43,67 @@ export default function Inspiration() {
     return () => ctx.revert()
   }, [])
 
-  const packages = [
+  const packageDefs = [
     {
-      id: 'adventure',
-      title: t('inspiration.packages.adventure.title'),
-      duration: t('inspiration.packages.adventure.duration'),
-      description: t('inspiration.packages.adventure.description'),
+      id: 'adventure' as const,
       image: '/images/pkg-adventure.jpg',
       icon: Mountain,
-      highlights: [
-        'Rafting en río Pacuare',
-        'Canopy en Monteverde',
-        'Rappel en cataratas',
-        'Senderismo en volcanes'
-      ],
       locations: ['Pacuare', 'Monteverde', 'Arenal', 'Manuel Antonio'],
-      color: 'from-orange-500/80 to-red-600/80'
+      color: 'from-orange-500/80 to-red-600/80',
     },
     {
-      id: 'wildlife',
-      title: t('inspiration.packages.wildlife.title'),
-      duration: t('inspiration.packages.wildlife.duration'),
-      description: t('inspiration.packages.wildlife.description'),
+      id: 'wildlife' as const,
       image: '/images/pkg-wildlife.jpg',
       icon: Binoculars,
-      highlights: [
-        'Corcovado: la Amazonía de Costa Rica',
-        'Tortuguero: desove de tortugas',
-        'Monteverde: quetzales y bellos',
-        'Cahuita: arrecifes de coral'
-      ],
       locations: ['Corcovado', 'Tortuguero', 'Monteverde', 'Cahuita'],
-      color: 'from-green-600/80 to-emerald-700/80'
+      color: 'from-green-600/80 to-emerald-700/80',
     },
     {
-      id: 'wellness',
-      title: t('inspiration.packages.wellness.title'),
-      duration: t('inspiration.packages.wellness.duration'),
-      description: t('inspiration.packages.wellness.description'),
+      id: 'wellness' as const,
       image: '/images/pkg-wellness.jpg',
       icon: Heart,
-      highlights: [
-        'Yoga con vista al océano',
-        'Aguas termales naturales',
-        'Spa con productos locales',
-        'Meditación en la selva'
-      ],
       locations: ['Nosara', 'Tabacón', 'Osa Peninsula', 'Santa Teresa'],
-      color: 'from-pink-500/80 to-rose-600/80'
+      color: 'from-pink-500/80 to-rose-600/80',
     },
     {
-      id: 'family',
-      title: t('inspiration.packages.family.title'),
-      duration: t('inspiration.packages.family.duration'),
-      description: t('inspiration.packages.family.description'),
+      id: 'family' as const,
       image: '/images/pkg-family.jpg',
       icon: Users,
-      highlights: [
-        'Observación de animales',
-        'Playa segura para niños',
-        'Actividades educativas',
-        'Hoteles familiares'
-      ],
       locations: ['Manuel Antonio', 'Tortuguero', 'Monteverde', 'Guanacaste'],
-      color: 'from-blue-500/80 to-cyan-600/80'
+      color: 'from-blue-500/80 to-cyan-600/80',
     },
     {
-      id: 'romantic',
-      title: t('inspiration.packages.romantic.title'),
-      duration: t('inspiration.packages.romantic.duration'),
-      description: t('inspiration.packages.romantic.description'),
+      id: 'romantic' as const,
       image: '/images/pkg-romantic.jpg',
       icon: Sparkles,
-      highlights: [
-        'Cena privada en la playa',
-        'Atardecer en catamarán',
-        'Hotel boutique con vista',
-        'Tour de chocolate y vino'
-      ],
       locations: ['Manuel Antonio', 'Guanacaste', 'Puerto Viejo', 'Drake Bay'],
-      color: 'from-purple-500/80 to-violet-600/80'
+      color: 'from-purple-500/80 to-violet-600/80',
     },
     {
-      id: 'culture',
-      title: t('inspiration.packages.culture.title'),
-      duration: t('inspiration.packages.culture.duration'),
-      description: t('inspiration.packages.culture.description'),
+      id: 'culture' as const,
       image: '/images/pkg-culture.jpg',
       icon: Coffee,
-      highlights: [
-        'Tour de café en plantación',
-        'Chocolate artesanal',
-        'Pueblos típicos',
-        'Gastronomía local'
-      ],
       locations: ['Naranjo', 'Sarchí', 'San Ramón', 'Turrialba'],
-      color: 'from-amber-600/80 to-yellow-700/80'
+      color: 'from-amber-600/80 to-yellow-700/80',
     },
     {
-      id: 'photography',
-      title: t('inspiration.packages.photography.title'),
-      duration: t('inspiration.packages.photography.duration'),
-      description: t('inspiration.packages.photography.description'),
+      id: 'photography' as const,
       image: '/images/pkg-photography.jpg',
       icon: Camera,
-      highlights: [
-        'Mejores horarios para luz',
-        'Escondites de fotógrafos',
-        'Guía fotógrafo experto',
-        'Workshops de edición'
-      ],
       locations: ['Corcovado', 'Monteverde', 'Tortuguero', 'Bijagua'],
-      color: 'from-teal-500/80 to-cyan-600/80'
-    }
+      color: 'from-teal-500/80 to-cyan-600/80',
+    },
   ]
+
+  const packages = packageDefs.map((def) => ({
+    ...def,
+    title: t(`inspiration.packages.${def.id}.title`),
+    duration: t(`inspiration.packages.${def.id}.duration`),
+    description: t(`inspiration.packages.${def.id}.description`),
+    highlights: t(`inspiration.packages.${def.id}.highlights`, {
+      returnObjects: true,
+    }) as string[],
+  }))
 
   return (
     <div className="pt-24 lg:pt-32">
@@ -165,7 +112,7 @@ export default function Inspiration() {
         <div className="absolute inset-0 opacity-30">
           <img 
             src="/images/pkg-hero.jpg" 
-            alt="Inspiración" 
+            alt={t('inspiration.heroImageAlt')} 
             className="w-full h-full object-cover"
           />
         </div>
@@ -256,14 +203,13 @@ export default function Inspiration() {
       <section className="py-24 lg:py-32 px-6 lg:px-12 bg-wp-forest">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="headline-lg text-white mb-6">
-            ¿Ninguno de estos paquetes es exactamente lo que buscas?
+            {t('inspiration.customCta.title')}
           </h2>
           <p className="body-text text-white/70 mb-10 max-w-2xl mx-auto">
-            Podemos crear un itinerario completamente personalizado combinando elementos 
-            de diferentes paquetes o diseñando algo completamente nuevo según tus intereses.
+            {t('inspiration.customCta.subtitle')}
           </p>
           <Link to="/contacto" className="btn-primary">
-            CREAR MI ITINERARIO PERSONALIZADO
+            {t('inspiration.customCta.button')}
           </Link>
         </div>
       </section>

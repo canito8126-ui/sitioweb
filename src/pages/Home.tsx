@@ -120,7 +120,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <img 
             src="/images/hero-montana-playa.jpg" 
-            alt="Montaña y playa Costa Rica" 
+            alt={t('home.heroAltMountain')} 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-wp-forest/60 via-wp-forest/30 to-wp-forest/70" />
@@ -299,12 +299,11 @@ export default function Home() {
 
           <div className="bg-white p-8 lg:p-12 shadow-card">
             <p className="text-xl lg:text-2xl text-wp-forest italic mb-8 leading-relaxed">
-              "Wild Path diseñó exactamente el viaje que soñaba. Cada detalle estuvo pensado para nosotros. 
-              No fue un tour genérico, fue NUESTRA aventura."
+              &ldquo;{t('home.previewQuote')}&rdquo;
             </p>
             <div>
-              <p className="font-display font-semibold text-wp-forest">María y Carlos</p>
-              <p className="text-graytext text-sm">España · Viaje de 10 días</p>
+              <p className="font-display font-semibold text-wp-forest">{t('home.previewAuthor')}</p>
+              <p className="text-graytext text-sm">{t('home.previewMeta')}</p>
             </div>
           </div>
 
@@ -323,7 +322,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <img 
             src="/images/cta-naturaleza.jpg" 
-            alt="Naturaleza Costa Rica" 
+            alt={t('home.heroAltCta')} 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-wp-forest/80" />
@@ -331,11 +330,10 @@ export default function Home() {
 
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <h2 className="headline-lg text-white mb-6">
-            ¿Listo para tu aventura?
+            {t('home.ctaTitle')}
           </h2>
           <p className="body-text text-white/70 mb-10 max-w-xl mx-auto">
-            Agenda una llamada gratuita y descubre cómo podemos diseñar 
-            tu experiencia perfecta en Costa Rica.
+            {t('home.ctaSubtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
@@ -344,10 +342,10 @@ export default function Home() {
               rel="noopener noreferrer"
               className="btn-primary bg-[#25D366] hover:bg-[#128C7E]"
             >
-              ESCRÍBENOS POR WHATSAPP
+              {t('home.ctaWhatsapp')}
             </a>
             <Link to="/contacto" className="btn-primary">
-              LLENAR FORMULARIO
+              {t('home.ctaForm')}
             </Link>
           </div>
         </div>
