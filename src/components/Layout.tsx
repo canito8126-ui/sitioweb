@@ -122,7 +122,7 @@ export default function Layout() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="xl:hidden absolute top-full left-0 w-full bg-wp-forest/98 backdrop-blur-sm py-6 px-6">
+          <div className="xl:hidden fixed top-16 left-0 right-0 w-full z-50 mobile-menu-bg py-6 px-6">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link

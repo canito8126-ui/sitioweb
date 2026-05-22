@@ -286,3 +286,12 @@ input:focus, textarea:focus, select:focus {
     transition: none !important;
   }
 }
+
+/* Mobile menu backdrop fix (adds -webkit- prefix for iOS and a fallback color) */
+.mobile-menu-bg {
+  background-color: rgba(35,55,40,0.98);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transform: translateZ(0);
+  will-change: backdrop-filter;
+}
