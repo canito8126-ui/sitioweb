@@ -1,21 +1,105 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Star } from 'lucide-react';
 
+type GoogleReview = { name: string; rating: number; text: string; date: string };
+type TripReview = { name: string; rating: number; title: string; text: string; date: string };
+
+const GOOGLE_REVIEWS: Record<'en' | 'es', GoogleReview[]> = {
+  en: [
+    {
+      name: 'María González',
+      rating: 5,
+      text: 'Amazing experience. The Wild Path team designed a perfect itinerary for our family. Every detail was thought through.',
+      date: '2 weeks ago',
+    },
+    {
+      name: 'John Smith',
+      rating: 5,
+      text: 'Best experience in Costa Rica! Knowledgeable guides and an itinerary tailored to our interests.',
+      date: '1 month ago',
+    },
+    {
+      name: 'Ana Patricia',
+      rating: 5,
+      text: 'I traveled solo and felt safe the whole time. The night hike was magical. Highly recommended!',
+      date: '2 months ago',
+    },
+  ],
+  es: [
+    {
+      name: 'María González',
+      rating: 5,
+      text: 'Experiencia increíble. El equipo de Wild Path diseñó un itinerario perfecto para nuestra familia. Cada detalle estuvo pensado.',
+      date: '2 semanas atrás',
+    },
+    {
+      name: 'John Smith',
+      rating: 5,
+      text: '¡La mejor experiencia en Costa Rica! Los guías conocían el destino y el itinerario se adaptó a nuestros intereses.',
+      date: '1 mes atrás',
+    },
+    {
+      name: 'Ana Patricia',
+      rating: 5,
+      text: 'Viajé sola y me sentí segura en todo momento. La caminata nocturna fue mágica. ¡Totalmente recomendado!',
+      date: '2 meses atrás',
+    },
+  ],
+};
+
+const TRIP_REVIEWS: Record<'en' | 'es', TripReview[]> = {
+  en: [
+    {
+      name: 'Carlos R.',
+      rating: 5,
+      title: 'Unforgettable experience',
+      text: 'Wild Path exceeded our expectations. The guides are local experts who know every corner.',
+      date: 'January 2025',
+    },
+    {
+      name: 'Emma L.',
+      rating: 5,
+      title: 'Perfect for photographers',
+      text: 'As a photographer I needed access to the best spots. Wild Path made it happen—we saw quetzals and toucans.',
+      date: 'December 2024',
+    },
+  ],
+  es: [
+    {
+      name: 'Carlos R.',
+      rating: 5,
+      title: 'Experiencia inolvidable',
+      text: 'Wild Path superó todas nuestras expectativas. Los guías son expertos locales que conocen cada rincón.',
+      date: 'enero 2025',
+    },
+    {
+      name: 'Emma L.',
+      rating: 5,
+      title: 'Perfecto para fotógrafos',
+      text: 'Como fotógrafa, necesitaba acceso a los mejores spots. Wild Path lo hizo posible. Vimos quetzales y tucanes.',
+      date: 'diciembre 2024',
+    },
+  ],
+};
+
 const ReviewWidgets = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const locale: 'en' | 'es' = i18n.language.startsWith('en') ? 'en' : 'es';
+
+  const googleReviews = useMemo(() => GOOGLE_REVIEWS[locale], [locale]);
+  const tripadvisorReviews = useMemo(() => TRIP_REVIEWS[locale], [locale]);
 
   useEffect(() => {
-    // Load Google Reviews Widget Script
     const googleScript = document.createElement('script');
     googleScript.src = 'https://widgets.sociablekit.com/google-reviews/widget.js';
     googleScript.async = true;
     googleScript.defer = true;
     document.body.appendChild(googleScript);
 
-    // Load TripAdvisor Widget Script
     const taScript = document.createElement('script');
-    taScript.src = 'https://www.jscache.com/wejs?wtype=selfserveprop&uniq=1&locationId=25322418&lang=es_CO&rating=true&nreviews=5&writereviewlink=true&popIdx=true&iswide=false&border=true&display_version=2';
+    taScript.src =
+      'https://www.jscache.com/wejs?wtype=selfserveprop&uniq=1&locationId=25322418&lang=es_CO&rating=true&nreviews=5&writereviewlink=true&popIdx=true&iswide=false&border=true&display_version=2';
     taScript.async = true;
     document.body.appendChild(taScript);
 
@@ -25,61 +109,19 @@ const ReviewWidgets = () => {
     };
   }, []);
 
-  // Static reviews data as fallback
-  const googleReviews = [
-    {
-      name: "María González",
-      rating: 5,
-      text: "Experiencia increíble. El equipo de Wild Path diseñó un itinerario perfecto para nuestra familia. Cada detalle estuvo pensado.",
-      date: "2 semanas atrás"
-    },
-    {
-      name: "John Smith",
-      rating: 5,
-      text: "Best experience in Costa Rica! The guides were knowledgeable and the itinerary was perfectly tailored to our interests.",
-      date: "1 mes atrás"
-    },
-    {
-      name: "Ana Patricia",
-      rating: 5,
-      text: "Viajé sola y me sentí segura en todo momento. La caminata nocturna fue mágica. ¡Totalmente recomendado!",
-      date: "2 meses atrás"
-    }
-  ];
-
-  const tripadvisorReviews = [
-    {
-      name: "Carlos R.",
-      rating: 5,
-      title: "Experiencia inolvidable",
-      text: "Wild Path superó todas nuestras expectativas. Los guías son expertos locales que conocen cada rincón.",
-      date: "enero 2025"
-    },
-    {
-      name: "Emma L.",
-      rating: 5,
-      title: "Perfecto para fotógrafos",
-      text: "Como fotógrafa, necesitaba acceso a los mejores spots. Wild Path lo hizo posible. Vimos quetzales y tucanes.",
-      date: "diciembre 2024"
-    }
-  ];
-
   return (
     <section className="py-24 lg:py-32 px-6 lg:px-12 bg-wp-cream">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <p className="micro-label text-wp-yellow mb-4 tracking-[0.15em]">
-            OPINIONES VERIFICADAS
+            {t('reviews.badge')}
           </p>
           <h2 className="headline-lg text-wp-forest mb-6">
             {t('reviews.title')}
           </h2>
         </div>
 
-        {/* Reviews Grid */}
         <div className="grid lg:grid-cols-2 gap-8">
-          {/* Google Reviews */}
           <div className="bg-white p-6 lg:p-8 shadow-card">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center">
@@ -106,7 +148,6 @@ const ReviewWidgets = () => {
               </div>
             </div>
 
-            {/* Google Reviews List */}
             <div className="space-y-4">
               {googleReviews.map((review, index) => (
                 <div key={index} className="border-b border-gray-100 pb-4 last:border-0">
@@ -131,21 +172,19 @@ const ReviewWidgets = () => {
               ))}
             </div>
 
-            {/* View All Link */}
             <a 
               href="https://www.google.com/maps/place/Wild+Path/@10.2332306,-84.3062782,17z/data=!4m8!3m7!1s0x8fa061136b4852f3:0xfcd6099c2483f145!8m2!3d10.2332253!4d-84.3037033!9m1!1b1!16s%2Fg%2F11wb9_lzfs?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-wp-yellow font-medium text-sm mt-4 hover:underline"
             >
-              Ver todas las reseñas
+              {locale === 'en' ? 'View all Google reviews' : 'Ver todas las reseñas'}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
           </div>
 
-          {/* TripAdvisor Reviews */}
           <div className="bg-white p-6 lg:p-8 shadow-card">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-[#00AF87] rounded-full flex items-center justify-center">
@@ -171,7 +210,6 @@ const ReviewWidgets = () => {
               </div>
             </div>
 
-            {/* TripAdvisor Reviews List */}
             <div className="space-y-4">
               {tripadvisorReviews.map((review, index) => (
                 <div key={index} className="border-b border-gray-100 pb-4 last:border-0">
@@ -199,14 +237,13 @@ const ReviewWidgets = () => {
               ))}
             </div>
 
-            {/* View All Link */}
             <a 
               href="https://www.tripadvisor.co/Attraction_Review-g1048263-d25322418-Reviews-Wild_Path_Costa_Rica-Bajos_del_Toro_Province_of_Alajuela.html"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-[#00AF87] font-medium text-sm mt-4 hover:underline"
             >
-              Ver todas las reseñas
+              {locale === 'en' ? 'View all TripAdvisor reviews' : 'Ver todas las reseñas'}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>

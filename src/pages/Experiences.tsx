@@ -1,7 +1,8 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { 
   Moon, 
   Bird, 
@@ -16,7 +17,36 @@ import {
 
 gsap.registerPlugin(ScrollTrigger)
 
+type ExpKey = 'nocturnal' | 'birds' | 'waterfalls' | 'forest' | 'naturalist' | 'cooking'
+
+const EXP_META: { key: ExpKey; image: string; icon: typeof Moon }[] = [
+  { key: 'nocturnal', image: '/images/exp-nocturna.jpg', icon: Moon },
+  { key: 'birds', image: '/images/exp-aves.jpg', icon: Bird },
+  { key: 'waterfalls', image: '/images/exp-catarata.jpg', icon: Droplets },
+  { key: 'forest', image: '/images/exp-bosque.jpg', icon: Trees },
+  { key: 'naturalist', image: '/images/exp-naturalista.jpg', icon: MapPin },
+  { key: 'cooking', image: '/images/exp-cocina.jpg', icon: UtensilsCrossed },
+]
+
 export default function Experiences() {
+  const { t } = useTranslation()
+
+  const experiences = useMemo(
+    () =>
+      EXP_META.map(({ key, image, icon }) => {
+        const data = t(`pages.experiences.items.${key}`, { returnObjects: true }) as {
+          title: string
+          description: string
+          duration: string
+          groupSize: string
+          location: string
+          highlights: string[]
+        }
+        return { ...data, image, icon, key }
+      }),
+    [t]
+  )
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>('.experience-card').forEach((card, i) => {
@@ -38,6 +68,7 @@ export default function Experiences() {
     return () => ctx.revert()
   }, [])
 
+<<<<<<< HEAD
   const experiences = [
     {
       title: 'Caminatas Nocturnas',
@@ -131,41 +162,39 @@ export default function Experiences() {
     }
   ]
 
+=======
+>>>>>>> e0a5d30a25d7585f6c1ae62b5b4f5c86437f97ba
   return (
     <div className="pt-24 lg:pt-32">
-      {/* Hero */}
       <section className="relative py-24 lg:py-32 px-6 lg:px-12 bg-wp-forest overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img 
             src="/images/exp-bosque.jpg" 
-            alt="Experiencias" 
+            alt={t('pages.experiences.hero.alt')} 
             className="w-full h-full object-cover"
           />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <p className="micro-label text-wp-yellow mb-4 tracking-[0.15em]">
-            BAJOS DEL TORO Y ALREDEDORES
+            {t('pages.experiences.hero.badge')}
           </p>
           <h1 className="headline-xl text-white mb-6">
-            Experiencias de un día
+            {t('pages.experiences.hero.title')}
           </h1>
           <p className="body-text text-white/70 max-w-2xl mx-auto">
-            Descubre las maravillas naturales de Costa Rica con experiencias 
-            diseñadas para conectar auténticamente con la naturaleza.
+            {t('pages.experiences.hero.subtitle')}
           </p>
         </div>
       </section>
 
-      {/* Experiences Grid */}
       <section className="py-24 lg:py-32 px-6 lg:px-12 bg-wp-cream">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-            {experiences.map((exp, index) => (
+            {experiences.map((exp) => (
               <div 
-                key={index}
+                key={exp.key}
                 className="experience-card bg-white shadow-card overflow-hidden group hover:shadow-hover transition-shadow"
               >
-                {/* Image */}
                 <div className="relative h-64 overflow-hidden">
                   <img 
                     src={exp.image} 
@@ -177,7 +206,6 @@ export default function Experiences() {
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="p-8">
                   <h3 className="font-display font-bold text-2xl text-wp-forest mb-4">
                     {exp.title}
@@ -186,7 +214,6 @@ export default function Experiences() {
                     {exp.description}
                   </p>
 
-                  {/* Details */}
                   <div className="flex flex-wrap gap-4 mb-6 text-sm text-wp-forest/70">
                     <span className="flex items-center gap-1">
                       <Clock size={14} className="text-wp-yellow" />
@@ -202,7 +229,6 @@ export default function Experiences() {
                     </span>
                   </div>
 
-                  {/* Highlights */}
                   <ul className="space-y-2 mb-8">
                     {exp.highlights.map((highlight, i) => (
                       <li key={i} className="flex items-center gap-2 text-sm text-wp-forest/70">
@@ -212,12 +238,11 @@ export default function Experiences() {
                     ))}
                   </ul>
 
-                  {/* CTA */}
                   <Link 
                     to="/contacto"
                     className="inline-flex items-center gap-2 text-wp-yellow font-medium hover:underline"
                   >
-                    Reservar esta experiencia
+                    {t('pages.experiences.bookCta')}
                     <ArrowRight size={18} />
                   </Link>
                 </div>
@@ -227,18 +252,16 @@ export default function Experiences() {
         </div>
       </section>
 
-      {/* Custom Experience CTA */}
       <section className="py-24 lg:py-32 px-6 lg:px-12 bg-wp-forest">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="headline-lg text-white mb-6">
-            ¿Quieres algo más personalizado?
+            {t('pages.experiences.cta.title')}
           </h2>
           <p className="body-text text-white/70 mb-10 max-w-2xl mx-auto">
-            Podemos combinar varias experiencias o diseñar algo completamente 
-            nuevo según tus intereses y tiempo disponible.
+            {t('pages.experiences.cta.subtitle')}
           </p>
           <Link to="/contacto" className="btn-primary">
-            DISEÑA TU EXPERIENCIA
+            {t('pages.experiences.cta.button')}
           </Link>
         </div>
       </section>

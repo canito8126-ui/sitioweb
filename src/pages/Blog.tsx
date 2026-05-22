@@ -1,17 +1,34 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { 
   Calendar, 
   Clock, 
   ArrowRight,
   User
 } from 'lucide-react'
+import { BLOG_SLUG_ORDER, getBlogPosts } from '../data/blogPosts'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Blog() {
+  const { t, i18n } = useTranslation()
+
+  const blogPosts = useMemo(() => {
+    const posts = getBlogPosts(i18n.language)
+    return BLOG_SLUG_ORDER.map((slug) => ({
+      slug,
+      ...posts[slug],
+    }))
+  }, [i18n.language])
+
+  const categories = t('pages.blog.categories', { returnObjects: true }) as string[]
+  const allLabel = categories[0] ?? 'All'
+
+  const featuredPost = blogPosts[0]
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>('.blog-card').forEach((card, i) => {
@@ -33,109 +50,33 @@ export default function Blog() {
     return () => ctx.revert()
   }, [])
 
-  const blogPosts = [
-    {
-      slug: 'mejor-epoca-viajar-costa-rica',
-      title: '¿Cuál es la mejor época para viajar a Costa Rica?',
-      excerpt: 'Descubre las ventajas de cada temporada y elige el momento perfecto para tu aventura. Desde la época seca hasta la verde, cada una tiene su magia.',
-      image: '/images/blog-epoca.jpg',
-      category: 'Consejos de Viaje',
-      author: 'Equipo Wild Path',
-      date: '15 de febrero, 2025',
-      readTime: '5 min'
-    },
-    {
-      slug: 'aves-costa-rica-guia-principiantes',
-      title: 'Guía de avistamiento de aves para principiantes',
-      excerpt: 'Todo lo que necesitas saber para comenzar a observar las más de 900 especies de aves que habitan Costa Rica. Equipo, mejores spots y consejos prácticos.',
-      image: '/images/blog-aves.jpg',
-      category: 'Naturaleza',
-      author: 'María González',
-      date: '10 de febrero, 2025',
-      readTime: '8 min'
-    },
-    {
-      slug: 'comida-tipica-costa-rica',
-      title: '10 platillos típicos que debes probar en Costa Rica',
-      excerpt: 'Desde el gallo pinto hasta el casado, descubre los sabores auténticos de la gastronomía costarricense y dónde encontrarlos.',
-      image: '/images/blog-comida.jpg',
-      category: 'Cultura',
-      author: 'Carlos Ramírez',
-      date: '5 de febrero, 2025',
-      readTime: '6 min'
-    },
-    {
-      slug: 'tortuguero-guia-completa',
-      title: 'Tortuguero: La guía completa para ver tortugas',
-      excerpt: 'Todo sobre el desove de tortugas en Costa Rica: cuándo ir, qué especies ver, qué esperar y cómo hacerlo de manera responsable.',
-      image: '/images/blog-tortuguero.jpg',
-      category: 'Fauna',
-      author: 'Equipo Wild Path',
-      date: '28 de enero, 2025',
-      readTime: '7 min'
-    },
-    {
-      slug: 'senderismo-seguro-costa-rica',
-      title: 'Consejos para senderismo seguro en Costa Rica',
-      excerpt: 'Preparación, equipo esencial y precauciones para disfrutar de las caminatas en la selva de manera segura y responsable.',
-      image: '/images/blog-senderismo.jpg',
-      category: 'Aventura',
-      author: 'Pedro Sánchez',
-      date: '20 de enero, 2025',
-      readTime: '5 min'
-    },
-    {
-      slug: 'perezosos-costa-rica',
-      title: 'Todo sobre los perezosos de Costa Rica',
-      excerpt: 'Conoce a estos adorables habitantes de la selva: dónde verlos, cómo se comportan y por qué son tan especiales para el ecosistema.',
-      image: '/images/blog-perezosos.jpg',
-      category: 'Fauna',
-      author: 'Ana Patricia',
-      date: '15 de enero, 2025',
-      readTime: '6 min'
-    }
-  ]
-
-  const categories = [
-    'Todos',
-    'Consejos de Viaje',
-    'Naturaleza',
-    'Fauna',
-    'Cultura',
-    'Aventura'
-  ]
-
-  const featuredPost = blogPosts[0]
-
   return (
     <div className="pt-24 lg:pt-32">
-      {/* Hero */}
       <section className="relative py-24 lg:py-32 px-6 lg:px-12 bg-wp-forest overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img 
             src="/images/blog-hero.jpg" 
-            alt="Blog" 
+            alt={t('pages.blog.hero.alt')} 
             className="w-full h-full object-cover"
           />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <p className="micro-label text-wp-yellow mb-4 tracking-[0.15em]">
-            TRAVEL JOURNAL
+            {t('pages.blog.hero.badge')}
           </p>
           <h1 className="headline-xl text-white mb-6">
-            Blog
+            {t('pages.blog.hero.title')}
           </h1>
           <p className="body-text text-white/70 max-w-2xl mx-auto">
-            Historias, consejos y guías para ayudarte a planificar tu aventura perfecta en Costa Rica.
+            {t('pages.blog.hero.subtitle')}
           </p>
         </div>
       </section>
 
-      {/* Featured Post */}
       <section className="py-16 lg:py-24 px-6 lg:px-12 bg-wp-cream">
         <div className="max-w-6xl mx-auto">
           <p className="micro-label text-wp-yellow mb-6 tracking-[0.15em]">
-            ARTÍCULO DESTACADO
+            {t('pages.blog.featured')}
           </p>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="relative aspect-[4/3] overflow-hidden">
@@ -168,14 +109,14 @@ export default function Blog() {
                 </span>
                 <span className="text-sm text-graytext flex items-center gap-1">
                   <Clock size={14} />
-                  {featuredPost.readTime} de lectura
+                  {`${featuredPost.readTime} ${t('pages.blog.readSuffix')}`}
                 </span>
               </div>
               <Link 
                 to={`/blog/${featuredPost.slug}`}
                 className="btn-primary inline-flex items-center"
               >
-                Leer artículo
+                {t('pages.blog.readArticle')}
                 <ArrowRight size={18} className="ml-2" />
               </Link>
             </div>
@@ -183,15 +124,15 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Categories Filter */}
       <section className="py-8 px-6 lg:px-12 bg-wp-cream border-y border-wp-forest/10">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
               <button
                 key={category}
+                type="button"
                 className={`px-4 py-2 text-sm font-medium transition-colors ${
-                  category === 'Todos'
+                  category === allLabel
                     ? 'bg-wp-forest text-white'
                     : 'bg-white text-wp-forest hover:bg-wp-forest hover:text-white'
                 }`}
@@ -203,7 +144,6 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Blog Grid */}
       <section className="py-24 lg:py-32 px-6 lg:px-12 bg-wp-cream">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -212,7 +152,6 @@ export default function Blog() {
                 key={post.slug}
                 className="blog-card bg-white shadow-card overflow-hidden hover:shadow-hover transition-all duration-300 group"
               >
-                {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img 
                     src={post.image} 
@@ -226,7 +165,6 @@ export default function Blog() {
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3 text-xs text-graytext">
                     <span className="flex items-center gap-1">
@@ -256,7 +194,7 @@ export default function Blog() {
                       to={`/blog/${post.slug}`}
                       className="text-wp-yellow text-sm font-medium flex items-center gap-1 hover:underline"
                     >
-                      Leer más
+                      {t('pages.blog.readMore')}
                       <ArrowRight size={14} />
                     </Link>
                   </div>
@@ -267,23 +205,22 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Newsletter CTA */}
       <section className="py-24 lg:py-32 px-6 lg:px-12 bg-wp-forest">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="headline-lg text-white mb-6">
-            Suscríbete a nuestro newsletter
+            {t('pages.blog.newsletterTitle')}
           </h2>
           <p className="body-text text-white/70 mb-8">
-            Recibe consejos de viaje, historias de la selva y ofertas exclusivas directamente en tu correo.
+            {t('pages.blog.newsletterSubtitle')}
           </p>
           <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
-              placeholder="tu@email.com"
+              placeholder={t('pages.blog.emailPlaceholder')}
               className="flex-1 px-4 py-3 bg-white/10 border border-white/30 text-white placeholder:text-white/50 focus:outline-none focus:border-wp-yellow"
             />
             <button type="submit" className="btn-primary">
-              SUSCRIBIRME
+              {t('pages.blog.subscribe')}
             </button>
           </form>
         </div>

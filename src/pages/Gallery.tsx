@@ -1,12 +1,43 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useTranslation } from 'react-i18next'
 import { X, ZoomIn } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
+const GALLERY_SRC = [
+  '/images/gal-perezoso.jpg',
+  '/images/gal-quetzal.jpg',
+  '/images/gal-catarata.jpg',
+  '/images/gal-tucan.jpg',
+  '/images/gal-bosque.jpg',
+  '/images/gal-rana.jpg',
+  '/images/gal-colibri.jpg',
+  '/images/gal-sendero.jpg',
+  '/images/gal-mono.jpg',
+  '/images/gal-orquidea.jpg',
+  '/images/gal-helechos.jpg',
+  '/images/gal-amanecer.jpg',
+]
+
 export default function Gallery() {
+  const { t } = useTranslation()
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
+
+  const categories = t('pages.gallery.categories', { returnObjects: true }) as string[]
+  const imageAlts = t('pages.gallery.imageAlts', { returnObjects: true }) as string[]
+  const imageCategories = t('pages.gallery.imageCategories', { returnObjects: true }) as string[]
+
+  const galleryImages = useMemo(
+    () =>
+      GALLERY_SRC.map((src, index) => ({
+        src,
+        alt: imageAlts[index] ?? '',
+        category: imageCategories[index] ?? '',
+      })),
+    [imageAlts, imageCategories]
+  )
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -29,102 +60,36 @@ export default function Gallery() {
     return () => ctx.revert()
   }, [])
 
-  const galleryImages = [
-    {
-      src: '/images/gal-perezoso.jpg',
-      alt: 'Perezoso en su hábitat natural',
-      category: 'Fauna'
-    },
-    {
-      src: '/images/gal-quetzal.jpg',
-      alt: 'Quetzal resplandeciente',
-      category: 'Aves'
-    },
-    {
-      src: '/images/gal-catarata.jpg',
-      alt: 'Catarata en la selva',
-      category: 'Naturaleza'
-    },
-    {
-      src: '/images/gal-tucan.jpg',
-      alt: 'Tucán de pico arcoíris',
-      category: 'Aves'
-    },
-    {
-      src: '/images/gal-bosque.jpg',
-      alt: 'Bosque nuboso de Costa Rica',
-      category: 'Naturaleza'
-    },
-    {
-      src: '/images/gal-rana.jpg',
-      alt: 'Rana de ojos rojos',
-      category: 'Fauna'
-    },
-    {
-      src: '/images/gal-colibri.jpg',
-      alt: 'Colibrí en vuelo',
-      category: 'Aves'
-    },
-    {
-      src: '/images/gal-sendero.jpg',
-      alt: 'Sendero en el bosque',
-      category: 'Naturaleza'
-    },
-    {
-      src: '/images/gal-mono.jpg',
-      alt: 'Mono cara blanca',
-      category: 'Fauna'
-    },
-    {
-      src: '/images/gal-orquidea.jpg',
-      alt: 'Orquídea silvestre',
-      category: 'Flora'
-    },
-    {
-      src: '/images/gal-helechos.jpg',
-      alt: 'Helechos en el bosque',
-      category: 'Flora'
-    },
-    {
-      src: '/images/gal-amanecer.jpg',
-      alt: 'Amanecer en la montaña',
-      category: 'Paisajes'
-    }
-  ]
-
   return (
     <div className="pt-24 lg:pt-32">
-      {/* Hero */}
       <section className="relative py-24 lg:py-32 px-6 lg:px-12 bg-wp-forest overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img 
             src="/images/gal-bosque.jpg" 
-            alt="Galería" 
+            alt={t('pages.gallery.hero.alt')} 
             className="w-full h-full object-cover"
           />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <p className="micro-label text-wp-yellow mb-4 tracking-[0.15em]">
-            MOMENTOS REALES
+            {t('pages.gallery.hero.badge')}
           </p>
           <h1 className="headline-xl text-white mb-6">
-            Galería
+            {t('pages.gallery.hero.title')}
           </h1>
           <p className="body-text text-white/70 max-w-2xl mx-auto">
-            Imágenes reales de nuestras experiencias. Fauna, flora y paisajes 
-            auténticos de Costa Rica capturados durante nuestros viajes.
+            {t('pages.gallery.hero.subtitle')}
           </p>
         </div>
       </section>
 
-      {/* Gallery Grid */}
       <section className="py-24 lg:py-32 px-6 lg:px-12 bg-wp-cream">
         <div className="max-w-7xl mx-auto">
-          {/* Filter Tags */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {['Todas', 'Fauna', 'Aves', 'Naturaleza', 'Flora', 'Paisajes'].map((category) => (
+            {categories.map((category) => (
               <button
                 key={category}
+                type="button"
                 className="px-4 py-2 text-sm font-medium text-wp-forest/70 hover:text-wp-yellow hover:bg-wp-yellow/10 transition-colors"
               >
                 {category}
@@ -132,11 +97,10 @@ export default function Gallery() {
             ))}
           </div>
 
-          {/* Masonry Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {galleryImages.map((image, index) => (
               <div 
-                key={index}
+                key={image.src}
                 className={`gallery-item relative overflow-hidden cursor-pointer group ${
                   index === 0 || index === 5 || index === 10 ? 'md:col-span-2 md:row-span-2' : ''
                 }`}
@@ -167,13 +131,13 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Lightbox */}
       {selectedImage && (
         <div 
           className="fixed inset-0 z-50 bg-wp-forest/95 flex items-center justify-center p-6"
           onClick={() => setSelectedImage(null)}
         >
           <button 
+            type="button"
             className="absolute top-6 right-6 text-white/70 hover:text-white"
             onClick={() => setSelectedImage(null)}
           >
@@ -181,22 +145,20 @@ export default function Gallery() {
           </button>
           <img 
             src={selectedImage} 
-            alt="Gallery image"
+            alt={t('pages.gallery.lightboxAlt')}
             className="max-w-full max-h-[90vh] object-contain"
             onClick={(e) => e.stopPropagation()}
           />
         </div>
       )}
 
-      {/* CTA */}
       <section className="py-24 lg:py-32 px-6 lg:px-12 bg-wp-forest">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="headline-lg text-white mb-6">
-            ¿Te gustaría vivir estas experiencias?
+            {t('pages.gallery.cta.title')}
           </h2>
           <p className="body-text text-white/70 mb-10">
-            Diseñamos tu itinerario personalizado para que captures 
-            tus propios momentos inolvidables.
+            {t('pages.gallery.cta.subtitle')}
           </p>
           <a 
             href="https://wa.me/50689857750"
@@ -204,7 +166,7 @@ export default function Gallery() {
             rel="noopener noreferrer"
             className="btn-primary bg-[#25D366] hover:bg-[#128C7E]"
           >
-            CONTÁCTANOS POR WHATSAPP
+            {t('pages.gallery.cta.button')}
           </a>
         </div>
       </section>

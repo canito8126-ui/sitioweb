@@ -1,113 +1,105 @@
+import { useTranslation } from 'react-i18next'
+
 export default function Terms() {
+  const { t } = useTranslation()
+  const s2li = t('pages.terms.s2li', { returnObjects: true }) as string[]
+  const s3li = t('pages.terms.s3li', { returnObjects: true }) as string[]
+  const s4li = t('pages.terms.s4li', { returnObjects: true }) as string[]
+
   return (
     <div className="pt-24 lg:pt-32">
-      {/* Hero */}
       <section className="relative py-16 lg:py-24 px-6 lg:px-12 bg-wp-forest">
         <div className="max-w-4xl mx-auto text-center">
           <p className="micro-label text-wp-yellow mb-4 tracking-[0.15em]">
-            INFORMACIÓN LEGAL
+            {t('pages.terms.heroBadge')}
           </p>
           <h1 className="headline-lg text-white">
-            Términos y Condiciones
+            {t('pages.terms.title')}
           </h1>
         </div>
       </section>
 
-      {/* Content */}
       <section className="py-16 lg:py-24 px-6 lg:px-12 bg-wp-cream">
         <div className="max-w-3xl mx-auto">
           <div className="bg-white p-8 lg:p-12 shadow-card space-y-8">
             <section>
               <h2 className="font-display font-bold text-xl text-wp-forest mb-4">
-                1. Reservas y Pagos
+                {t('pages.terms.s1h')}
               </h2>
               <p className="body-text text-graytext mb-4">
-                Para confirmar una reserva, se requiere un depósito del 30% del valor total 
-                del itinerario. El saldo restante debe ser cancelado hasta 15 días antes 
-                del inicio de la experiencia.
+                {t('pages.terms.s1p1')}
               </p>
               <p className="body-text text-graytext">
-                Aceptamos transferencias bancarias, SINPE Móvil y pagos en efectivo. 
-                Para pagos internacionales, se aplican las comisiones bancarias correspondientes.
+                {t('pages.terms.s1p2')}
               </p>
             </section>
 
             <section>
               <h2 className="font-display font-bold text-xl text-wp-forest mb-4">
-                2. Inclusión en los Itinerarios
+                {t('pages.terms.s2h')}
               </h2>
               <p className="body-text text-graytext mb-4">
-                Nuestros itinerarios personalizados incluyen:
+                {t('pages.terms.s2p1')}
               </p>
               <ul className="list-disc list-inside space-y-2 body-text text-graytext ml-4">
-                <li>Transporte durante las actividades programadas</li>
-                <li>Guía local especializado</li>
-                <li>Entradas a parques y reservas</li>
-                <li>Comidas especificadas en el itinerario</li>
-                <li>Equipo necesario para las actividades</li>
+                {s2li.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
             </section>
 
             <section>
               <h2 className="font-display font-bold text-xl text-wp-forest mb-4">
-                3. No Incluido
+                {t('pages.terms.s3h')}
               </h2>
               <p className="body-text text-graytext mb-4">
-                Los siguientes elementos no están inclidos a menos que se especifique lo contrario:
+                {t('pages.terms.s3p1')}
               </p>
               <ul className="list-disc list-inside space-y-2 body-text text-graytext ml-4">
-                <li>Vuelos internacionales o nacionales</li>
-                <li>Seguro de viaje (obligatorio)</li>
-                <li>Bebidas alcohólicas</li>
-                <li>Gastos personales</li>
-                <li>Propinas (opcionales)</li>
+                {s3li.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
             </section>
 
             <section>
               <h2 className="font-display font-bold text-xl text-wp-forest mb-4">
-                4. Responsabilidades del Viajero
+                {t('pages.terms.s4h')}
               </h2>
               <p className="body-text text-graytext mb-4">
-                El viajero es responsable de:
+                {t('pages.terms.s4p1')}
               </p>
               <ul className="list-disc list-inside space-y-2 body-text text-graytext ml-4">
-                <li>Contar con pasaporte vigente (mínimo 6 meses)</li>
-                <li>Obtener los visados necesarios</li>
-                <li>Contratar seguro de viaje con cobertura médica</li>
-                <li>Informar sobre condiciones médicas relevantes</li>
-                <li>Seguir las instrucciones de los guías</li>
+                {s4li.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
             </section>
 
             <section>
               <h2 className="font-display font-bold text-xl text-wp-forest mb-4">
-                5. Seguridad
+                {t('pages.terms.s5h')}
               </h2>
               <p className="body-text text-graytext">
-                La seguridad de nuestros viajeros es nuestra prioridad. Nos reservamos 
-                el derecho de modificar o cancelar actividades si las condiciones 
-                climáticas o de seguridad lo requieren.
+                {t('pages.terms.s5p1')}
               </p>
             </section>
 
             <section>
               <h2 className="font-display font-bold text-xl text-wp-forest mb-4">
-                6. Modificaciones al Itinerario
+                {t('pages.terms.s6h')}
               </h2>
               <p className="body-text text-graytext">
-                Wild Path Costa Rica se reserva el derecho de realizar modificaciones 
-                menores al itinerario cuando sea necesario por razones operativas, 
-                climáticas o de seguridad.
+                {t('pages.terms.s6p1')}
               </p>
             </section>
 
             <div className="pt-8 border-t border-wp-forest/10">
               <p className="text-sm text-graytext">
-                Última actualización: Febrero 2025
+                {t('pages.terms.updated')}
               </p>
               <p className="text-sm text-graytext mt-2">
-                Si tienes alguna pregunta sobre estos términos, contáctanos en{' '}
+                {t('pages.terms.questions')}{' '}
                 <a href="mailto:wildpathcr@gmail.com" className="text-wp-yellow hover:underline">
                   wildpathcr@gmail.com
                 </a>
