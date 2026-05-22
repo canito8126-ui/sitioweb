@@ -65,7 +65,7 @@ const pagesEn = {
         title: 'Night hikes',
         description:
           'Discover the world that wakes when the sun goes down. See frogs, bioluminescent insects, and nocturnal mammals in their natural habitat.',
-        duration: '3–4 hours',
+        duration: '2 hours',
         groupSize: '2–8 people',
         location: 'Bajos del Toro',
         highlights: [
@@ -79,7 +79,7 @@ const pagesEn = {
         title: 'Bird watching',
         description:
           'Costa Rica hosts more than 10% of the world’s bird species. Join us to spot quetzals, toucans, hummingbirds, and hundreds more.',
-        duration: '4–5 hours',
+        duration: '2 hours',
         groupSize: '2–6 people',
         location: 'Private reserves',
         highlights: [
@@ -121,7 +121,7 @@ const pagesEn = {
         title: 'Naturalist walks',
         description:
           'Learn about Costa Rica’s flora, fauna, and ecosystems with an expert naturalist—a fun, educational experience for families.',
-        duration: '3–4 hours',
+        duration: '2 hours',
         groupSize: '2–12 people',
         location: 'Local trails',
         highlights: [
@@ -474,7 +474,7 @@ const pagesEs = {
         title: 'Caminatas Nocturnas',
         description:
           'Descubre el mundo que despierta cuando el sol se oculta. Observa ranas, insectos bioluminiscentes y mamíferos nocturnos en su hábitat natural.',
-        duration: '3-4 horas',
+        duration: '2 horas',
         groupSize: '2-8 personas',
         location: 'Bajos del Toro',
         highlights: [
@@ -488,7 +488,7 @@ const pagesEs = {
         title: 'Avistamiento de Aves',
         description:
           'Costa Rica alberga más del 10% de las especies de aves del mundo. Acompáñanos a descubrir quetzales, tucanes, colibríes y cientos de especies más.',
-        duration: '4-5 horas',
+        duration: '2 horas',
         groupSize: '2-6 personas',
         location: 'Reservas privadas',
         highlights: [
