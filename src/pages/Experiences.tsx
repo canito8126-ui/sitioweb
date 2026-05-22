@@ -44,8 +44,8 @@ export default function Experiences() {
       description: 'Descubre el mundo que despierta cuando el sol se oculta. Observa ranas, insectos bioluminiscentes y mamíferos nocturnos en su hábitat natural.',
       image: '/images/exp-nocturna.jpg',
       icon: Moon,
-      duration: '3-4 horas',
-      groupSize: '2-8 personas',
+      duration: '2 horas',
+      groupSize: '1-15 personas',
       location: 'Bajos del Toro',
       highlights: [
         'Observación de fauna nocturna',
@@ -59,13 +59,13 @@ export default function Experiences() {
       description: 'Costa Rica alberga más del 10% de las especies de aves del mundo. Acompáñanos a descubrir quetzales, tucanes, colibríes y cientos de especies más.',
       image: '/images/exp-aves.jpg',
       icon: Bird,
-      duration: '4-5 horas',
-      groupSize: '2-6 personas',
+      duration: '2-4 horas',
+      groupSize: '1-10 personas',
       location: 'Reservas privadas',
       highlights: [
         'Guía ornitólogo certificado',
         'Telescopio y binoculares',
-        'Más de 200 especies posibles',
+        'Más de 100 especies posibles',
         'Desayuno típico incluido'
       ]
     },
@@ -75,12 +75,12 @@ export default function Experiences() {
       image: '/images/exp-catarata.jpg',
       icon: Droplets,
       duration: '5-6 horas',
-      groupSize: '2-10 personas',
+      groupSize: '1-15 personas',
       location: 'Múltiples cataratas',
       highlights: [
         '3-5 cataratas diferentes',
         'Baño en pozas naturales',
-        'Almuerzo picnic',
+        'Guía especializado',
         'Nivel de dificultad adaptable'
       ]
     },
@@ -89,8 +89,8 @@ export default function Experiences() {
       description: 'Sumérgete en ecosistemas primarios donde la naturaleza ha evolucionado sin intervención humana. Árboles centenarios, orquídeas silvestres y biodiversidad impresionante.',
       image: '/images/exp-bosque.jpg',
       icon: Trees,
-      duration: '4-6 horas',
-      groupSize: '2-8 personas',
+      duration: '3-4 horas',
+      groupSize: '1-15 personas',
       location: 'Bosques primarios',
       highlights: [
         'Bosque primario milenario',
@@ -105,7 +105,7 @@ export default function Experiences() {
       image: '/images/exp-naturalista.jpg',
       icon: MapPin,
       duration: '3-4 horas',
-      groupSize: '2-12 personas',
+      groupSize: '1-15 personas',
       location: 'Senderos locales',
       highlights: [
         'Enfoque educativo',
@@ -116,11 +116,11 @@ export default function Experiences() {
     },
     {
       title: 'Cocina Típica Costarricense',
-      description: 'Aprende a preparar platillos tradicionales costarricenses con ingredientes locales y técnicas ancestrales. Una experiencia gastronómica auténtica.',
+      description: 'Aprende a preparar platillos tradicionales costarricenses con ingredientes locales y técnicas campesinas. Una experiencia gastronómica auténtica.',
       image: '/images/exp-cocina.jpg',
       icon: UtensilsCrossed,
       duration: '3-4 horas',
-      groupSize: '2-8 personas',
+      groupSize: '1-15 personas',
       location: 'Finca local',
       highlights: [
         'Ingredientes 100% locales',
