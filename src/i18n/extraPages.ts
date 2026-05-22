@@ -230,13 +230,13 @@ const pagesEn = {
     },
     storyTitle: 'Our story',
     storyP1:
-      'Wild Path was born from a deep love for Costa Rica’s nature and a desire to share it authentically and responsibly.',
+      'Mambo is the nickname of Daniel Sibaja and Isaac Sánchez (known as Canito). They met in 2014 at the University of Costa Rica while studying Ecotourism and began talking about creating a tourism company that would leave a positive impact on rural communities.',
     storyP2:
-      'After years in mass tourism, we felt something was missing: the genuine connection between traveler and place. Generic tours didn’t let people experience the real Costa Rica.',
+      'Their aim is to always support local entrepreneurial families and to visit places that stand out for their beauty and authenticity. Rooted in deep knowledge of the local environment, their passion is to share the secrets of Costa Rica’s flora and fauna.',
     storyP3:
-      'We created Wild Path to design 100% personalized itineraries where every detail reflects each traveler’s interests, pace, and dreams.',
+      'They find joy in creating new connections with travelers—many of whom become friends—and they design each experience to be unique, personal, and tailored to guests’ preferences.',
     storyP4:
-      'Today every itinerary is a close collaboration between our team and you. We don’t sell prefabricated packages—we design unique adventures that change how people see the world.',
+      'Our values include community support through environmental education, collaboration with protected areas, showcasing the hidden Costa Rica, and empowering local entrepreneurs by connecting travelers with authentic local activities.',
     teamAlt: 'Wild Path team',
     valuesBadge: 'WHAT DEFINES US',
     valuesTitle: 'Our values',
@@ -638,13 +638,13 @@ const pagesEs = {
     },
     storyTitle: 'Nuestra Historia',
     storyP1:
-      'Wild Path nació de una profunda conexión con la naturaleza costarricense y el deseo de compartirla de manera auténtica y responsable.',
+      'Mambo es el apodo de Daniel Sibaja e Isaac Sánchez (conocido como Canito). Se conocieron en 2014 en la Universidad de Costa Rica mientras estudiaban Turismo Ecológico y hablaron sobre crear una empresa de turismo que dejara un impacto positivo en las comunidades rurales.',
     storyP2:
-      'Después de años trabajando en turismo masivo, nos dimos cuenta de que algo importante se había perdido: la conexión genuina entre el viajero y el destino. Los tours genéricos no permitían a las personas experimentar la verdadera esencia de Costa Rica.',
+      'Su objetivo es apoyar siempre a las familias emprendedoras locales y visitar lugares que destacan por su belleza y autenticidad. Basados en un profundo conocimiento del entorno local, su pasión es compartir los secretos de la flora y fauna de Costa Rica.',
     storyP3:
-      'Por eso creamos Wild Path: para diseñar experiencias 100% personalizadas donde cada detalle refleja los intereses, el ritmo y los sueños de cada viajero.',
+      'Disfrutan creando nuevas conexiones con los viajeros—que muchas veces se convierten en amigos—y diseñan cada experiencia para que sea única, personal y adaptada a las preferencias de los huéspedes.',
     storyP4:
-      'Hoy, cada itinerario que creamos es una colaboración íntima entre nuestro equipo y el viajero. No vendemos paquetes prefabricados. Diseñamos aventuras únicas que transforman la forma en que las personas ven y experimentan el mundo.',
+      'Nuestros valores incluyen el apoyo a la comunidad mediante la educación ambiental, la colaboración con las áreas protegidas, mostrar la Costa Rica escondida y empoderar a los emprendedores locales conectando viajeros con actividades auténticas.',
     teamAlt: 'Equipo Wild Path',
     valuesBadge: 'LO QUE NOS DEFINE',
     valuesTitle: 'Nuestros Valores',
