@@ -165,12 +165,45 @@
   "testimonials": {
     "badge": "TESTIMONIOS",
     "title": "Lo que dicen nuestros viajeros",
-    "cta": "Ver más testimonios"
+    "cta": "Ver más testimonios",
+    "items": [
+      {
+        "name": "Josh rowley",
+        "location": "Costa Rica",
+        "trip": "Tour Personalizado",
+        "text": "¡Tuvimos una experiencia increíble explorando Costa Rica con Isaak como nuestro guía! Es increíblemente conocedor del país, su cultura y, especialmente, la vida silvestre. Durante el recorrido, pudo detectar animales que habríamos pasado por alto por completo por nuestra cuenta y explicó todo de una manera tan interesante. Isaak también fue muy amable, profesional y hizo que todos se sintieran cómodos desde el principio. Su pasión por Costa Rica realmente se nota, e hizo que toda la experiencia fuera inolvidable. Si buscas un guía informativo, divertido y que realmente se preocupe por brindarte la mejor experiencia posible, recomiendo encarecidamente a Isaak. ¡5 estrellas sin duda!"
+      },
+      {
+        "name": "Tonya Bryant",
+        "location": "Costa Rica",
+        "trip": "Tour Personalizado",
+        "text": "Las palabras no pueden expresar lo agradecida que estoy por haber tenido esta experiencia turística con Daniel. Al conocerlo, se nota inmediatamente que es tremendamente apasionado y conocedor de lo que hace. Nunca sintió que esto fuera solo un trabajo para él. Tiene un gran espíritu y me encantó el conocimiento que compartió sobre el hermoso país de Costa Rica. Fue tan considerado y respondió a los millones de preguntas que tuve incluso la noche anterior al tour. Fue muy paciente y flexible al ayudarme a decidir qué quería hacer y fue muy complaciente con mis necesidades. Mi tour fue personalizado a lo que yo quería hacer y no fue un tour genérico donde tienes que hacer algunas cosas que no te interesaban. Hicimos kayak en el hermoso lago de Río Cuarto, comimos en un restaurante local que fue increíble y fuimos a unas excelentes aguas termales y también nos sentamos en el río en las aguas termales. También mencioné casualmente que deseaba poder ver un perezoso en este viaje y, para mi sorpresa, más tarde me preguntó si quería buscar algunos mientras pasábamos en coche por un árbol. ¡Estaba tan emocionada de ver uno en la “naturaleza” y no en una reserva! Aprendí mucho sobre Costa Rica, desde el medio ambiente, la gente, la vida silvestre, hasta la agricultura e incluso obtuve ayuda para fortalecer mis pobres habilidades en español, jajaja. Cada vez que quería una foto, él estaba feliz de tomarlas. Me encantó que pudiera ir a las áreas de La Fortuna y Arenal, pero también tenía opciones para explorar los lugares menos turísticos como Bocas del Toro y las áreas y ciudades circundantes porque estas áreas también merecen nuestro amor y atención. Siempre estaré agradecida por nuestro tour y su amabilidad. Ser una mujer que viaja sola suele ser estresante, pero nunca me sentí insegura ni incómoda. Fue tan acogedor y estoy muy feliz de haber decidido arriesgarme y reservar con él en mi último día completo en Costa Rica. Fue realmente mágico. ¡Puedo decir sin duda que Daniel fue el mejor guía turístico con el que he viajado y lo recomendaría a cualquiera que conozca! ¡Gracias por los recuerdos para toda la vida! ¡Pura Vida! Todo lo mejor, Tonya"
+      },
+      {
+        "name": "Javier Rodriguez",
+        "location": "Costa Rica",
+        "trip": "Tour de Fotografía de Naturaleza",
+        "text": "Isaac es un guía turístico excepcional, cuyo amor por la naturaleza y profunda conciencia ambiental hacen que cada viaje sea inolvidable. Su pasión por el aire libre es contagiosa. Le encanta educar a los visitantes sobre los ecosistemas locales, los esfuerzos de conservación y las prácticas de viaje sostenible. Isaac se asegura de que la experiencia no solo sea agradable, sino también informativa y respetuosa con la naturaleza. Su compromiso con la protección del medio ambiente se refleja en cada detalle, haciendo que los tours sean tanto ecológicos como enriquecedores. Muy recomendado para cualquiera que busque conectar con la naturaleza a un nivel más profundo mientras contribuye a su preservación."
+      },
+      {
+        "name": "Tina Hof",
+        "location": "Costa Rica",
+        "trip": "Tour Personalizado",
+        "text": "¡Isaac es simplemente el mejor! Sus tours están llenos de información interesante sobre el país, la naturaleza y, por supuesto, también la gente. Aprendí mucho de él y reservaría más tours con él en el futuro en cualquier momento. Simplemente puedes ver su pasión y eso es muy simpático."
+      },
+      {
+        "name": "Gerald Quirós.",
+        "location": "Costa Rica",
+        "trip": "Bajos del Toro",
+        "text": "Una de las mejores experiencias en Bajos del Toro, Isaac nos ayudó a conectar con la naturaleza, encontrando \"lifers\" 🦜 caminando por este hermoso bosque, ¡¡altamente recomendado!!"
+      }
+    ]
   },
   "reviews": {
     "title": "Lo que dicen sobre nosotros",
     "google": "Reviews de Google",
-    "tripadvisor": "Reviews de TripAdvisor"
+    "tripadvisor": "Reviews de TripAdvisor",
+    "badge": "REVIEWS"
   },
   "footer": {
     "description": "Experiencias personalizadas en Costa Rica. Diseñamos tu aventura perfecta, paso a paso.",

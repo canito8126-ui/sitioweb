@@ -3,13 +3,15 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { 
-  Phone, 
-  Map, 
-  Compass, 
+import {
+  Phone,
+  Map,
+  Compass,
   ArrowRight,
   Calendar,
-  CheckCircle2
+  CheckCircle2,
+  Quote,
+  Star
 } from 'lucide-react'
 import ReviewWidgets from '../components/ReviewWidgets'
 
@@ -23,16 +25,16 @@ export default function Home() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Hero animations
-      gsap.fromTo('.hero-content', 
-        { y: 60, opacity: 0 }, 
+      gsap.fromTo('.hero-content',
+        { y: 60, opacity: 0 },
         { y: 0, opacity: 1, duration: 1, ease: 'power3.out', delay: 0.3 }
       )
 
       // Process section
       gsap.utils.toArray<HTMLElement>('.process-step').forEach((step, i) => {
-        gsap.fromTo(step, 
-          { y: 50, opacity: 0 }, 
-          { 
+        gsap.fromTo(step,
+          { y: 50, opacity: 0 },
+          {
             y: 0, opacity: 1, duration: 0.8, ease: 'power3.out',
             scrollTrigger: {
               trigger: step,
@@ -46,9 +48,9 @@ export default function Home() {
 
       // Experience cards
       gsap.utils.toArray<HTMLElement>('.exp-card').forEach((card, i) => {
-        gsap.fromTo(card, 
-          { y: 40, opacity: 0 }, 
-          { 
+        gsap.fromTo(card,
+          { y: 40, opacity: 0 },
+          {
             y: 0, opacity: 1, duration: 0.6, ease: 'power3.out',
             scrollTrigger: {
               trigger: card,
@@ -118,9 +120,9 @@ export default function Home() {
       <section ref={heroRef} className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src="/images/hero-montana-playa.jpg" 
-            alt={t('home.heroAltMountain')} 
+          <img
+            src="/images/hero-montana-playa.jpg"
+            alt={t('home.heroAltMountain')}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-wp-forest/60 via-wp-forest/30 to-wp-forest/70" />
@@ -144,8 +146,8 @@ export default function Home() {
               {t('hero.ctaPrimary')}
               <ArrowRight size={18} className="inline ml-2" />
             </Link>
-            <Link 
-              to="/experiencias" 
+            <Link
+              to="/experiencias"
               className="px-8 py-4 border border-white/30 text-white font-display font-semibold text-sm tracking-wide hover:bg-white/10 transition-colors"
             >
               {t('hero.ctaSecondary')}
@@ -180,7 +182,7 @@ export default function Home() {
           {/* Process Steps */}
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
             {processSteps.map((step, index) => (
-              <div 
+              <div
                 key={step.number}
                 className="process-step relative bg-white p-8 lg:p-10 shadow-card hover:shadow-hover transition-shadow"
               >
@@ -246,7 +248,7 @@ export default function Home() {
                 {t('dayExperiences.title')}
               </h2>
             </div>
-            <Link 
+            <Link
               to="/experiencias"
               className="text-white/70 hover:text-wp-yellow transition-colors mt-4 lg:mt-0 flex items-center gap-2"
             >
@@ -258,13 +260,13 @@ export default function Home() {
           {/* Experience Cards */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {dayExperiences.map((exp, index) => (
-              <div 
+              <div
                 key={index}
                 className="exp-card group relative overflow-hidden cursor-pointer"
               >
                 <div className="aspect-[3/4] overflow-hidden">
-                  <img 
-                    src={exp.image} 
+                  <img
+                    src={exp.image}
                     alt={exp.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -289,25 +291,56 @@ export default function Home() {
 
       {/* Testimonials Preview */}
       <section className="py-24 lg:py-32 px-6 lg:px-12 bg-wp-cream">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="micro-label text-wp-yellow mb-4 tracking-[0.15em]">
-            {t('testimonials.badge')}
-          </p>
-          <h2 className="headline-lg text-wp-forest mb-12">
-            {t('testimonials.title')}
-          </h2>
-
-          <div className="bg-white p-8 lg:p-12 shadow-card">
-            <p className="text-xl lg:text-2xl text-wp-forest italic mb-8 leading-relaxed">
-              &ldquo;{t('home.previewQuote')}&rdquo;
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="micro-label text-wp-yellow mb-4 tracking-[0.15em]">
+              {t('testimonials.badge')}
             </p>
-            <div>
-              <p className="font-display font-semibold text-wp-forest">{t('home.previewAuthor')}</p>
-              <p className="text-graytext text-sm">{t('home.previewMeta')}</p>
-            </div>
+            <h2 className="headline-lg text-wp-forest mb-6">
+              {t('testimonials.title')}
+            </h2>
           </div>
 
-          <Link 
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {(t('testimonials.items', { returnObjects: true }) as any[])
+              .slice(0, 3)
+              .map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="testimonial-card bg-white p-8 shadow-card hover:shadow-hover transition-shadow"
+                >
+                  <Quote size={32} className="text-wp-yellow/30 mb-6" />
+
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} size={16} className="text-wp-yellow fill-wp-yellow" />
+                    ))}
+                  </div>
+
+                  <p className="body-text text-wp-forest mb-6 leading-relaxed">
+                    &ldquo;{testimonial.text}&rdquo;
+                  </p>
+
+                  <div className="flex items-center gap-4 pt-6 border-t border-wp-forest/10">
+                    <div className="w-12 h-12 bg-wp-green/20 rounded-full flex items-center justify-center">
+                      <span className="font-display font-bold text-wp-forest">
+                        {testimonial.name.charAt(0)}
+                      </span>
+                    </div>
+                    <div>
+                      <p className="font-display font-semibold text-wp-forest">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-sm text-graytext">
+                        {testimonial.location} · {testimonial.trip}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+          </div>
+
+          <Link
             to="/testimonios"
             className="inline-flex items-center gap-2 text-wp-yellow font-medium mt-8 hover:underline"
           >
@@ -320,9 +353,9 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-24 lg:py-32 px-6 lg:px-12 relative overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="/images/cta-naturaleza.jpg" 
-            alt={t('home.heroAltCta')} 
+          <img
+            src="/images/cta-naturaleza.jpg"
+            alt={t('home.heroAltCta')}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-wp-forest/80" />
@@ -336,7 +369,7 @@ export default function Home() {
             {t('home.ctaSubtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="https://wa.me/50689857750"
               target="_blank"
               rel="noopener noreferrer"

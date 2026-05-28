@@ -31,7 +31,7 @@
     "step2": {
       "number": "02",
       "title": "Personalized Proposal",
-      "description": "We create a 100% customized itinerary draft adapted to your interests. We adjust it as many times as necessary until it's perfect.",
+      "description": "We create a 100% customized itinerary draft adapted to your interests. We adjust it as many times as necessary until it\"s perfect.",
       "details": ["Tailor-made itinerary", "Unlimited adjustments", "Adapted to your pace", "Clear budget"]
     },
     "step3": {
@@ -44,7 +44,7 @@
   },
   "map": {
     "title": "Explore Costa Rica by Province",
-    "subtitle": "Select the provinces you're interested in visiting and we'll design your ideal route",
+    "subtitle": "Select the provinces you\"re interested in visiting and we\"ll design your ideal route",
     "selected": "Selected provinces:",
     "cta": "DESIGN MY CUSTOM ROUTE"
   },
@@ -146,7 +146,7 @@
       "photography": {
         "title": "Nature Photography",
         "duration": "9 days",
-        "description": "The best spots to capture Costa Rica's biodiversity.",
+        "description": "The best spots to capture Costa Rica\"s biodiversity.",
         "highlights": [
           "Best light windows for photos",
           "Local photographer hideouts",
@@ -165,12 +165,45 @@
   "testimonials": {
     "badge": "TESTIMONIALS",
     "title": "What our travelers say",
-    "cta": "View more testimonials"
+    "cta": "View more testimonials",
+    "items": [
+      {
+        "name": "Josh rowley",
+        "location": "Costa Rica",
+        "trip": "Custom Tour",
+        "text": "We had an amazing experience exploring Costa Rica with Isaak as our tour guide! He is incredibly knowledgeable about the country, its culture, and especially the wildlife. Throughout the tour he was able to spot animals we would have completely missed on our own and explained everything in such an interesting way.Isaak was also very friendly, professional, and made everyone feel comfortable from the start. His passion for Costa Rica really shows, and it made the whole experience unforgettable. If you’re looking for a guide who is informative, fun, and genuinely cares about giving you the best experience possible, I highly recommend Isaak. 5 stars without a doubt!"
+      },
+      {
+        "name": "Tonya Bryant",
+        "location": "Costa Rica",
+        "trip": "Custom Tour",
+        "text": "Words can’t express how grateful I am to have had this tour experience with Daniel. Upon meeting him you can immediately tell he is tremendously passionate and knowledgeable about what he does! It never felt like this was just a job for him. He has a great spirit and I loved the knowledge he shared about the beautiful country of Costa Rica! He was sooo considerate and answered all the million questions I had even on the night before the tour. He was very patient and flexible in helping me decide on what I wanted to do and was very accommodating to my tour needs. My tour was personalized to what I wanted to do and was not a generic type of tour where you have to do some things you weren’t interested in. We went kayaking in the beautiful lake of Rio Cuarto, ate a local restaurant that was amazing and went to a great thermal springs and got to sit in the river as well at the thermal springs. I also casually mentioned wishing I could see a sloth on this trip and to my surprise he later asked if I wanted to look for some as we drove past a tree. I was so excited to actually see one in the “wild” and not at a reserve! I learned so much about Costa Rica, from the environment, the people, the wildlife, to the agricultural and even got help strengthening my poor Spanish skills lol. Anytime I wanted a picture he was happy to take them.I loved that he was able to go to La Fortuna and Arenal areas but also had options to explore the less touristy places like Bocas Del Toro and surrounding areas and cities because these areas deserve our love and attention too.I’m forever grateful for our tour and his kindness. Being a solo female traveler is usually nerve wrecking but I never felt unsafe and never felt uncomfortable.  He was so welcoming and I’m so happy I decided to take a chance and book with him on my last full day in Costa Rica. It was truly magical. I can without a doubt say Daniel was the best tour guide I’ve ever traveled with and I would recommend his company to anyone I ever encounter! Thank you for the lifelong memories! Pura Vida!All the best,Tonya"
+      },
+      {
+        "name": "Javier Rodriguez",
+        "location": "Costa Rica",
+        "trip": "Nature Photography Tour",
+        "text": "Isaac is an exceptional tour guide, whose love for nature and deep environmental consciousness make every journey unforgettable. His passion for the outdoors is contagious. He just loves to educate visitors about local ecosystems, conservation efforts, and sustainable travel practices. Isaac ensures the experience is not only enjoyable but also informative and respectful of nature. His commitment to protecting the environment shines through in every detail, making the tours both eco-friendly and enriching. Highly recommended for anyone looking to connect with nature on a deeper level while contributing to its preservation."
+      },
+      {
+        "name": "Tina Hof",
+        "location": "Costa Rica",
+        "trip": "Custom Tour",
+        "text": "Isaac is simply the best! His tours are full of interesting information about the country, the nature and of course also the people. I learned a lot from him and would book more tours anytime with him in the future. You can just see his passion and that\"s very sympathetic"
+      },
+      {
+        "name": "Gerald Quirós.",
+        "location": "Costa Rica",
+        "trip": "Bajos del Toro",
+        "text": "One of the best experiences in Bajos del Toro, Issac helped us to connect with the nature, finding lifers 🦜 walking around this beautiful forest, highly recommended!!"
+      }
+    ]
   },
   "reviews": {
     "title": "What they say about us",
     "google": "Google Reviews",
-    "tripadvisor": "TripAdvisor Reviews"
+    "tripadvisor": "TripAdvisor Reviews",
+    "badge": "REVIEWS"
   },
   "footer": {
     "description": "Personalized experiences in Costa Rica. We design your perfect adventure, step by step.",
