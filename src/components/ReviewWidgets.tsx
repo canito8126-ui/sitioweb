@@ -2,9 +2,6 @@ import { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Star } from 'lucide-react';
 
-type GoogleReview = { name: string; rating: number; text: string; date: string };
-type TripReview = { name: string; rating: number; title: string; text: string; date: string };
-
 const ALL_REVIEWS = [
   {
     name: "Josh rowley",
