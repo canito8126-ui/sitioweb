@@ -215,12 +215,126 @@ const ALL_REVIEWS = [
   }
 ];
 
+const TRIPADVISOR_REVIEWS = [
+  {
+    name: "Karla",
+    location: "Puerto Rico",
+    rating: 5,
+    date: { en: "Oct 2025", es: "Oct 2025" },
+    title: { en: "Spectacular adventure", es: "Aventura espectacular" },
+    review: {
+      en: "Back to the Canyon is an unrivalled Fall. Junior, our guide to Toro Amarillo 360 Ecotours was excellent; he gave us clear details and suggestions, always looked after our safety and shared much knowledge of the ecosystem. It is definitely a tour I recommend doing.",
+      es: "Vuelta al Cañón es una caída inigualable. Junior, nuestro guía de Toro Amarillo 360 Ecotours fue excelente; nos dio detalles claros y sugerencias, siempre veló por nuestra seguridad y compartió mucho conocimiento del ecosistema. Definitivamente es un tour que recomiendo hacer."
+    }
+  },
+  {
+    name: "dennib88",
+    location: "Charlotte, North Carolina",
+    rating: 5,
+    date: { en: "Sep 2025", es: "Sep 2025" },
+    title: { en: "Best tour ever!!", es: "¡El mejor tour de todos!" },
+    review: {
+      en: "Words can’t express how grateful I am to have had this tour experience with Daniel. Upon meeting him you can immediately tell he is tremendously passionate and knowledgeable about what he does! It never felt like this was just a job for him. He has a great spirit and I loved the knowledge he shared about the beautiful country of Costa Rica! He was sooo considerate and answered all the million questions I had even on the night before the tour. He was very patient and flexible in helping me decide on what I wanted to do and was very accommodating to my tour needs.",
+      es: "¡Las palabras no pueden expresar lo agradecida que estoy de haber tenido esta experiencia de tour con Daniel! Al conocerlo, te das cuenta inmediatamente de que es sumamente apasionado y conocedor de lo que hace. Nunca se sintió como si esto fuera solo un trabajo para él. ¡Tiene un gran espíritu y me encantó el conocimiento que compartió sobre el hermoso país de Costa Rica! Fue tan considerado y respondió a todas las millones de preguntas que tuve, incluso la noche antes del tour. Fue muy paciente y flexible para ayudarme a decidir qué quería hacer y se adaptó mucho a mis necesidades."
+    }
+  },
+  {
+    name: "Tonya",
+    location: "United States",
+    rating: 5,
+    date: { en: "Aug 2025", es: "Ago 2025" },
+    title: { en: "Hiking Vuelta Del Cañon w. Isaac", es: "Senderismo en Vuelta del Cañón con Isaac" },
+    review: {
+      en: "My husband & I booked a hike to Vuelta del Cañon Waterfall with Isaac and it was one of the highlights of our trip to CR! Isaac was an incredible guide, very knowledgeable about Costa Rican culture, history, plants, and wildlife. You can tell he is truly passionate about what he does, and that passion made the experience so much richer. The hike itself was beautiful and adventurous, with a mix of muddy paths, rocky spots, and multiple river crossings. It’s not overly steep, but you do have to go up and down multiple rocky areas. We would call it mildly difficult and best for those in decent shape. The reward at the end is absolutely worth the effort! If you choose to do this hike, definitely invest in some water hiking shoes such as Keens, and high quality quick drying hiking pants & shirt. While you could technically do the trail on your own, going with Isaac turned it into a memorable, meaningful, and fun experience. Highly recommend!",
+      es: "¡Mi esposo y yo reservamos una caminata a la catarata Vuelta del Cañón con Isaac y fue uno de los puntos culminantes de nuestro viaje a CR! Isaac fue un guía increíble, con mucho conocimiento sobre la cultura, historia, plantas y vida silvestre de Costa Rica. Se nota que es verdaderamente apasionado por lo que hace, y esa pasión hizo que la experiencia fuera mucho más enriquecedora. La caminata en sí fue hermosa y aventurera, con una mezcla de senderos embarrados, tramos rocosos y múltiples cruces de ríos. No es excesivamente empinada, pero tienes que subir y bajar varias zonas rocosas. Diríamos que es de dificultad moderada y ideal para personas en buena forma física. ¡La recompensa al final vale absolutamente el esfuerzo! Si eliges hacer esta caminata, definitivamente invierte en zapatos para agua como Keens y pantalones y camisa de senderismo de alta calidad y secado rápido. Aunque técnicamente podrías hacer el sendero por tu cuenta, ir con Isaac lo convirtió en una experiencia memorable, significativa y divertida. ¡Muy recomendado!"
+    }
+  },
+  {
+    name: "Gustavo A",
+    location: "Costa Rica",
+    rating: 5,
+    date: { en: "Oct 2024", es: "Oct 2024" },
+    title: { en: "Nice experience overall", es: "Buena experiencia en general" },
+    review: {
+      en: "It was a great experience, we liked that it was according to our way to enjoy nature and that we were able to go with our dog!",
+      es: "Fue una gran experiencia, ¡nos gustó que se adaptara a nuestra manera de disfrutar de la naturaleza y que pudiéramos ir con nuestra perrita!"
+    }
+  },
+  {
+    name: "Kelsey H",
+    location: "United States",
+    rating: 5,
+    date: { en: "Mar 2024", es: "Mar 2024" },
+    title: { en: "Great Family excursion", es: "Gran excursión familiar" },
+    review: {
+      en: "We went as a family of 3, one 4 year old. Our tour guide Randy was great and very knowledgeable! We had a great time and the waterfall is beautiful. Lunch was also delicious!",
+      es: "Fuimos en familia de 3, con un niño de 4 años. ¡Nuestro guía turístico Randy fue genial y muy conocedor! La pasamos súper bien y la catarata es hermosa. ¡El almuerzo también estuvo delicioso!"
+    }
+  },
+  {
+    name: "Barry K",
+    location: "San Jose, Costa Rica",
+    rating: 5,
+    date: { en: "Feb 2024", es: "Feb 2024" },
+    title: { en: "Great!!", es: "¡Excelente!" },
+    review: {
+      en: "The tour we had with Randy Lopez from Wild Path Tours was fantastic!! We are an active couple in our very late 60’s. He’s a local guide, was very informative with birds, and sounds and just all the nature around us. The views and sounds of the waterfall were magnificent, swimming underneath the falls was a great experience. Lunch was wonderful also. We met one of the family members that owned the property.",
+      es: "¡El tour que tuvimos con Randy López de Wild Path Tours fue fantástico! Somos una pareja activa a finales de nuestros 60 años. Es un guía local, fue muy informativo con las aves, los sonidos y toda la naturaleza a nuestro alrededor. Las vistas y los sonidos de la catarata fueron magníficos, nadar debajo de las caídas fue una gran experiencia. El almuerzo también fue maravilloso. Conocimos a uno de los miembros de la familia que es dueña de la propiedad."
+    }
+  },
+  {
+    name: "Peter M",
+    location: "Villach, Austria",
+    rating: 5,
+    date: { en: "Feb 2024", es: "Feb 2024" },
+    title: { en: "Best contact to plan your individual trip to Costa Rica", es: "El mejor contacto para planear tu viaje individual a Costa Rica" },
+    review: {
+      en: "First of all, this is the best contact to plan your individual trip to Costa Rica. I met Issac by chance and after a few WhatsApp messages we arranged a call to plan our trip to Costa Rica together. Thanks to his expertise, I was able to plan a trip that was perfect for us. Issac listened to my suggestions and together we made the best of them. He also answered other open questions quickly and easily afterwards and gave us further useful suggestions. Now we are looking forward to the trip and hope to maybe meet Issac since our chosen places are not near him. Keep you updated. Pura Vida, Tina & Peter",
+      es: "En primer lugar, este es el mejor contacto para planear tu viaje individual a Costa Rica. Conocí a Isaac por casualidad y después de unos mensajes de WhatsApp organizamos una llamada para planificar juntos nuestro viaje a Costa Rica. Gracias a su experiencia, pude planificar un viaje perfecto para nosotros. Isaac escuchó mis sugerencias y juntos logramos lo mejor de ellas. También respondió a otras preguntas abiertas de forma rápida y sencilla después, y nos dio más sugerencias útiles. Ahora estamos deseando que llegue el viaje y esperamos tal vez encontrarnos con Isaac ya que nuestros lugares elegidos no están cerca de él. Los mantendré informados. Pura Vida, Tina y Peter"
+    }
+  },
+  {
+    name: "Anja F",
+    location: "Germany",
+    rating: 5,
+    date: { en: "Dec 2023", es: "Dic 2023" },
+    title: { en: "Our best experience in Costa Rica!", es: "¡Nuestra mejor experiencia en Costa Rica!" },
+    review: {
+      en: "This trip was truly amazing, I cannot put it into words what a great experience it was. Randy and Isaac are great guides and know so much about the surrounding nature that we learned as much as we could during the trip. It was important to them that we don't just see the animals and plants, but also understand the unique ecosystems and the connection to the local community and culture. We truly felt connected with rich nature of Costa Rica. In addition, they didn't sugar coat the issues costa rican nature is facing today, which gave us precious insights.",
+      es: "Este viaje fue verdaderamente increíble, no puedo expresar con palabras la gran experiencia que fue. Randy e Isaac son guías excelentes y conocen tanto sobre la naturaleza circundante que aprendimos todo lo que pudimos durante el viaje. Para ellos era importante que no solo viéramos los animales y las plantas, sino que también comprendiéramos los ecosistemas únicos y la conexión con la comunidad local y la cultura. Realmente nos sentimos conectados con la rica naturaleza de Costa Rica. Además, no endulzaron los problemas que enfrenta la naturaleza costarricense hoy en día, lo que nos dio valiosas ideas."
+    }
+  },
+  {
+    name: "Eva O",
+    location: "Germany",
+    rating: 5,
+    date: { en: "Dec 2023", es: "Dic 2023" },
+    title: { en: "What a way to make memories", es: "Qué manera de crear recuerdos" },
+    review: {
+      en: "Thanks so much for this incredible experience! Isaac and Randy were amazing for listening to us and then focusing the tour according to our wishes. We had the opportunity to stay a few nights in Tinamaste with a lovely family and visited some wild ranging sloths, a huuge tree and the local organic farm. As real locals and experienced guides they knew everything we could ask for and we learned a lot. In addition, we had the best food prepared by Randy’s brother and mother. On one occasion we even helped making Tacos.",
+      es: "¡Muchas gracias por esta increíble experiencia! Isaac y Randy fueron increíbles para escucharnos y luego enfocar el tour de acuerdo a nuestros deseos. Tuvimos la oportunidad de hospedarnos unas noches en Tinamaste con una familia encantadora y visitamos algunos perezosos en libertad, un árbol enorme y la finca orgánica local. Como verdaderos locales y guías experimentados, sabían todo lo que podíamos pedir y aprendimos mucho. Además, tuvimos la mejor comida preparada por la madre y el hermano de Randy. En una ocasión incluso ayudamos a hacer tacos."
+    }
+  },
+  {
+    name: "Excursion to the waterfall",
+    location: "Unknown",
+    rating: 5,
+    date: { en: "Sep 2023", es: "Sep 2023" },
+    title: { en: "Excursion to the waterfall", es: "Excursión a la catarata" },
+    review: {
+      en: "A great experience that we recommend to those who do not want mass tourism. You see what Costa Rica is really like and you can see places you would never imagine.",
+      es: "Una gran experiencia que recomendamos a quienes no quieren turismo de masas. Ves cómo es Costa Rica realmente y puedes ver lugares que nunca imaginarías."
+    }
+  }
+];
+
 const ReviewWidgets = () => {
   const { t, i18n } = useTranslation();
   const locale: 'en' | 'es' = i18n.language.startsWith('en') ? 'en' : 'es';
 
   // Filter reviews to display only a subset on the homepage
   const displayedReviews = useMemo(() => ALL_REVIEWS.slice(0, 5), []); // Display first 5 reviews
+  const displayedTripAdvisorReviews = useMemo(() => TRIPADVISOR_REVIEWS.slice(0, 5), []);
 
   useEffect(() => {
     // Remove Sociablekit and TripAdvisor scripts as we're using custom reviews
@@ -337,8 +451,36 @@ const ReviewWidgets = () => {
               </div>
             </div>
 
-            <div className="flex-grow flex items-center justify-center text-graytext/70 italic">
-              {locale === 'en' ? 'TripAdvisor reviews coming soon' : 'Reseñas de TripAdvisor pronto'}
+            <div className="flex-grow overflow-y-auto pr-4 custom-scrollbar">
+              {displayedTripAdvisorReviews.map((review, index) => (
+                <div key={index} className="border-b border-gray-100 pb-4 mb-4 last:border-0 last:pb-0">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-8 h-8 bg-[#00AF87]/10 rounded-full flex items-center justify-center">
+                      <span className="text-[#00AF87] font-bold text-sm">
+                        {review.name.charAt(0)}
+                      </span>
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <p className="font-medium text-wp-forest text-sm">{review.name}</p>
+                        {review.location !== "Unknown" && (
+                          <span className="text-graytext/60 text-[10px]">{review.location}</span>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <div className="flex">
+                          {[...Array(review.rating)].map((_, i) => (
+                            <span key={i} className="w-2 h-2 bg-[#00AF87] rounded-full inline-block mr-0.5" />
+                          ))}
+                        </div>
+                        <span className="font-semibold text-wp-forest text-xs">{review.title[locale]}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-graytext text-sm line-clamp-3">{review.review[locale]}</p>
+                  <p className="text-graytext/60 text-xs mt-1">{review.date[locale]}</p>
+                </div>
+              ))}
             </div>
 
             <a 
