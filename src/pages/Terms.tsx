@@ -1,7 +1,15 @@
 import { useTranslation } from 'react-i18next'
+import useSeo from '../hooks/useSeo'
 
 export default function Terms() {
   const { t } = useTranslation()
+
+  useSeo({
+    title: t('pages.terms.title'),
+    description: t('pages.terms.s1p1'),
+    image: 'https://wildpath.lat/images/logo-wildpath.png',
+    canonicalPath: '/terminos',
+  })
   const s2li = t('pages.terms.s2li', { returnObjects: true }) as string[]
   const s3li = t('pages.terms.s3li', { returnObjects: true }) as string[]
   const s4li = t('pages.terms.s4li', { returnObjects: true }) as string[]

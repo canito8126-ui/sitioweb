@@ -3,11 +3,19 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useTranslation } from 'react-i18next'
 import { Star, Quote } from 'lucide-react'
+import useSeo from '../hooks/useSeo'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Testimonials() {
   const { t } = useTranslation()
+
+  useSeo({
+    title: t('pages.testimonials.hero.title'),
+    description: t('pages.testimonials.hero.subtitle'),
+    image: 'https://wildpath.lat/images/test-hero.jpg',
+    canonicalPath: '/testimonios',
+  })
 
   const stats = t('pages.testimonials.stats', { returnObjects: true }) as {
     number: string

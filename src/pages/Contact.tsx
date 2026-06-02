@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import useSeo from '../hooks/useSeo'
 import { 
   Phone, 
   Mail, 
@@ -17,6 +18,13 @@ const TikTokIcon = () => (
 
 export default function Contact() {
   const { t } = useTranslation()
+
+  useSeo({
+    title: t('pages.contact.hero.title'),
+    description: t('pages.contact.hero.subtitle'),
+    image: 'https://wildpath.lat/images/contact-hero.jpg',
+    canonicalPath: '/contacto',
+  })
 
   return (
     <div className="pt-24 lg:pt-32">

@@ -1,8 +1,18 @@
 import { useTranslation } from 'react-i18next'
+import useSeo from '../hooks/useSeo'
 
 export default function Cancellation() {
   const { i18n } = useTranslation()
   const isEs = i18n.language === 'es'
+
+  useSeo({
+    title: isEs ? 'Política de Cancelación y Reembolso' : 'Cancellation & Refund Policy',
+    description: isEs
+      ? 'Política de cancelación y reembolso para reservas en Costa Rica: tours de un día, itinerarios personalizados y programas en Latinoamérica.'
+      : 'Cancellation and refund policy for bookings in Costa Rica: day tours, tailored itineraries, and Latin America programs.',
+    image: 'https://wildpath.lat/images/logo-wildpath.png',
+    canonicalPath: '/cancelacion',
+  })
 
   /* ─── Shared helpers ─── */
   const Tag = ({ color, label }: { color: 'green' | 'amber' | 'red' | 'teal'; label: string }) => {

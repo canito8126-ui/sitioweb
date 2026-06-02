@@ -2,6 +2,7 @@ import { useEffect, useMemo } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useTranslation } from 'react-i18next'
+import useSeo from '../hooks/useSeo'
 import { 
   Leaf, 
   Heart, 
@@ -20,6 +21,13 @@ const COMMIT_KEYS = ['conservation', 'plastic'] as const
 
 export default function About() {
   const { t } = useTranslation()
+
+  useSeo({
+    title: t('pages.about.hero.title'),
+    description: t('pages.about.hero.subtitle'),
+    image: 'https://wildpath.lat/images/about-hero.jpg',
+    canonicalPath: '/nosotros',
+  })
 
   const values = useMemo(
     () =>

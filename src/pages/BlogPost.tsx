@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import useSeo from '../hooks/useSeo'
 import { 
   Calendar, 
   Clock, 
@@ -32,6 +33,14 @@ export default function BlogPost() {
       </div>
     )
   }
+
+  useSeo({
+    title: post.title,
+    description: post.excerpt ?? post.title,
+    image: post.image,
+    canonicalPath: `/blog/${slug}`,
+    keywords: post.tags?.join(', '),
+  })
 
   const related = BLOG_SLUG_ORDER.filter((k) => k !== slug)
     .slice(0, 2)

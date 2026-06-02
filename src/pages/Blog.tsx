@@ -10,11 +10,19 @@ import {
   User
 } from 'lucide-react'
 import { BLOG_SLUG_ORDER, getBlogPosts } from '../data/blogPosts'
+import useSeo from '../hooks/useSeo'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Blog() {
   const { t, i18n } = useTranslation()
+
+  useSeo({
+    title: t('pages.blog.hero.title'),
+    description: t('pages.blog.hero.subtitle'),
+    image: 'https://wildpath.lat/images/blog-hero.jpg',
+    canonicalPath: '/blog',
+  })
 
   const blogPosts = useMemo(() => {
     const posts = getBlogPosts(i18n.language)

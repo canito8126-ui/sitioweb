@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useTranslation } from 'react-i18next'
+import useSeo from '../hooks/useSeo'
 import { X, ZoomIn } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -23,6 +24,13 @@ const GALLERY_SRC = [
 
 export default function Gallery() {
   const { t } = useTranslation()
+
+  useSeo({
+    title: t('pages.gallery.hero.title'),
+    description: t('pages.gallery.hero.subtitle'),
+    image: 'https://wildpath.lat/images/gal-bosque.jpg',
+    canonicalPath: '/galeria',
+  })
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   const categories = t('pages.gallery.categories', { returnObjects: true }) as string[]

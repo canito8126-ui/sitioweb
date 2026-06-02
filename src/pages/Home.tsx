@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import useSeo from '../hooks/useSeo'
 import {
   Phone,
   Map,
@@ -19,6 +20,13 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
   const { t } = useTranslation()
+
+  useSeo({
+    title: `${t('hero.title1')} ${t('hero.title2')}`.replace(/\s+/g, ' ').trim(),
+    description: t('hero.subtitle'),
+    image: 'https://wildpath.lat/images/logo-wildpath.png',
+    canonicalPath: '/',
+  })
   const heroRef = useRef<HTMLDivElement>(null)
   const processRef = useRef<HTMLDivElement>(null)
   const experiencesRef = useRef<HTMLDivElement>(null)

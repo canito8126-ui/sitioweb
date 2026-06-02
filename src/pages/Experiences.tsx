@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import useSeo from '../hooks/useSeo'
 import { 
   Moon, 
   Bird, 
@@ -30,6 +31,13 @@ const EXP_META: { key: ExpKey; image: string; icon: typeof Moon }[] = [
 
 export default function Experiences() {
   const { t } = useTranslation()
+
+  useSeo({
+    title: t('pages.experiences.hero.title'),
+    description: t('pages.experiences.hero.subtitle'),
+    image: 'https://wildpath.lat/images/exp-bosque.jpg',
+    canonicalPath: '/experiencias',
+  })
 
   const experiences = useMemo(
     () =>

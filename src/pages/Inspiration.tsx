@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import useSeo from '../hooks/useSeo'
 import { 
   Mountain, 
   Binoculars, 
@@ -21,6 +22,13 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Inspiration() {
   const { t } = useTranslation()
+
+  useSeo({
+    title: t('inspiration.title'),
+    description: t('inspiration.subtitle'),
+    image: 'https://wildpath.lat/images/pkg-hero.jpg',
+    canonicalPath: '/inspiracion',
+  })
 
   useEffect(() => {
     const ctx = gsap.context(() => {
