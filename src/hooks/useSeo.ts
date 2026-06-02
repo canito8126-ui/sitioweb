@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 
 type SeoParams = {
   title: string
@@ -32,6 +32,11 @@ function upsertLinkTag(rel: string, href: string) {
   el.setAttribute('href', href)
 }
 
+function normalizeNonEmpty(value: string, fallback: string) {
+  const trimmed = value?.trim()
+  return trimmed && trimmed.length > 0 ? trimmed : fallback
+}
+
 export default function useSeo({
   title,
   description,
@@ -40,14 +45,20 @@ export default function useSeo({
   canonicalPath,
   keywords,
 }: SeoParams) {
-  useEffect(() => {
-    const prevTitle = document.title
+  useLayoutEffect(() => {
     const finalUrl = url ?? (canonicalPath ? new URL(canonicalPath, window.location.origin).toString() : window.location.href)
 
-    document.title = title
+    // Ensure non-empty values to avoid SEO “empty title/description/H1” mismatches.
+    const safeTitle = normalizeNonEmpty(title, 'Wild Path | Tailor-Made Travel Experiences in Costa Rica')
+    const safeDescription = normalizeNonEmpty(
+      description,
+      'Wild Path offers tailor-made travel in Costa Rica — private wildlife, waterfall & cloud forest tours in Bajos del Toro.'
+    )
+
+    document.title = safeTitle
 
     // Standard description
-    upsertMetaTag('name', 'description', description)
+    upsertMetaTag('name', 'description', safeDescription)
 
     // Keywords (optional, but cheap)
     if (keywords && keywords.trim().length > 0) {
@@ -60,20 +71,16 @@ export default function useSeo({
     }
 
     // Open Graph
-    if (title) upsertMetaTag('property', 'og:title', title)
-    if (description) upsertMetaTag('property', 'og:description', description)
+    upsertMetaTag('property', 'og:title', safeTitle)
+    upsertMetaTag('property', 'og:description', safeDescription)
     if (image) upsertMetaTag('property', 'og:image', image)
     if (finalUrl) upsertMetaTag('property', 'og:url', finalUrl)
     upsertMetaTag('property', 'og:type', 'website')
 
     // Twitter
-    if (title) upsertMetaTag('name', 'twitter:title', title)
-    if (description) upsertMetaTag('name', 'twitter:description', description)
+    upsertMetaTag('name', 'twitter:title', safeTitle)
+    upsertMetaTag('name', 'twitter:description', safeDescription)
     if (image) upsertMetaTag('name', 'twitter:image', image)
     upsertMetaTag('name', 'twitter:card', 'summary_large_image')
-
-    return () => {
-      document.title = prevTitle
-    }
   }, [title, description, url, image, canonicalPath, keywords])
 }
