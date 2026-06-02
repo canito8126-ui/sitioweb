@@ -11,12 +11,13 @@ import {
   Linkedin
 } from 'lucide-react'
 import { getBlogPosts, BLOG_SLUG_ORDER } from '../data/blogPosts'
+import type { BlogPostData } from '../data/blogPosts'
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>()
   const { t, i18n } = useTranslation()
 
-  const blogPosts = getBlogPosts(i18n.language)
+  const blogPosts: Record<string, BlogPostData> = getBlogPosts(i18n.language)
   const post = slug ? blogPosts[slug] : null
 
   if (!post) {
@@ -42,9 +43,10 @@ export default function BlogPost() {
     keywords: post.tags?.join(', '),
   })
 
-  const related = BLOG_SLUG_ORDER.filter((k) => k !== slug)
+  const related = BLOG_SLUG_ORDER
+    .filter((k: string) => k !== slug)
     .slice(0, 2)
-    .map((key) => ({ key, ...blogPosts[key] }))
+    .map((key: string) => ({ key, ...blogPosts[key] }))
 
   return (
     <div className="pt-24 lg:pt-32">
@@ -104,7 +106,7 @@ export default function BlogPost() {
 
           <div className="mt-12 pt-8 border-t border-wp-forest/10">
             <div className="flex flex-wrap gap-2">
-              {post.tags.map((tag) => (
+              {post.tags.map((tag: string) => (
                 <span 
                   key={tag}
                   className="bg-wp-cream text-wp-forest text-sm px-3 py-1 border border-wp-forest/20"
@@ -141,7 +143,7 @@ export default function BlogPost() {
             {t('pages.blogPost.related')}
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {related.map((relatedPost) => (
+            {related.map((relatedPost: { key: string } & BlogPostData) => (
               <Link 
                 key={relatedPost.key}
                 to={`/blog/${relatedPost.key}`}

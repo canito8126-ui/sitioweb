@@ -10,6 +10,7 @@ import {
   User
 } from 'lucide-react'
 import { BLOG_SLUG_ORDER, getBlogPosts } from '../data/blogPosts'
+import type { BlogPostData } from '../data/blogPosts'
 import useSeo from '../hooks/useSeo'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -24,9 +25,9 @@ export default function Blog() {
     canonicalPath: '/blog',
   })
 
-  const blogPosts = useMemo(() => {
+  const blogPosts = useMemo((): Array<{ slug: string } & BlogPostData> => {
     const posts = getBlogPosts(i18n.language)
-    return BLOG_SLUG_ORDER.map((slug) => ({
+    return BLOG_SLUG_ORDER.map((slug: string) => ({
       slug,
       ...posts[slug],
     }))
