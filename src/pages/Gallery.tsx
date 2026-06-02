@@ -22,6 +22,26 @@ const GALLERY_SRC = [
   '/images/gal-amanecer.jpg',
 ]
 
+function usePrefersReducedMotion() {
+  const [prefers, setPrefers] = useState(false)
+
+  useEffect(() => {
+    const mq = window.matchMedia?.('(prefers-reduced-motion: reduce)')
+    if (!mq) return
+    const update = () => setPrefers(!!mq.matches)
+    update()
+    // Safari fallback
+    if (typeof mq.addEventListener === 'function') {
+      mq.addEventListener('change', update)
+      return () => mq.removeEventListener('change', update)
+    }
+    mq.addListener(update)
+    return () => mq.removeListener(update)
+  }, [])
+
+  return prefers
+}
+
 export default function Gallery() {
   const { t } = useTranslation()
 
@@ -47,35 +67,50 @@ export default function Gallery() {
     [imageAlts, imageCategories]
   )
 
+  const prefersReducedMotion = usePrefersReducedMotion()
+
   useEffect(() => {
+    // Reduce JS + animation work on mobile and for reduced-motion users
+    if (prefersReducedMotion) return
+
+    const isMobile = window.matchMedia?.('(max-width: 767px)')?.matches
+    if (isMobile) return
+
     const ctx = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>('.gallery-item').forEach((item, i) => {
-        gsap.fromTo(item, 
-          { y: 30, opacity: 0 }, 
-          { 
-            y: 0, opacity: 1, duration: 0.6, ease: 'power3.out',
+        gsap.fromTo(
+          item,
+          { y: 30, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            ease: 'power3.out',
             scrollTrigger: {
               trigger: item,
               start: 'top 90%',
-              toggleActions: 'play none none reverse'
+              toggleActions: 'play none none reverse',
             },
-            delay: (i % 4) * 0.1
+            delay: (i % 4) * 0.1,
           }
         )
       })
     })
 
     return () => ctx.revert()
-  }, [])
+  }, [prefersReducedMotion])
 
   return (
     <div className="pt-24 lg:pt-32">
       <section className="relative py-24 lg:py-32 px-6 lg:px-12 bg-wp-forest overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <img 
-            src="/images/gal-bosque.jpg" 
-            alt={t('pages.gallery.hero.alt')} 
+          <img
+            src="/images/gal-bosque.jpg"
+            alt={t('pages.gallery.hero.alt')}
             className="w-full h-full object-cover"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -114,13 +149,18 @@ export default function Gallery() {
                 }`}
                 onClick={() => setSelectedImage(image.src)}
               >
-                <div className={`${
-                  index === 0 || index === 5 || index === 10 ? 'aspect-square' : 'aspect-[4/5]'
-                }`}>
-                  <img 
-                    src={image.src} 
+                <div
+                  className={`${
+                    index === 0 || index === 5 || index === 10 ? 'aspect-square' : 'aspect-[4/5]'
+                  }`}
+                >
+                  <img
+                    src={image.src}
                     alt={image.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading={index < 3 ? 'eager' : 'lazy'}
+                    decoding="async"
+                    {...(index === 0 ? { fetchPriority: 'high' as const } : {})}
                   />
                 </div>
                 <div className="absolute inset-0 bg-wp-forest/0 group-hover:bg-wp-forest/40 transition-colors flex items-center justify-center">
@@ -151,10 +191,12 @@ export default function Gallery() {
           >
             <X size={32} />
           </button>
-          <img 
-            src={selectedImage} 
+          <img
+            src={selectedImage}
             alt={t('pages.gallery.lightboxAlt')}
             className="max-w-full max-h-[90vh] object-contain"
+            loading="eager"
+            decoding="async"
             onClick={(e) => e.stopPropagation()}
           />
         </div>

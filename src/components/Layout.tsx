@@ -61,10 +61,15 @@ export default function Layout() {
         <div className="px-4 lg:px-8 flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img 
-              src="/images/logo-wildpath.png" 
-              alt="Wild Path Costa Rica" 
+            <img
+              src="/images/logo-wildpath.png"
+              alt="Wild Path Costa Rica"
               className="h-12 lg:h-14 w-auto"
+              width="120"
+              height="56"
+              fetchPriority="high"
+              decoding="async"
+              loading="eager"
             />
           </Link>
 
@@ -215,10 +220,14 @@ export default function Layout() {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             {/* Brand */}
             <div>
-              <img 
-                src="/images/logo-wildpath.png" 
-                alt="Wild Path Costa Rica" 
+              <img
+                src="/images/logo-wildpath.png"
+                alt="Wild Path Costa Rica"
                 className="h-16 w-auto mb-4"
+                width="120"
+                height="56"
+                loading="lazy"
+                decoding="async"
               />
               <p className="text-white/60 text-sm leading-relaxed">
                 {t('footer.description')}
