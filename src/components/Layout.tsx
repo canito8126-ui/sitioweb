@@ -44,7 +44,6 @@ export default function Layout() {
     { path: '/inspiracion', label: t('nav.inspiration') },
     { path: '/galeria', label: t('nav.gallery') },
     { path: '/blog', label: t('nav.blog') },
-    { path: '/testimonios', label: t('nav.testimonials') },
     { path: '/nosotros', label: t('nav.about') },
     { path: '/contacto', label: t('nav.contact') },
   ]
