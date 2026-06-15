@@ -26,19 +26,34 @@
       "number": "01",
       "title": "Primera Llamada",
       "description": "Nos conectamos contigo para conocer tus gustos, el tipo de experiencias que buscas, actividades deseadas, hospedaje preferido, y tu nivel de aventura y comodidad.",
-      "details": ["Gustos personales", "Tipo de experiencias", "Actividades deseadas", "Nivel de aventura"]
+      "details": [
+        "Gustos personales",
+        "Tipo de experiencias",
+        "Actividades deseadas",
+        "Nivel de aventura"
+      ]
     },
     "step2": {
       "number": "02",
       "title": "Propuesta Personalizada",
       "description": "Creamos un borrador de itinerario 100% adaptado a tus intereses. Lo ajustamos tantas veces como sea necesario hasta que sea perfecto.",
-      "details": ["Itinerario a tu medida", "Ajustes ilimitados", "Adaptado a tu ritmo", "Presupuesto claro"]
+      "details": [
+        "Itinerario a tu medida",
+        "Ajustes ilimitados",
+        "Adaptado a tu ritmo",
+        "Presupuesto claro"
+      ]
     },
     "step3": {
       "number": "03",
       "title": "Ejecución de la Experiencia",
       "description": "Una vez aprobado, ejecutamos tu viaje en las fechas acordadas, garantizando una experiencia auténtica, sostenible y real.",
-      "details": ["Viaje en fechas acordadas", "Guías locales expertos", "Experiencia auténtica", "Soporte 24/7"]
+      "details": [
+        "Viaje en fechas acordadas",
+        "Guías locales expertos",
+        "Experiencia auténtica",
+        "Soporte 24/7"
+      ]
     },
     "cta": "AGENDA TU LLAMADA GRATIS"
   },
@@ -201,49 +216,79 @@
         "name": "Michael",
         "location": "Costa Rica",
         "trip": "Caminata a una hermosa cascada",
-        "text": "¡Una experiencia increíble! El guía estaba muy bien informado sobre los ecosistemas de Costa Rica y nos contó sobre muchas cosas. En general, ¡una guía espectacular! Si estás indeciso/a sobre la experiencia, ¡regístrate!"
+        "text": "¡Una experiencia increíble! El guía estaba muy bien informado sobre los ecosistemas de Costa Rica y nos contó sobre muchas cosas. En general, ¡una guía espectacular! Si estás indeciso/a sobre la experiencia, ¡regístrate!",
+        "date": "24 de diciembre de 2025",
+        "time": "7:30",
+        "rating": 5,
+        "source": "Experiencias de Airbnb"
       },
       {
         "name": "Carina",
         "location": "Milwaukee, Wisconsin",
         "trip": "Caminata a una hermosa cascada",
-        "text": "¡Una experiencia increíble! El guía estaba muy bien informado sobre los ecosistemas de Costa Rica y nos contó sobre muchas cosas. En general, ¡una guía espectacular! Si estás indeciso/a sobre la experiencia, ¡regístrate!"
+        "text": "¡Una experiencia increíble! El guía estaba muy bien informado sobre los ecosistemas de Costa Rica y nos contó sobre muchas cosas. En general, ¡una guía espectacular! Si estás indeciso/a sobre la experiencia, ¡regístrate!",
+        "date": "15 de octubre de 2025",
+        "time": "7:00",
+        "rating": 5,
+        "source": "Experiencias de Airbnb"
       },
       {
         "name": "Kellie",
         "location": "Cincinnati, Ohio",
         "trip": "Caminata a una hermosa cascada",
-        "text": "Daniel fue increíblemente amable y conocedor de la vida silvestre y la diversidad vegetal de Costa Rica. Respondió a todas nuestras preguntas e hizo que la experiencia fuera educativa y agradable. La caminata es de dificultad moderada, por lo que recomendamos llevar un buen calzado de senderismo. Daniel estuvo atento y se aseguró de que nos sintiéramos seguros al cruzar ríos y escalar rocas. ¡La cascada al final es absolutamente impresionante y vale la pena el esfuerzo!"
+        "text": "Daniel fue increíblemente amable y conocedor de la vida silvestre y la diversidad vegetal de Costa Rica. Respondió a todas nuestras preguntas e hizo que la experiencia fuera educativa y agradable. La caminata es de dificultad moderada, por lo que recomendamos llevar un buen calzado de senderismo. Daniel estuvo atento y se aseguró de que nos sintiéramos seguros al cruzar ríos y escalar rocas. ¡La cascada al final es absolutamente impresionante y vale la pena el esfuerzo!",
+        "date": "31 de agosto de 2025",
+        "time": "7:00",
+        "rating": 5,
+        "source": "Experiencias de Airbnb"
       },
       {
         "name": "Erica",
         "location": "Atlanta, Georgia",
         "trip": "Caminata a una hermosa cascada",
-        "text": "¡Nos lo pasamos muy bien caminando a Catarata Vuelta del Cañón con Isaac! Fue muy amable, servicial e hizo que toda la experiencia fuera divertida. Se nota que le apasiona Costa Rica y su trabajo, y compartió mucho sobre la cultura, las plantas y los animales en el camino, cosas que nunca habríamos notado sin él. Incluso nos hizo fotos durante la caminata y nos las envió después. La caminata en sí es una aventura: al inicio atravesarás un terreno llano pero fangoso y con algo de estiércol de vaca; luego el sendero se vuelve más accidentado con rocas y terreno irregular. Hay unos 20 cruces de ríos y cerca del final entras y sales del agua con frecuencia. Las sandalias de senderismo cerradas o zapatos anfibios son las mejores opciones, y recomendamos comenzar temprano para evitar la lluvia. ¡La cascada al final es impresionante! En general, el sendero es de dificultad media."
+        "text": "¡Nos lo pasamos muy bien caminando a Catarata Vuelta del Cañón con Isaac! Fue muy amable, servicial e hizo que toda la experiencia fuera divertida. Se nota que le apasiona Costa Rica y su trabajo, y compartió mucho sobre la cultura, las plantas y los animales en el camino, cosas que nunca habríamos notado sin él. Incluso nos hizo fotos durante la caminata y nos las envió después. La caminata en sí es una aventura: al inicio atravesarás un terreno llano pero fangoso y con algo de estiércol de vaca; luego el sendero se vuelve más accidentado con rocas y terreno irregular. Hay unos 20 cruces de ríos y cerca del final entras y sales del agua con frecuencia. Las sandalias de senderismo cerradas o zapatos anfibios son las mejores opciones, y recomendamos comenzar temprano para evitar la lluvia. ¡La cascada al final es impresionante! En general, el sendero es de dificultad media.",
+        "date": "14 de junio de 2025",
+        "time": "7:00",
+        "rating": 5,
+        "source": "Experiencias de Airbnb"
       },
       {
         "name": "Terri",
         "location": "Oak Hills, California",
         "trip": "Caminata a una hermosa cascada",
-        "text": "Increíble experiencia en Costa Rica, mi favorita de las cascadas que vimos mientras estábamos allí. Los guías turísticos Isaac y Daniel son geniales y muy conocedores, hicieron que la experiencia fuera mejor. También hay una agradable sorpresa a medida que te acercas al destino de la cascada, y una gran historia detrás del nombre de la cascada."
+        "text": "Increíble experiencia en Costa Rica, mi favorita de las cascadas que vimos mientras estábamos allí. Los guías turísticos Isaac y Daniel son geniales y muy conocedores, hicieron que la experiencia fuera mejor. También hay una agradable sorpresa a medida que te acercas al destino de la cascada, y una gran historia detrás del nombre de la cascada.",
+        "date": "11 de junio de 2025",
+        "time": "7:00",
+        "rating": 5,
+        "source": "Experiencias de Airbnb"
       },
       {
         "name": "Dan",
         "location": "Costa Rica",
         "trip": "Caminata a una hermosa cascada",
-        "text": "¡Isaac fue absolutamente increíble! ¡Fue muy paciente, amable y conocedor! Esta empresa se centra en preservar la historia, la cultura y la naturaleza de Costa Rica en su conjunto. ¡Sostenibilidad/autosuficiencia en su máxima expresión! Nos tomamos el tiempo para explorar el nivel apropiado de caminata y cascadas, disfrutando de la flora y la fauna sin prisas. Nos sentimos totalmente seguros y sabíamos que estábamos en manos de un experto. ¡Sin duda haremos otra caminata con Isaac cuando volvamos a Costa Rica!"
+        "text": "¡Isaac fue absolutamente increíble! ¡Fue muy paciente, amable y conocedor! Esta empresa se centra en preservar la historia, la cultura y la naturaleza de Costa Rica en su conjunto. ¡Sostenibilidad/autosuficiencia en su máxima expresión! Nos tomamos el tiempo para explorar el nivel apropiado de caminata y cascadas, disfrutando de la flora y la fauna sin prisas. Nos sentimos totalmente seguros y sabíamos que estábamos en manos de un experto. ¡Sin duda haremos otra caminata con Isaac cuando volvamos a Costa Rica!",
+        "date": "07 de mayo de 2025",
+        "time": "7:00",
+        "rating": 5,
+        "source": "Experiencias de Airbnb"
       },
       {
         "name": "Brian",
         "location": "Youngstown, Ohio",
         "trip": "Caminata a una hermosa cascada",
-        "text": "Mi guía Daniel fue muy experimentado, profesional y fácil de hablar. Respondió todas mis preguntas y ofreció una aventura hasta la cascada. ¡Excelente experiencia!"
+        "text": "Mi guía Daniel fue muy experimentado, profesional y fácil de hablar. Respondió todas mis preguntas y ofreció una aventura hasta la cascada. ¡Excelente experiencia!",
+        "date": "03 de octubre de 2024",
+        "time": "7:00",
+        "rating": 5,
+        "source": "Experiencias de Airbnb"
       },
       {
         "name": "Guest",
         "location": "Costa Rica",
         "trip": "Caminata a una hermosa cascada",
-        "text": "Esta experiencia fue realmente genial. Los anfitriones fueron muy buenos a la hora de adaptar la experiencia a las necesidades específicas de nuestro grupo. Hablaban bien inglés, proporcionaron una gran conversación y aprendizaje, y la ubicación es impresionante. No te arrepentirás de reservar esto."
+        "text": "Esta experiencia fue realmente genial. Los anfitriones fueron muy buenos a la hora de adaptar la experiencia a las necesidades específicas de nuestro grupo. Hablaban bien inglés, proporcionaron una gran conversación y aprendizaje, y la ubicación es impresionante. No te arrepentirás de reservar esto.",
+        "rating": 5,
+        "source": "Experiencias de Airbnb"
       }
     ]
   },
