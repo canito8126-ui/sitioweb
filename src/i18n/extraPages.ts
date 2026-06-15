@@ -304,7 +304,7 @@ const pagesEn = {
     stats: [
       { number: '500+', label: 'Happy travelers' },
       { number: '98%', label: 'Would recommend' },
-      { number: '4.9', label: 'Average rating' },
+      { number: '5', label: 'Average rating' },
       { number: '100%', label: 'Personalized' },
     ],
     items: [
