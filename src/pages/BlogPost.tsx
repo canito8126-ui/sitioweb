@@ -14,6 +14,31 @@ import { getBlogPosts, BLOG_SLUG_ORDER } from '../data/blogPosts'
 import type { BlogPostData } from '../data/blogPosts'
 
 export default function BlogPost() {
+  // Share handler
+  const handleShare = (platform: string) => {
+    if (!post) return;
+    const url = window.location.href;
+    const text = encodeURIComponent(post.title);
+    let shareUrl = '';
+    switch (platform) {
+      case 'facebook':
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+        break;
+      case 'twitter':
+        shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${text}`;
+        break;
+      case 'linkedin':
+        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+        break;
+      default:
+        if (navigator.share) {
+          navigator.share({ title: post.title, url });
+          return;
+        }
+        shareUrl = url;
+    }
+    window.open(shareUrl, '_blank', 'noopener,noreferrer');
+  };
   const { slug } = useParams<{ slug: string }>()
   const { t, i18n } = useTranslation()
 
@@ -120,16 +145,16 @@ export default function BlogPost() {
           <div className="mt-8 flex items-center gap-4">
             <span className="text-graytext text-sm">{t('pages.blogPost.share')}</span>
             <div className="flex gap-2">
-              <button type="button" className="w-10 h-10 bg-wp-forest text-white flex items-center justify-center hover:bg-wp-yellow transition-colors" aria-label="Facebook">
+              <button type="button" onClick={() => handleShare('facebook')} className="w-10 h-10 bg-wp-forest text-white flex items-center justify-center hover:bg-wp-yellow transition-colors" aria-label="Facebook">
                 <Facebook size={18} />
               </button>
-              <button type="button" className="w-10 h-10 bg-wp-forest text-white flex items-center justify-center hover:bg-wp-yellow transition-colors" aria-label="Twitter">
+              <button type="button" onClick={() => handleShare('twitter')} className="w-10 h-10 bg-wp-forest text-white flex items-center justify-center hover:bg-wp-yellow transition-colors" aria-label="Twitter">
                 <Twitter size={18} />
               </button>
-              <button type="button" className="w-10 h-10 bg-wp-forest text-white flex items-center justify-center hover:bg-wp-yellow transition-colors" aria-label="LinkedIn">
+              <button type="button" onClick={() => handleShare('linkedin')} className="w-10 h-10 bg-wp-forest text-white flex items-center justify-center hover:bg-wp-yellow transition-colors" aria-label="LinkedIn">
                 <Linkedin size={18} />
               </button>
-              <button type="button" className="w-10 h-10 bg-wp-forest text-white flex items-center justify-center hover:bg-wp-yellow transition-colors" aria-label="Share">
+              <button type="button" onClick={() => handleShare('share')} className="w-10 h-10 bg-wp-forest text-white flex items-center justify-center hover:bg-wp-yellow transition-colors" aria-label="Share">
                 <Share2 size={18} />
               </button>
             </div>
