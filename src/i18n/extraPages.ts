@@ -174,7 +174,7 @@ const pagesEn = {
     imageAlts: [
       'Sloth in its natural habitat',
       'Resplendent quetzal',
-      'Waterfall in the jungle',
+      'Masked frog',
       'Rainbow-billed toucan',
       'Costa Rica cloud forest',
       'Red-eyed tree frog',
@@ -582,7 +582,7 @@ const pagesEs = {
     imageAlts: [
       'Perezoso en su hábitat natural',
       'Quetzal resplandeciente',
-      'Catarata en la selva',
+      'Rana enmascarada',
       'Tucán de pico arcoíris',
       'Bosque nuboso de Costa Rica',
       'Rana de ojos rojos',

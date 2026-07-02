@@ -125,7 +125,7 @@ export default function BlogPost() {
           </div>
 
           <div 
-            className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-wp-forest prose-p:text-graytext prose-li:text-graytext prose-strong:text-wp-forest prose-a:text-wp-yellow hover:prose-a:underline"
+            className="prose blog-content prose-lg max-w-none prose-headings:font-display prose-headings:text-wp-forest prose-p:text-graytext prose-li:text-graytext prose-strong:text-wp-forest prose-a:text-wp-yellow hover:prose-a:underline"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
