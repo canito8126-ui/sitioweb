@@ -8,7 +8,6 @@ import {
   Facebook, 
   Menu, 
   X,
-  MessageCircle,
   Globe,
   MapPinned
 } from 'lucide-react'
@@ -169,7 +168,12 @@ export default function Layout() {
           className="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform"
           aria-label="WhatsApp"
         >
-          <MessageCircle size={28} fill="white" />
+          <img
+            src="/images/whatsapp-logo.svg"
+            alt=""
+            className="w-7 h-7 object-contain"
+            style={{ filter: 'brightness(0) invert(1)' }}
+          />
         </a>
         
         {/* Phone */}
