@@ -3,15 +3,18 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import es from './locales/es.json';
 import en from './locales/en.json';
+import de from './locales/de.json';
+import fr from './locales/fr.json';
 import { mergeExtraPages, homeExtra, reviewsExtra } from './extraPages';
 
 function buildTranslation(
   base: typeof es,
-  locale: 'en' | 'es'
+  locale: 'en' | 'es' | 'de' | 'fr'
 ) {
   const pages = mergeExtraPages(locale);
-  const home = locale === 'en' ? homeExtra.en : homeExtra.es;
-  const revExtra = locale === 'en' ? reviewsExtra.en : reviewsExtra.es;
+  // default extras to English, use Spanish extras when locale is 'es'
+  const home = locale === 'es' ? homeExtra.es : homeExtra.en;
+  const revExtra = locale === 'es' ? reviewsExtra.es : reviewsExtra.en;
   return {
     ...base,
     home,
@@ -27,8 +30,11 @@ i18n
     resources: {
       es: { translation: buildTranslation(es, 'es') },
       en: { translation: buildTranslation(en, 'en') },
+      de: { translation: buildTranslation(de, 'de') },
+      fr: { translation: buildTranslation(fr, 'fr') },
     },
-    fallbackLng: 'es',
+    // Prefer English as the fallback for new languages
+    fallbackLng: 'en',
     interpolation: {
       escapeValue: false,
     },

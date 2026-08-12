@@ -32,10 +32,18 @@ export default function Layout() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'es' ? 'en' : 'es'
-    i18n.changeLanguage(newLang)
-  }
+  const languageOptions = [
+    { code: 'es', label: 'ES', flag: '/images/flag-es.svg' },
+    { code: 'en', label: 'EN', flag: '/images/flag-en.svg' },
+    { code: 'de', label: 'DE', flag: '/images/flag-de.svg' },
+    { code: 'fr', label: 'FR', flag: '/images/flag-fr.svg' },
+  ];
+  const [showLangMenu, setShowLangMenu] = useState(false);
+  const changeLanguage = (code: string) => {
+    i18n.changeLanguage(code);
+    setShowLangMenu(false);
+    try { localStorage.setItem('i18nextLng', code); } catch (e) {}
+  };
 
   const navLinks = [
     { path: '/', label: t('nav.home') },
@@ -93,15 +101,36 @@ export default function Layout() {
           {/* Right Section */}
           <div className="flex items-center gap-4">
             {/* Language Selector */}
-            <button
-              onClick={toggleLanguage}
-              className={`flex items-center gap-1 transition-colors text-sm ${
-                useLightHeader ? 'text-wp-forest/80 hover:text-wp-forest' : 'text-white/80 hover:text-white'
-              }`}
-            >
-              <Globe size={16} />
-              <span className="uppercase">{i18n.language}</span>
-            </button>
+            <div className="relative">
+              <button
+                onClick={() => setShowLangMenu(!showLangMenu)}
+                className={`flex items-center gap-2 transition-colors text-sm ${
+                  useLightHeader ? 'text-wp-forest/80 hover:text-wp-forest' : 'text-white/80 hover:text-white'
+                }`}
+              >
+                <img
+                  src={languageOptions.find(o => o.code === i18n.language)?.flag || '/images/flag-en.svg'}
+                  alt={i18n.language}
+                  className="w-5 h-5 rounded-sm object-cover"
+                />
+                <span className="uppercase">{i18n.language}</span>
+              </button>
+
+              {showLangMenu && (
+                <div className="absolute right-0 mt-2 bg-white rounded shadow p-2 flex flex-col">
+                  {languageOptions.map(opt => (
+                    <button
+                      key={opt.code}
+                      onClick={() => changeLanguage(opt.code)}
+                      className="flex items-center gap-2 px-2 py-1 text-sm hover:bg-gray-100 rounded"
+                    >
+                      <img src={opt.flag} alt={opt.code} className="w-5 h-5 rounded-sm object-cover" />
+                      <span className="uppercase">{opt.label}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* CTA Button Desktop */}
             <Link 
