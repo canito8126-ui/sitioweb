@@ -1,318 +1,318 @@
 {
   "nav": {
-    "home": "Home",
-    "experiences": "Experiences",
+    "home": "Maison",
+    "experiences": "Expériences",
     "inspiration": "Inspiration",
-    "gallery": "Gallery",
-    "blog": "Blog",
-    "testimonials": "Testimonials",
-    "about": "About Us",
+    "gallery": "Galerie",
+    "blog": "Blogue",
+    "testimonials": "Témoignages",
+    "about": "À propos de nous",
     "contact": "Contact",
-    "cta": "DESIGN YOUR EXPERIENCE"
+    "cta": "CONCEVEZ VOTRE EXPÉRIENCE"
   },
   "hero": {
-    "badge": "100% CUSTOMIZED EXPERIENCES",
-    "title1": "DESIGN YOUR",
-    "title2": "EXPERIENCE",
-    "subtitle": "Tailor-made itineraries in Costa Rica. From the first call to your last day of travel.",
-    "ctaPrimary": "BOOK YOUR ADVENTURE",
-    "ctaSecondary": "VIEW EXPERIENCES"
+    "badge": "EXPÉRIENCES 100% PERSONNALISÉES",
+    "title1": "CONCEVEZ VOTRE",
+    "title2": "EXPÉRIENCE",
+    "subtitle": "Itinéraires sur mesure au Costa Rica. Du premier appel jusqu'à votre dernier jour de voyage.",
+    "ctaPrimary": "RÉSERVEZ VOTRE AVENTURE",
+    "ctaSecondary": "VOIR LES EXPÉRIENCES"
   },
   "process": {
-    "badge": "HOW IT WORKS",
-    "title": "Design your tailor-made experience",
-    "subtitle": "A simple and transparent process to create your perfect trip to Costa Rica",
+    "badge": "COMMENT ÇA MARCHE",
+    "title": "Concevez votre expérience sur mesure",
+    "subtitle": "Un processus simple et transparent pour créer votre voyage parfait au Costa Rica",
     "step1": {
       "number": "01",
-      "title": "First Call",
-      "description": "We connect with you to learn about your tastes, the type of experiences you seek, desired activities, preferred accommodation, and your adventure and comfort level.",
+      "title": "Premier appel",
+      "description": "Nous nous connectons avec vous pour connaître vos goûts, le type d'expériences que vous recherchez, les activités souhaitées, l'hébergement préféré, ainsi que votre niveau d'aventure et de confort.",
       "details": [
-        "Personal tastes",
-        "Type of experiences",
-        "Desired activities",
-        "Adventure level"
+        "Goûts personnels",
+        "Type d'expériences",
+        "Activités souhaitées",
+        "Niveau aventure"
       ]
     },
     "step2": {
       "number": "02",
-      "title": "Personalized Proposal",
-      "description": "We create a 100% customized itinerary draft adapted to your interests. We adjust it as many times as necessary until it\"s perfect.",
+      "title": "Proposition personnalisée",
+      "description": "Nous créons un projet d'itinéraire 100% personnalisé adapté à vos intérêts. Nous l'ajustons autant de fois que nécessaire jusqu'à ce qu'il soit parfait.",
       "details": [
-        "Tailor-made itinerary",
-        "Unlimited adjustments",
-        "Adapted to your pace",
-        "Clear budget"
+        "Itinéraire sur mesure",
+        "Ajustements illimités",
+        "Adapté à votre rythme",
+        "Budget clair"
       ]
     },
     "step3": {
       "number": "03",
-      "title": "Experience Execution",
-      "description": "Once approved, we execute your trip on the agreed dates, guaranteeing an authentic, sustainable, and real experience.",
+      "title": "Exécution de l'expérience",
+      "description": "Une fois approuvé, nous exécutons votre voyage aux dates convenues, garantissant une expérience authentique, durable et réelle.",
       "details": [
-        "Trip on agreed dates",
-        "Expert local guides",
-        "Authentic experience",
-        "24/7 support"
+        "Voyage aux dates convenues",
+        "Guides locaux experts",
+        "Expérience authentique",
+        "Assistance 24h/24 et 7j/7"
       ]
     },
-    "cta": "SCHEDULE YOUR FREE CALL"
+    "cta": "PLANIFIEZ VOTRE APPEL GRATUIT"
   },
   "map": {
-    "title": "Explore Costa Rica by Province",
-    "subtitle": "Select the provinces you\"re interested in visiting and we\"ll design your ideal route",
-    "selected": "Selected provinces:",
-    "cta": "DESIGN MY CUSTOM ROUTE"
+    "title": "Explorez le Costa Rica par province",
+    "subtitle": "Sélectionnez les provinces qui vous intéressent et nous concevrons votre itinéraire idéal",
+    "selected": "Provinces sélectionnées :",
+    "cta": "CONCEVOIR MON ITINÉRAIRE PERSONNALISÉ"
   },
   "dayExperiences": {
-    "badge": "BAJOS DEL TORO AND SURROUNDINGS",
-    "title": "Day Experiences",
-    "viewAll": "View all experiences",
+    "badge": "BAJOS DEL TORO ET ENVIRONS",
+    "title": "Expériences d'une journée",
+    "viewAll": "Voir toutes les expériences",
     "experiences": {
       "nocturnal": {
-        "title": "Night Hikes",
-        "description": "Discover the wildlife that awakens when the sun goes down."
+        "title": "Randonnées nocturnes",
+        "description": "Découvrez la faune qui se réveille lorsque le soleil se couche."
       },
       "birds": {
-        "title": "Bird Watching",
-        "description": "Observe endemic species in their natural habitat."
+        "title": "Observation des oiseaux",
+        "description": "Observez les espèces endémiques dans leur habitat naturel."
       },
       "waterfalls": {
-        "title": "Hidden Waterfalls",
-        "description": "Explore pristine waterfalls in the middle of the jungle."
+        "title": "Cascades cachées",
+        "description": "Explorez des cascades immaculées au milieu de la jungle."
       },
       "forest": {
-        "title": "Primary Forest",
-        "description": "Immerse yourself in millenary primary ecosystems."
+        "title": "Forêt primaire",
+        "description": "Plongez dans des écosystèmes primaires millénaires."
       }
     }
   },
   "inspiration": {
-    "badge": "COMPLETE PACKAGES",
-    "title": "Inspiration for your trip",
-    "subtitle": "7 themed experiences designed based on what travelers seek in Costa Rica",
-    "heroImageAlt": "Inspiration packages",
+    "badge": "FORFAITS COMPLETS",
+    "title": "Inspiration pour votre voyage",
+    "subtitle": "7 expériences thématiques conçues en fonction de ce que recherchent les voyageurs au Costa Rica",
+    "heroImageAlt": "Forfaits inspiration",
     "packages": {
       "adventure": {
-        "title": "Extreme Adventure",
-        "duration": "7 days",
-        "description": "Rafting, canopy, rappel and challenging hikes for adrenaline lovers.",
+        "title": "Aventure extrême",
+        "duration": "7 jours",
+        "description": "Rafting, canopée, rappel et randonnées exigeantes pour les amateurs d'adrénaline.",
         "highlights": [
-          "Pacuare River rafting",
-          "Monteverde canopy",
-          "Waterfall rappelling",
-          "Volcano hiking"
+          "Rafting sur la rivière Pacuaré",
+          "Auvent de Monteverde",
+          "Descente en rappel en cascade",
+          "Randonnée volcanique"
         ]
       },
       "wildlife": {
-        "title": "Wildlife",
-        "duration": "8 days",
-        "description": "Wildlife observation in Corcovado, Tortuguero and Monteverde.",
+        "title": "Faune",
+        "duration": "8 jours",
+        "description": "Observation de la faune du Corcovado, Tortuguero et Monteverde.",
         "highlights": [
-          "Corcovado: Costa Rica’s Amazon",
-          "Tortuguero turtle nesting",
-          "Monteverde: quetzals and hummingbirds",
-          "Cahuita coral reefs"
+          "Corcovado : l’Amazonie du Costa Rica",
+          "Nidification des tortues Tortuguero",
+          "Monteverde : quetzals et colibris",
+          "Récifs coralliens de Cahuita"
         ]
       },
       "wellness": {
-        "title": "Wellness & Nature",
-        "duration": "6 days",
-        "description": "Yoga, natural spa, hot springs and meditation in the jungle.",
+        "title": "Bien-être & Nature",
+        "duration": "6 jours",
+        "description": "Yoga, spa naturel, sources chaudes et méditation dans la jungle.",
         "highlights": [
-          "Ocean-view yoga",
-          "Natural hot springs",
-          "Spa with local products",
-          "Jungle meditation"
+          "Yoga avec vue sur l'océan",
+          "Sources chaudes naturelles",
+          "Spa avec produits locaux",
+          "Méditation dans la jungle"
         ]
       },
       "family": {
-        "title": "Family Adventure",
-        "duration": "10 days",
-        "description": "Educational and fun activities for the whole family.",
+        "title": "Aventure en famille",
+        "duration": "10 jours",
+        "description": "Des activités éducatives et ludiques pour toute la famille.",
         "highlights": [
-          "Wildlife viewing",
-          "Kid-friendly beaches",
-          "Educational activities",
-          "Family-friendly hotels"
+          "Observation de la faune",
+          "Des plages adaptées aux enfants",
+          "Activités éducatives",
+          "Hôtels familiaux"
         ]
       },
       "romantic": {
-        "title": "Romantic Getaway",
-        "duration": "5 days",
-        "description": "Paradise beaches, sunsets and private dinners.",
+        "title": "Escapade romantique",
+        "duration": "5 jours",
+        "description": "Plages paradisiaques, couchers de soleil et dîners privés.",
         "highlights": [
-          "Private beach dinner",
-          "Sunset catamaran",
-          "Boutique hotel views",
-          "Chocolate & wine tour"
+          "Dîner sur la plage privée",
+          "Catamaran au coucher du soleil",
+          "Vues sur les hôtels de charme",
+          "Visite du chocolat et du vin"
         ]
       },
       "culture": {
-        "title": "Culture & Tradition",
-        "duration": "7 days",
-        "description": "Typical towns, coffee, chocolate and local gastronomy.",
+        "title": "Culture & Traditions",
+        "duration": "7 jours",
+        "description": "Villes typiques, café, chocolat et gastronomie locale.",
         "highlights": [
-          "Coffee plantation tour",
-          "Artisan chocolate",
-          "Traditional towns",
-          "Local gastronomy"
+          "Visite d'une plantation de café",
+          "Chocolat artisanal",
+          "Villes traditionnelles",
+          "Gastronomie locale"
         ]
       },
       "photography": {
-        "title": "Nature Photography",
-        "duration": "9 days",
-        "description": "The best spots to capture Costa Rica\"s biodiversity.",
+        "title": "Photographie nature",
+        "duration": "9 jours",
+        "description": "Les meilleurs endroits pour capturer la biodiversité du Costa Rica.",
         "highlights": [
-          "Best light windows for photos",
-          "Local photographer hideouts",
-          "Expert photographer guide",
-          "Editing workshops"
+          "Meilleures fenêtres lumineuses pour les photos",
+          "Cachettes de photographes locaux",
+          "Guide photographe expert",
+          "Ateliers d'édition"
         ]
       }
     },
-    "cta": "CUSTOMIZE THIS PACKAGE",
+    "cta": "PERSONNALISEZ CE FORFAIT",
     "customCta": {
-      "title": "None of these packages exactly what you want?",
-      "subtitle": "We can build a fully custom itinerary—mixing elements from different packages or designing something new around your interests.",
-      "button": "CREATE MY CUSTOM ITINERARY"
+      "title": "Aucun de ces forfaits ne correspond exactement à vos attentes ?",
+      "subtitle": "Nous pouvons créer un itinéraire entièrement personnalisé en mélangeant des éléments de différents forfaits ou en concevant quelque chose de nouveau en fonction de vos intérêts.",
+      "button": "CRÉER MON ITINÉRAIRE PERSONNALISÉ"
     }
   },
   "testimonials": {
-    "badge": "TESTIMONIALS",
-    "title": "What our travelers say",
-    "cta": "View more testimonials",
+    "badge": "TÉMOIGNAGES",
+    "title": "Ce que disent nos voyageurs",
+    "cta": "Voir plus de témoignages",
     "items": [
       {
-        "name": "Josh rowley",
+        "name": "Josh Rowley",
         "location": "Costa Rica",
-        "trip": "Custom Tour",
-        "text": "We had an amazing experience exploring Costa Rica with Isaak as our tour guide! He is incredibly knowledgeable about the country, its culture, and especially the wildlife. Throughout the tour he was able to spot animals we would have completely missed on our own and explained everything in such an interesting way.Isaak was also very friendly, professional, and made everyone feel comfortable from the start. His passion for Costa Rica really shows, and it made the whole experience unforgettable. If you’re looking for a guide who is informative, fun, and genuinely cares about giving you the best experience possible, I highly recommend Isaak. 5 stars without a doubt!"
+        "trip": "Visite personnalisée",
+        "text": "Nous avons vécu une expérience incroyable en explorant le Costa Rica avec Isaak comme guide touristique ! Il connaît incroyablement bien le pays, sa culture et surtout sa faune. Tout au long de la tournée, il a pu repérer des animaux que nous aurions complètement manqués par nous-mêmes et a tout expliqué d'une manière très intéressante. Isaak était également très sympathique, professionnel et a mis tout le monde à l'aise dès le début. Sa passion pour le Costa Rica se voit vraiment et cela a rendu cette expérience inoubliable. Si vous recherchez un guide informatif, amusant et réellement soucieux de vous offrir la meilleure expérience possible, je recommande vivement Isaak. 5 étoiles sans aucun doute !"
       },
       {
         "name": "Tonya Bryant",
         "location": "Costa Rica",
-        "trip": "Custom Tour",
-        "text": "Words can’t express how grateful I am to have had this tour experience with Daniel. Upon meeting him you can immediately tell he is tremendously passionate and knowledgeable about what he does! It never felt like this was just a job for him. He has a great spirit and I loved the knowledge he shared about the beautiful country of Costa Rica! He was sooo considerate and answered all the million questions I had even on the night before the tour. He was very patient and flexible in helping me decide on what I wanted to do and was very accommodating to my tour needs. My tour was personalized to what I wanted to do and was not a generic type of tour where you have to do some things you weren’t interested in. We went kayaking in the beautiful lake of Rio Cuarto, ate a local restaurant that was amazing and went to a great thermal springs and got to sit in the river as well at the thermal springs. I also casually mentioned wishing I could see a sloth on this trip and to my surprise he later asked if I wanted to look for some as we drove past a tree. I was so excited to actually see one in the “wild” and not at a reserve! I learned so much about Costa Rica, from the environment, the people, the wildlife, to the agricultural and even got help strengthening my poor Spanish skills lol. Anytime I wanted a picture he was happy to take them.I loved that he was able to go to La Fortuna and Arenal areas but also had options to explore the less touristy places like Bocas Del Toro and surrounding areas and cities because these areas deserve our love and attention too.I’m forever grateful for our tour and his kindness. Being a solo female traveler is usually nerve wrecking but I never felt unsafe and never felt uncomfortable.  He was so welcoming and I’m so happy I decided to take a chance and book with him on my last full day in Costa Rica. It was truly magical. I can without a doubt say Daniel was the best tour guide I’ve ever traveled with and I would recommend his company to anyone I ever encounter! Thank you for the lifelong memories! Pura Vida!All the best,Tonya"
+        "trip": "Visite personnalisée",
+        "text": "Les mots ne peuvent exprimer à quel point je suis reconnaissant d’avoir vécu cette expérience de tournée avec Daniel. En le rencontrant, vous pouvez immédiatement dire qu'il est extrêmement passionné et connaît bien ce qu'il fait ! Il n’a jamais eu l’impression que c’était juste un travail pour lui. Il a un grand esprit et j'ai adoré les connaissances qu'il a partagées sur le magnifique pays du Costa Rica ! Il était tellement prévenant et a répondu aux millions de questions que j'avais même la veille de la tournée. Il a été très patient et flexible pour m'aider à décider de ce que je voulais faire et a été très accommodant avec mes besoins de tournée. Ma visite était personnalisée en fonction de ce que je voulais faire et n'était pas un type de visite générique où vous deviez faire des choses qui ne vous intéressaient pas. Nous sommes allés faire du kayak dans le magnifique lac de Rio Cuarto, avons mangé dans un restaurant local qui était incroyable et sommes allés dans de superbes sources thermales et avons pu nous asseoir également dans la rivière aux sources thermales. J'ai également mentionné avec désinvolture que j'aurais aimé voir un paresseux lors de ce voyage et, à ma grande surprise, il m'a demandé plus tard si je voulais en chercher alors que nous passions devant un arbre. J’étais tellement excité d’en voir un dans la nature et non dans une réserve ! J'ai tellement appris sur le Costa Rica, de l'environnement, des gens, de la faune à l'agriculture et j'ai même reçu de l'aide pour renforcer mes faibles compétences en espagnol mdr. Chaque fois que je voulais une photo, il était heureux de les prendre. J'ai adoré qu'il puisse se rendre dans les régions de La Fortuna et Arenal, mais il avait également la possibilité d'explorer les endroits les moins touristiques comme Bocas Del Toro et les zones et villes environnantes, car ces régions méritent également notre amour et notre attention. Je suis éternellement reconnaissant pour notre visite et sa gentillesse. Être une voyageuse seule est généralement angoissant, mais je ne me suis jamais sentie en danger ni mal à l'aise.  Il était si accueillant et je suis si heureux d'avoir décidé de tenter ma chance et de réserver avec lui lors de ma dernière journée complète au Costa Rica. C'était vraiment magique. Je peux sans aucun doute dire que Daniel était le meilleur guide touristique avec lequel j'ai jamais voyagé et je recommanderais sa compagnie à tous ceux que je rencontre ! Merci pour les souvenirs inoubliables! Pura Vida ! Bonne chance, Tonya"
       },
       {
-        "name": "Javier Rodriguez",
+        "name": "Javier Rodríguez",
         "location": "Costa Rica",
-        "trip": "Nature Photography Tour",
-        "text": "Isaac is an exceptional tour guide, whose love for nature and deep environmental consciousness make every journey unforgettable. His passion for the outdoors is contagious. He just loves to educate visitors about local ecosystems, conservation efforts, and sustainable travel practices. Isaac ensures the experience is not only enjoyable but also informative and respectful of nature. His commitment to protecting the environment shines through in every detail, making the tours both eco-friendly and enriching. Highly recommended for anyone looking to connect with nature on a deeper level while contributing to its preservation."
+        "trip": "Visite de photographie de nature",
+        "text": "Isaac est un guide touristique exceptionnel, dont l'amour pour la nature et la profonde conscience environnementale rendent chaque voyage inoubliable. Sa passion pour le plein air est contagieuse. Il adore informer les visiteurs sur les écosystèmes locaux, les efforts de conservation et les pratiques de voyage durables. Isaac veille à ce que l'expérience soit non seulement agréable mais aussi informative et respectueuse de la nature. Son engagement en faveur de la protection de l'environnement transparaît dans les moindres détails, rendant les visites à la fois écologiques et enrichissantes. Fortement recommandé à tous ceux qui cherchent à se connecter plus profondément avec la nature tout en contribuant à sa préservation."
       },
       {
         "name": "Tina Hof",
         "location": "Costa Rica",
-        "trip": "Custom Tour",
-        "text": "Isaac is simply the best! His tours are full of interesting information about the country, the nature and of course also the people. I learned a lot from him and would book more tours anytime with him in the future. You can just see his passion and that\"s very sympathetic"
+        "trip": "Visite personnalisée",
+        "text": "Isaac est tout simplement le meilleur ! Ses visites regorgent d'informations intéressantes sur le pays, la nature et bien sûr aussi sur les gens. J'ai beaucoup appris de lui et je réserverais plus de visites à tout moment avec lui à l'avenir. On voit juste sa passion et c'est très sympathique"
       },
       {
-        "name": "Gerald Quirós.",
+        "name": "Gérald Quiros.",
         "location": "Costa Rica",
-        "trip": "Bajos del Toro",
-        "text": "One of the best experiences in Bajos del Toro, Issac helped us to connect with the nature, finding lifers 🦜 walking around this beautiful forest, highly recommended!!"
+        "trip": "Bajos du Toro",
+        "text": "L'une des meilleures expériences à Bajos del Toro, Issac nous a aidés à nous connecter avec la nature, en trouvant des condamnés à perpétuité 🦜 en nous promenant dans cette belle forêt, fortement recommandé !!"
       },
       {
-        "name": "Michael",
+        "name": "Michel",
         "location": "Costa Rica",
-        "trip": "Waterfall hike",
-        "text": "An incredible experience. The guide was extremely knowledgeable about Costa Rica’s ecosystems and shared a lot along the way. If you’re thinking about booking, don’t hesitate—register and enjoy it!",
+        "trip": "Randonnée en cascade",
+        "text": "Une expérience incroyable. Le guide connaissait extrêmement bien les écosystèmes du Costa Rica et partageait beaucoup de choses tout au long du parcours. Si vous envisagez de réserver, n’hésitez pas, inscrivez-vous et profitez-en !",
         "date": "2025-12-24",
-        "time": "7:30",
+        "time": "7h30",
         "rating": 5,
-        "source": "Airbnb Experiences"
+        "source": "Expériences Airbnb"
       },
       {
-        "name": "Carina",
+        "name": "Carine",
         "location": "Milwaukee, Wisconsin",
-        "trip": "Waterfall hike",
-        "text": "An incredible experience. The guide was extremely knowledgeable about Costa Rica’s ecosystems and shared a lot along the way. If you’re thinking about booking, don’t hesitate—register and enjoy it!",
+        "trip": "Randonnée en cascade",
+        "text": "Une expérience incroyable. Le guide connaissait extrêmement bien les écosystèmes du Costa Rica et partageait beaucoup de choses tout au long du parcours. Si vous envisagez de réserver, n’hésitez pas, inscrivez-vous et profitez-en !",
         "date": "2025-10-15",
-        "time": "7:00",
+        "time": "7h00",
         "rating": 5,
-        "source": "Airbnb Experiences"
+        "source": "Expériences Airbnb"
       },
       {
         "name": "Kellie",
         "location": "Cincinnati, Ohio",
-        "trip": "Waterfall hike",
-        "text": "Daniel was incredibly kind and knowledgeable about Costa Rica’s wildlife and plant diversity. He answered all our questions and made the experience educational and fun. The hike is moderately difficult, so we highly recommend bringing good hiking shoes. Daniel was attentive and made sure we felt safe during river crossings and rocky climbs. The waterfall at the end is absolutely stunning and worth the effort.",
+        "trip": "Randonnée en cascade",
+        "text": "Daniel était incroyablement gentil et connaissait bien la diversité de la faune et de la flore du Costa Rica. Il a répondu à toutes nos questions et a rendu l'expérience éducative et amusante. La randonnée est moyennement difficile, nous vous recommandons donc fortement d'apporter de bonnes chaussures de randonnée. Daniel était attentif et veillait à ce que nous nous sentions en sécurité lors des traversées de rivières et des ascensions rocheuses. La cascade au bout est absolument magnifique et vaut l’effort.",
         "date": "2025-08-31",
-        "time": "7:00",
+        "time": "7h00",
         "rating": 5,
-        "source": "Airbnb Experiences"
+        "source": "Expériences Airbnb"
       },
       {
-        "name": "Erica",
-        "location": "Atlanta, Georgia",
-        "trip": "Catarata Vuelta del Cañón hike",
-        "text": "We had a great time hiking to Catarata Vuelta del Cañón with Isaac! He was friendly and made the whole experience fun. It’s clear he loves Costa Rica and shared plenty about culture, plants, and animals along the way. He even took photos during the hike and sent them afterward. The trail is medium difficulty: it starts relatively flat but muddy, then becomes more uneven with rocks and frequent river crossings near the end. Closed-toe hiking sandals or water-friendly shoes are best, and we recommend starting early to avoid rain. The waterfall at the end is impressive—highly recommended, especially with a guide.",
+        "name": "Érica",
+        "location": "Atlanta, Géorgie",
+        "trip": "Randonnée Catarata Vuelta del Cañón",
+        "text": "Nous avons passé un bon moment à faire de la randonnée jusqu'à Catarata Vuelta del Cañón avec Isaac ! Il était sympathique et a rendu toute l'expérience amusante. Il est clair qu’il aime le Costa Rica et qu’il a beaucoup partagé sur la culture, les plantes et les animaux tout au long du parcours. Il a même pris des photos pendant la randonnée et les a envoyées ensuite. Le sentier est de difficulté moyenne : il commence relativement plat mais boueux, puis devient plus irrégulier avec des rochers et des traversées de rivières fréquentes vers la fin. Des sandales de randonnée fermées ou des chaussures imperméables sont préférables, et nous vous recommandons de commencer tôt pour éviter la pluie. La cascade au bout est impressionnante, fortement recommandée, surtout avec un guide.",
         "date": "2025-06-14",
-        "time": "7:00",
+        "time": "7h00",
         "rating": 5,
-        "source": "Airbnb Experiences"
+        "source": "Expériences Airbnb"
       },
       {
         "name": "Terri",
-        "location": "Oak Hills, California",
-        "trip": "Waterfall hike",
-        "text": "Incredible experience in Costa Rica—my favorite of the waterfalls we saw while we were there. The guides Isaac and Daniel were great and very knowledgeable. There’s also a nice surprise as you get closer to the waterfall destination, plus a great story behind the waterfall’s name.",
+        "location": "Oak Hills, Californie",
+        "trip": "Randonnée en cascade",
+        "text": "Expérience incroyable au Costa Rica - ma préférée des cascades que nous avons vues pendant notre séjour. Les guides Isaac et Daniel étaient formidables et très compétents. Il y a aussi une belle surprise à mesure que vous vous rapprochez de la destination de la cascade, ainsi qu'une belle histoire derrière le nom de la cascade.",
         "date": "2025-06-11",
-        "time": "7:00",
+        "time": "7h00",
         "rating": 5,
-        "source": "Airbnb Experiences"
+        "source": "Expériences Airbnb"
       },
       {
         "name": "Dan",
         "location": "Costa Rica",
-        "trip": "Waterfall hike",
-        "text": "Isaac was absolutely amazing—patient, kind, and extremely knowledgeable. This company focuses on preserving Costa Rica’s history, culture, and nature as a whole, with a strong sustainability mindset. We took the time to explore the right walking level and waterfall options without rushing, and we felt completely safe throughout. We’ll definitely book another hike with Isaac when we return to Costa Rica—10/10!",
+        "trip": "Randonnée en cascade",
+        "text": "Isaac était absolument incroyable : patient, gentil et extrêmement compétent. Cette entreprise se concentre sur la préservation de l’histoire, de la culture et de la nature du Costa Rica dans son ensemble, avec un fort esprit de développement durable. Nous avons pris le temps d'explorer les bonnes options de niveau de marche et de cascade sans nous précipiter, et nous nous sommes sentis complètement en sécurité tout au long. Nous réserverons certainement une autre randonnée avec Isaac à notre retour au Costa Rica : 10/10 !",
         "date": "2025-05-07",
-        "time": "7:00",
+        "time": "7h00",
         "rating": 5,
-        "source": "Airbnb Experiences"
+        "source": "Expériences Airbnb"
       },
       {
         "name": "Brian",
         "location": "Youngstown, Ohio",
-        "trip": "Waterfall hike",
-        "text": "My guide Daniel was very experienced, professional, and easy to talk to. He answered all my questions and was excited to share the experience all the way to the waterfall.",
+        "trip": "Randonnée en cascade",
+        "text": "Mon guide Daniel était très expérimenté, professionnel et avec qui il était facile de parler. Il a répondu à toutes mes questions et était ravi de partager l'expérience jusqu'à la cascade.",
         "date": "2024-10-03",
-        "time": "7:00",
+        "time": "7h00",
         "rating": 5,
-        "source": "Airbnb Experiences"
+        "source": "Expériences Airbnb"
       },
       {
-        "name": "Guest",
+        "name": "Invité",
         "location": "Costa Rica",
-        "trip": "Waterfall hike",
-        "text": "This experience was really great. The hosts were excellent at adapting the tour to our group’s specific needs. They spoke good English, provided great conversation and learning, and the location is impressive. You won’t regret booking.",
+        "trip": "Randonnée en cascade",
+        "text": "Cette expérience était vraiment géniale. Les hôtes ont su adapter la visite aux besoins spécifiques de notre groupe. Ils parlaient bien anglais, offraient d'excellentes conversations et apprentissages, et l'emplacement est impressionnant. Vous ne regretterez pas d'avoir réservé.",
         "rating": 5,
-        "source": "Airbnb Experiences"
+        "source": "Expériences Airbnb"
       }
     ]
   },
   "reviews": {
-    "title": "What they say about us",
-    "google": "Google Reviews",
-    "tripadvisor": "TripAdvisor Reviews",
-    "badge": "REVIEWS"
+    "title": "Ce qu'ils disent de nous",
+    "google": "Avis Google",
+    "tripadvisor": "Avis TripAdvisor",
+    "badge": "AVIS"
   },
   "footer": {
-    "description": "Personalized experiences in Costa Rica. We design your perfect adventure, step by step.",
+    "description": "Expériences personnalisées au Costa Rica. Nous concevons votre aventure parfaite, étape par étape.",
     "links": "Links",
     "contact": "Contact",
-    "followUs": "Follow Us",
-    "rights": "© 2025 Wild Path Costa Rica. All rights reserved.",
-    "photoCredits": "Photos by Randy Lopez",
-    "terms": "Terms & Conditions",
-    "cancellation": "Cancellation Policy"
+    "followUs": "Suivez-nous",
+    "rights": "© 2025 Chemin sauvage Costa Rica. Tous droits réservés.",
+    "photoCredits": "Photos de Randy Lopez",
+    "terms": "Conditions générales",
+    "cancellation": "Politique d'annulation"
   },
   "contact": {
     "phone": "+506 8985 7750",
     "email": "wildpathcr@gmail.com",
     "location": "Bajos del Toro, Costa Rica",
-    "hours": "Monday to Sunday: 7:00 AM - 8:00 PM",
-    "findUs": "Find us on Google Maps"
+    "hours": "Du lundi au dimanche : 7h00 - 20h00",
+    "findUs": "Retrouvez-nous sur Google Maps"
   }
 }
