@@ -215,9 +215,13 @@ const pagesEn = {
     hoursNote: 'We respond within 24 hours.',
     followUs: 'Follow us',
     formTitle: 'Tell us about your dream trip',
+    formNamePlaceholder: 'Full Name',
+    formEmailPlaceholder: 'Email Address',
+    formMessagePlaceholder: 'Your Message',
+    formButton: 'Submit Form',
     formLoading: 'Loading…',
     formDisclaimer:
-      'This form is hosted on Google Forms. By submitting, you accept our privacy policy.',
+      'This form is handled by FormSubmit.co. By submitting, you accept our privacy policy.',
     privacyLink: 'privacy policy',
   },
   about: {
@@ -623,9 +627,13 @@ const pagesEs = {
     hoursNote: 'Respondemos en menos de 24 horas',
     followUs: 'Síguenos',
     formTitle: 'Cuéntanos sobre tu viaje soñado',
+    formNamePlaceholder: 'Nombre completo',
+    formEmailPlaceholder: 'Correo electrónico',
+    formMessagePlaceholder: 'Tu mensaje',
+    formButton: 'Enviar formulario',
     formLoading: 'Cargando…',
     formDisclaimer:
-      'Este formulario está alojado en Google Forms. Al enviar, aceptas nuestra',
+      'Este formulario es gestionado por FormSubmit.co. Al enviar, aceptas nuestra',
     privacyLink: 'política de privacidad',
   },
   about: {

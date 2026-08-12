@@ -8,7 +8,6 @@ import {
   Facebook, 
   Menu, 
   X,
-  Globe,
   MapPinned
 } from 'lucide-react'
 

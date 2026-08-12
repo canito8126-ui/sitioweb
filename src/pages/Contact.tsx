@@ -177,21 +177,49 @@ export default function Contact() {
                 {t('pages.contact.formTitle')}
               </h3>
               
-              <div className="w-full h-[800px]">
-                <iframe 
-                  src="https://docs.google.com/forms/d/1wNqCCFoEeOMogzWQwIFHBuj_vqq-VrYlNQuB_vBCO_s/viewform?embedded=true"
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  marginHeight={0}
-                  marginWidth={0}
-                  className="w-full h-full"
-                  title={t('pages.contact.formTitle')}
+              <div className="w-full">
+                <form
+                  action="https://formsubmit.co/wildpathcr@gmail.com"
+                  method="POST"
+                  target="_blank"
+                  className="space-y-6"
                 >
-                  {t('pages.contact.formLoading')}
-                </iframe>
+                  <input type="hidden" name="_subject" value="New contact request from Wild Path" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder={t('pages.contact.formNamePlaceholder')}
+                      required
+                      className="w-full rounded-3xl border border-wp-forest/10 bg-white px-4 py-4 text-sm text-wp-forest placeholder:text-gray-400 shadow-sm outline-none transition focus:border-wp-yellow focus:ring-2 focus:ring-wp-yellow/30"
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder={t('pages.contact.formEmailPlaceholder')}
+                      required
+                      className="w-full rounded-3xl border border-wp-forest/10 bg-white px-4 py-4 text-sm text-wp-forest placeholder:text-gray-400 shadow-sm outline-none transition focus:border-wp-yellow focus:ring-2 focus:ring-wp-yellow/30"
+                    />
+                  </div>
+                  <div>
+                    <textarea
+                      name="message"
+                      rows={10}
+                      placeholder={t('pages.contact.formMessagePlaceholder')}
+                      required
+                      className="w-full rounded-[2rem] border border-wp-forest/10 bg-white px-4 py-4 text-sm text-wp-forest placeholder:text-gray-400 shadow-sm outline-none transition focus:border-wp-yellow focus:ring-2 focus:ring-wp-yellow/30"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full rounded-full bg-wp-forest px-6 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white shadow-card transition duration-200 hover:bg-wp-yellow hover:text-wp-forest"
+                  >
+                    {t('pages.contact.formButton')}
+                  </button>
+                </form>
               </div>
-              
+
               <p className="text-xs text-graytext text-center mt-4">
                 {t('pages.contact.formDisclaimer')}{' '}
                 <a href="/privacidad" className="text-wp-yellow hover:underline">
