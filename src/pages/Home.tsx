@@ -310,7 +310,14 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {(t('testimonials.items', { returnObjects: true }) as any[])
+            {(
+              t('testimonials.items', { returnObjects: true }) as Array<{
+                name: string
+                text: string
+                location: string
+                trip: string
+              }>
+            )
               .slice(0, 3)
               .map((testimonial, index) => (
                 <div

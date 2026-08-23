@@ -12,9 +12,8 @@ function buildTranslation(
   locale: 'en' | 'es' | 'de' | 'fr'
 ) {
   const pages = mergeExtraPages(locale);
-  // default extras to English, use Spanish extras when locale is 'es'
-  const home = locale === 'es' ? homeExtra.es : homeExtra.en;
-  const revExtra = locale === 'es' ? reviewsExtra.es : reviewsExtra.en;
+  const home = homeExtra[locale] ?? homeExtra.en;
+  const revExtra = reviewsExtra[locale] ?? reviewsExtra.en;
   return {
     ...base,
     home,

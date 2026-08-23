@@ -37,11 +37,19 @@ export default function Layout() {
     { code: 'de', label: 'DE', flag: '/images/flag-de.svg' },
     { code: 'fr', label: 'FR', flag: '/images/flag-fr.svg' },
   ];
+  const resolvedLanguage = (i18n.resolvedLanguage || i18n.language || 'en').split('-')[0]
+  const selectedLanguage = languageOptions.find((option) => option.code === resolvedLanguage) ?? languageOptions[1]
   const [showLangMenu, setShowLangMenu] = useState(false);
   const changeLanguage = (code: string) => {
     i18n.changeLanguage(code);
     setShowLangMenu(false);
-    try { localStorage.setItem('i18nextLng', code); } catch (e) {}
+    if (typeof window !== 'undefined') {
+      try {
+        window.localStorage.setItem('i18nextLng', code);
+      } catch {
+        /* storage unavailable */
+      }
+    }
   };
 
   const navLinks = [
@@ -108,23 +116,25 @@ export default function Layout() {
                 }`}
               >
                 <img
-                  src={languageOptions.find(o => o.code === i18n.language)?.flag || '/images/flag-en.svg'}
-                  alt={i18n.language}
-                  className="w-5 h-5 rounded-sm object-cover"
+                  src={selectedLanguage.flag}
+                  alt={resolvedLanguage}
+                  className="w-4 h-4 rounded-sm object-cover ring-1 ring-black/10"
                 />
-                <span className="uppercase">{i18n.language}</span>
+                <span className="uppercase text-xs tracking-wide">{resolvedLanguage}</span>
               </button>
 
               {showLangMenu && (
-                <div className="absolute right-0 mt-2 bg-white rounded shadow p-2 flex flex-col">
+                <div className="absolute right-0 mt-2 w-36 rounded-lg border border-black/10 bg-white/95 p-2 shadow-lg backdrop-blur-sm">
                   {languageOptions.map(opt => (
                     <button
                       key={opt.code}
                       onClick={() => changeLanguage(opt.code)}
-                      className="flex items-center gap-2 px-2 py-1 text-sm hover:bg-gray-100 rounded"
+                      className={`flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-left text-xs hover:bg-gray-100 ${
+                        resolvedLanguage === opt.code ? 'bg-gray-100' : ''
+                      }`}
                     >
-                      <img src={opt.flag} alt={opt.code} className="w-5 h-5 rounded-sm object-cover" />
-                      <span className="uppercase">{opt.label}</span>
+                      <img src={opt.flag} alt={opt.code} className="w-4 h-4 rounded-sm object-cover ring-1 ring-black/10" />
+                      <span className="uppercase tracking-wide">{opt.label}</span>
                     </button>
                   ))}
                 </div>
@@ -169,6 +179,34 @@ export default function Layout() {
                   {link.label}
                 </Link>
               ))}
+
+              <div className="mt-2 rounded-xl border border-white/10 bg-white/5 p-2">
+                <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/60">Language</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {languageOptions.map((opt) => (
+                    <button
+                      key={opt.code}
+                      onClick={() => {
+                        changeLanguage(opt.code)
+                        setIsMenuOpen(false)
+                      }}
+                      className={`flex items-center gap-2 rounded-md border px-2 py-1.5 text-left text-[10px] uppercase tracking-wide transition ${
+                        resolvedLanguage === opt.code
+                          ? 'border-wp-yellow/80 bg-wp-yellow/10 text-white'
+                          : 'border-white/10 text-white/80 hover:bg-white/5'
+                      }`}
+                    >
+                      <img
+                        src={opt.flag}
+                        alt={opt.code}
+                        className="w-4 h-4 rounded-sm object-cover ring-1 ring-white/20"
+                      />
+                      <span>{opt.label}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               <Link 
                 to="/contacto"
                 className="btn-primary text-center mt-4"

@@ -45,6 +45,17 @@ export default function BlogPost() {
   const blogPosts: Record<string, BlogPostData> = getBlogPosts(i18n.language)
   const post = slug ? blogPosts[slug] : null
 
+  const seoTitle = post?.title ?? t('pages.blogPost.notFoundTitle')
+  const seoDescription = post?.excerpt ?? post?.title ?? t('pages.blogPost.notFoundBody')
+
+  useSeo({
+    title: seoTitle,
+    description: seoDescription,
+    image: post?.image,
+    canonicalPath: slug ? `/blog/${slug}` : '/blog',
+    keywords: post?.tags?.join(', '),
+  })
+
   if (!post) {
     return (
       <div className="pt-24 lg:pt-32 py-24 px-6 lg:px-12 bg-wp-cream">
@@ -59,14 +70,6 @@ export default function BlogPost() {
       </div>
     )
   }
-
-  useSeo({
-    title: post.title,
-    description: post.excerpt ?? post.title,
-    image: post.image,
-    canonicalPath: `/blog/${slug}`,
-    keywords: post.tags?.join(', '),
-  })
 
   const related = BLOG_SLUG_ORDER
     .filter((k: string) => k !== slug)

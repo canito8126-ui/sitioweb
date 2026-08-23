@@ -1,6 +1,54 @@
 import { useTranslation } from 'react-i18next'
 import useSeo from '../hooks/useSeo'
 
+const Tag = ({ color, label }: { color: 'green' | 'amber' | 'red' | 'teal'; label: string }) => {
+  const map = {
+    green: 'bg-green-50 text-green-900',
+    amber: 'bg-amber-50 text-amber-900',
+    red: 'bg-red-50 text-red-900',
+    teal: 'bg-teal-50 text-teal-900',
+  }
+  return (
+    <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-md ${map[color]}`}>
+      {label}
+    </span>
+  )
+}
+
+const Alert = ({ color, children }: { color: 'red' | 'amber' | 'teal'; children: React.ReactNode }) => {
+  const map = {
+    red: 'bg-red-50 border-red-200 text-red-900',
+    amber: 'bg-amber-50 border-amber-200 text-amber-900',
+    teal: 'bg-teal-50 border-teal-200 text-teal-900',
+  }
+  return (
+    <div className={`flex gap-3 p-4 rounded-lg border text-sm leading-relaxed ${map[color]}`}>
+      <p>{children}</p>
+    </div>
+  )
+}
+
+const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
+  <div className="border border-gray-200 rounded-xl overflow-hidden">
+    <div className="flex items-center gap-2 px-5 py-4 bg-gray-50 border-b border-gray-200">
+      <h2 className="text-base font-semibold text-wp-forest">{title}</h2>
+    </div>
+    <div className="px-5 py-5 bg-white space-y-4">{children}</div>
+  </div>
+)
+
+const Th = ({ children }: { children: React.ReactNode }) => (
+  <th className="text-left px-3 py-2 font-semibold bg-gray-50 border-b border-gray-200 text-gray-500 text-xs uppercase tracking-wide">
+    {children}
+  </th>
+)
+const Td = ({ children }: { children: React.ReactNode }) => (
+  <td className="px-3 py-3 border-b border-gray-100">{children}</td>
+)
+const TdLast = ({ children }: { children: React.ReactNode }) => (
+  <td className="px-3 py-3">{children}</td>
+)
+
 export default function Cancellation() {
   const { i18n } = useTranslation()
   const isEs = i18n.language === 'es'
@@ -13,55 +61,6 @@ export default function Cancellation() {
     image: 'https://wildpath.lat/images/logo-wildpath.png',
     canonicalPath: '/cancelacion',
   })
-
-  /* ─── Shared helpers ─── */
-  const Tag = ({ color, label }: { color: 'green' | 'amber' | 'red' | 'teal'; label: string }) => {
-    const map = {
-      green: 'bg-green-50 text-green-900',
-      amber: 'bg-amber-50 text-amber-900',
-      red: 'bg-red-50 text-red-900',
-      teal: 'bg-teal-50 text-teal-900',
-    }
-    return (
-      <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-md ${map[color]}`}>
-        {label}
-      </span>
-    )
-  }
-
-  const Alert = ({ color, children }: { color: 'red' | 'amber' | 'teal'; children: React.ReactNode }) => {
-    const map = {
-      red: 'bg-red-50 border-red-200 text-red-900',
-      amber: 'bg-amber-50 border-amber-200 text-amber-900',
-      teal: 'bg-teal-50 border-teal-200 text-teal-900',
-    }
-    return (
-      <div className={`flex gap-3 p-4 rounded-lg border text-sm leading-relaxed ${map[color]}`}>
-        <p>{children}</p>
-      </div>
-    )
-  }
-
-  const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
-    <div className="border border-gray-200 rounded-xl overflow-hidden">
-      <div className="flex items-center gap-2 px-5 py-4 bg-gray-50 border-b border-gray-200">
-        <h2 className="text-base font-semibold text-wp-forest">{title}</h2>
-      </div>
-      <div className="px-5 py-5 bg-white space-y-4">{children}</div>
-    </div>
-  )
-
-  const Th = ({ children }: { children: React.ReactNode }) => (
-    <th className="text-left px-3 py-2 font-semibold bg-gray-50 border-b border-gray-200 text-gray-500 text-xs uppercase tracking-wide">
-      {children}
-    </th>
-  )
-  const Td = ({ children }: { children: React.ReactNode }) => (
-    <td className="px-3 py-3 border-b border-gray-100">{children}</td>
-  )
-  const TdLast = ({ children }: { children: React.ReactNode }) => (
-    <td className="px-3 py-3">{children}</td>
-  )
 
   /* ══════════════════════════════════════════
      ENGLISH VERSION

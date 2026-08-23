@@ -27,6 +27,32 @@ export const homeExtra = {
     heroAltMountain: 'Montaña y playa Costa Rica',
     heroAltCta: 'Naturaleza Costa Rica',
   },
+  fr: {
+    previewQuote:
+      'Wild Path a imaginé exactement le voyage de mes rêves. Chaque détail a été pensé pour nous. Ce n’était pas un tour générique, c’était NOTRE aventure.',
+    previewAuthor: 'María & Carlos',
+    previewMeta: 'Espagne · Voyage de 10 jours',
+    ctaTitle: 'Prêt pour votre aventure ?',
+    ctaSubtitle:
+      'Réservez un appel gratuit et découvrez comment nous pouvons concevoir votre expérience parfaite au Costa Rica.',
+    ctaWhatsapp: 'ÉCRIVEZ-NOUS SUR WHATSAPP',
+    ctaForm: 'REMPLIR LE FORMULAIRE',
+    heroAltMountain: 'Montagne et plage du Costa Rica',
+    heroAltCta: 'Nature du Costa Rica',
+  },
+  de: {
+    previewQuote:
+      'Wild Path hat genau die Reise geplant, die ich mir gewünscht habe. Jedes Detail wurde für uns durchdacht. Es war keine Standardtour – es war UNSER Abenteuer.',
+    previewAuthor: 'María & Carlos',
+    previewMeta: 'Spanien · 10-tägige Reise',
+    ctaTitle: 'Bereit für Ihr Abenteuer?',
+    ctaSubtitle:
+      'Buchen Sie einen kostenlosen Anruf und entdecken Sie, wie wir Ihr perfektes Erlebnis in Costa Rica gestalten können.',
+    ctaWhatsapp: 'SCHREIBEN SIE UNS PER WHATSAPP',
+    ctaForm: 'FORMULAR AUSFÜLLEN',
+    heroAltMountain: 'Berg und Strand in Costa Rica',
+    heroAltCta: 'Natur in Costa Rica',
+  },
 }
 
 export const reviewsExtra = {
@@ -41,6 +67,18 @@ export const reviewsExtra = {
     weeksAgo: 'semanas atrás',
     monthAgo: 'mes atrás',
     monthsAgo: 'meses atrás',
+  },
+  fr: {
+    badge: 'AVIS VÉRIFIÉS',
+    weeksAgo: 'semaines plus tôt',
+    monthAgo: 'mois plus tôt',
+    monthsAgo: 'mois plus tôt',
+  },
+  de: {
+    badge: 'VERIFIZIERTE BEWERTUNGEN',
+    weeksAgo: 'vor Wochen',
+    monthAgo: 'vor einem Monat',
+    monthsAgo: 'vor Monaten',
   },
 }
 
@@ -874,6 +912,362 @@ const pagesEs = {
   },
 }
 
+const pagesFr = structuredClone(pagesEn)
+pagesFr.experiences.hero.badge = 'BAJOS DEL TORO ET ENVIRONS'
+pagesFr.experiences.hero.title = 'Expériences d’une journée'
+pagesFr.experiences.hero.subtitle =
+  'Découvrez les merveilles naturelles du Costa Rica grâce à des expériences conçues pour vous connecter de manière authentique à la nature.'
+pagesFr.experiences.hero.alt = 'Expériences'
+pagesFr.experiences.bookCta = 'Réserver cette expérience'
+pagesFr.experiences.cta.title = 'Vous cherchez quelque chose de plus personnalisé ?'
+pagesFr.experiences.cta.subtitle =
+  'Nous pouvons combiner plusieurs expériences ou créer quelque chose de complètement nouveau selon vos intérêts et votre temps disponible.'
+pagesFr.experiences.cta.button = 'CONCEVEZ VOTRE EXPÉRIENCE'
+pagesFr.gallery.hero.badge = 'MOMENTS RÉELS'
+pagesFr.gallery.hero.title = 'Galerie'
+pagesFr.gallery.hero.subtitle =
+  'Photos réelles de nos expériences — faune, plantes et paysages de nos voyages au Costa Rica.'
+pagesFr.gallery.hero.alt = 'Galerie'
+pagesFr.gallery.categories = ['Tout', 'Faune', 'Oiseaux', 'Nature', 'Plantes', 'Paysages']
+pagesFr.gallery.imageCategories = ['Faune', 'Oiseaux', 'Nature', 'Oiseaux', 'Nature', 'Faune', 'Oiseaux', 'Nature', 'Faune', 'Plantes', 'Plantes', 'Paysages']
+pagesFr.gallery.imageAlts = [
+  'Paresseux dans son habitat naturel',
+  'Quetzal resplendissant',
+  'Grenouille masquée',
+  'Toucan à bec arc-en-ciel',
+  'Forêt nuageuse du Costa Rica',
+  'Grenouille aux yeux rouges',
+  'Colibri en plein vol',
+  'Sentier forestier',
+  'Capucin à face blanche',
+  'Orchidée sauvage',
+  'Fougères de la forêt',
+  'Lever du soleil dans les montagnes',
+]
+pagesFr.gallery.lightboxAlt = 'Image de la galerie'
+pagesFr.gallery.cta.title = 'Vous voulez vivre ces expériences ?'
+pagesFr.gallery.cta.subtitle =
+  'Nous concevons votre itinéraire sur mesure pour que vous puissiez capturer vos propres moments inoubliables.'
+pagesFr.gallery.cta.button = 'CONTACTEZ-NOUS SUR WHATSAPP'
+pagesFr.contact.hero.badge = 'COMMENCEZ VOTRE AVENTURE'
+pagesFr.contact.hero.title = 'Contact'
+pagesFr.contact.hero.subtitle =
+  'Réservez votre appel gratuit et découvrez comment nous pouvons concevoir votre expérience parfaite au Costa Rica.'
+pagesFr.contact.hero.alt = 'Contact'
+pagesFr.contact.sectionTitle = 'Parlons de votre voyage'
+pagesFr.contact.sectionIntro =
+  'Nous sommes là pour écouter vos idées et les transformer en une expérience inoubliable. Contactez-nous comme vous le préférez.'
+pagesFr.contact.whatsapp = 'WhatsApp'
+pagesFr.contact.callUs = 'Appelez-nous'
+pagesFr.contact.email = 'E-mail'
+pagesFr.contact.locationTitle = 'Localisation'
+pagesFr.contact.locationLine = 'Bajos del Toro, Costa Rica'
+pagesFr.contact.locationNote = 'Nous opérons dans tout le Costa Rica avec une base dans la région centrale.'
+pagesFr.contact.hoursTitle = 'Horaires'
+pagesFr.contact.hoursLine = 'Lundi–Dimanche : 7:00 – 20:00'
+pagesFr.contact.hoursNote = 'Nous répondons sous 24 heures.'
+pagesFr.contact.followUs = 'Suivez-nous'
+pagesFr.contact.formTitle = 'Parlez-nous de votre voyage de rêve'
+pagesFr.contact.formNamePlaceholder = 'Nom complet'
+pagesFr.contact.formEmailPlaceholder = 'Adresse e-mail'
+pagesFr.contact.formMessagePlaceholder = 'Votre message'
+pagesFr.contact.formButton = 'Envoyer le formulaire'
+pagesFr.contact.formLoading = 'Chargement…'
+pagesFr.contact.formDisclaimer =
+  'Ce formulaire est géré par FormSubmit.co. En soumettant, vous acceptez notre politique de confidentialité.'
+pagesFr.contact.privacyLink = 'politique de confidentialité'
+pagesFr.about.hero.badge = 'NOTRE ESSENCE'
+pagesFr.about.hero.title = 'À propos'
+pagesFr.about.hero.subtitle =
+  'Nous sommes une équipe passionnée par le Costa Rica, dédiée à des expériences authentiques qui connectent les gens à la nature.'
+pagesFr.about.hero.alt = 'À propos'
+pagesFr.about.storyTitle = 'Notre histoire'
+pagesFr.about.storyP1 =
+  'Mambo est le surnom de Daniel Sibaja et Isaac Sánchez (connu sous le nom de Canito). Ils se sont rencontrés en 2014 à l’Université du Costa Rica pendant leurs études en écotourisme et ont commencé à envisager de créer une entreprise de tourisme ayant un impact positif sur les communautés rurales.'
+pagesFr.about.storyP2 =
+  'Leur objectif est de soutenir les familles entrepreneuriales locales et de visiter des endroits remarquables par leur beauté et leur authenticité. Dotés d’une connaissance approfondie de l’environnement local, ils aiment partager les secrets de la flore et de la faune du Costa Rica.'
+pagesFr.about.storyP3 =
+  'Ils aiment créer de nouvelles connexions avec les voyageurs, qui deviennent souvent des amis, et chaque expérience est conçue pour être unique, personnelle et adaptée aux préférences des invités.'
+pagesFr.about.storyP4 =
+  'Nos valeurs incluent le soutien aux communautés à travers l’éducation environnementale, la collaboration avec les zones protégées, la mise en avant du Costa Rica caché et le renforcement des entrepreneurs locaux en connectant les voyageurs à des activités authentiques.'
+pagesFr.about.teamAlt = 'Équipe Wild Path'
+pagesFr.about.valuesBadge = 'CE QUI NOUS DÉFINIT'
+pagesFr.about.valuesTitle = 'Nos valeurs'
+pagesFr.about.valuesSubtitle = 'Les principes qui guident chaque décision et chaque expérience que nous créons.'
+pagesFr.about.sustainabilityBadge = 'ENGAGEMENT ENVIRONNEMENTAL'
+pagesFr.about.sustainabilityTitle = 'Tourisme responsable'
+pagesFr.about.sustainabilityP1 =
+  'Nous croyons que le tourisme peut soutenir la conservation et les communautés. Chaque expérience Wild Path est conçue en pensant à l’environnement.'
+pagesFr.about.sustainabilityP2 =
+  'Nous collaborons avec des guides locaux certifiés, des familles d’accueil et des projets de conservation dans les zones que nous visitons.'
+pagesFr.about.sustainabilityAlt = 'Durabilité'
+pagesFr.about.whyTitle = 'Pourquoi choisir Wild Path ?'
+pagesFr.about.stat1 = 'Sur mesure'
+pagesFr.about.stat1Label = 'Adapté à vous'
+pagesFr.about.stat2 = 'Local'
+pagesFr.about.stat2Label = 'Guides experts'
+pagesFr.about.stat3 = 'Réaliste'
+pagesFr.about.stat3Label = 'Expériences authentiques'
+pagesFr.about.ctaTitle = 'Rencontrez l’équipe derrière votre aventure'
+pagesFr.about.ctaSubtitle =
+  'Nous sommes prêts à écouter vos rêves et à les transformer en une expérience inoubliable au Costa Rica.'
+pagesFr.about.ctaButton = 'DISCUTEZ SUR WHATSAPP'
+pagesFr.about.values.sustainability.title = 'Durabilité'
+pagesFr.about.values.sustainability.description =
+  'Chaque expérience minimise l’impact environnemental et soutient la conservation des écosystèmes visités.'
+pagesFr.about.values.authenticity.title = 'Authenticité'
+pagesFr.about.values.authenticity.description =
+  'De vraies connexions avec la nature, les communautés locales et les traditions du Costa Rica — rien d’artificiel.'
+pagesFr.about.values.local.title = 'Tourisme local'
+pagesFr.about.values.local.description =
+  'Nous ne travaillons qu’avec des guides locaux, des familles d’accueil et de petites entreprises communautaires.'
+pagesFr.about.values.responsibility.title = 'Responsabilité'
+pagesFr.about.values.responsibility.description =
+  'Engagés dans un tourisme qui bénéficie aux communautés et protège la biodiversité du Costa Rica.'
+pagesFr.about.commitments.conservation.title = 'Conservation'
+pagesFr.about.commitments.conservation.description =
+  'Une partie de chaque réservation est destinée à des projets de reboisement et de protection des zones naturelles.'
+pagesFr.about.commitments.plastic.title = 'Sans plastique'
+pagesFr.about.commitments.plastic.description =
+  'Nos expériences évitent les plastiques à usage unique. Nous utilisons des produits réutilisables et biodégradables.'
+pagesFr.testimonials.hero.badge = 'HISTOIRES RÉELLES'
+pagesFr.testimonials.hero.title = 'Témoignages'
+pagesFr.testimonials.hero.subtitle =
+  'Ce que les voyageurs disent de leurs expériences personnalisées avec Wild Path Costa Rica.'
+pagesFr.testimonials.hero.alt = 'Témoignages'
+pagesFr.testimonials.stats = [
+  { number: '500+', label: 'Voyageurs heureux' },
+  { number: '98%', label: 'Recommanderaient' },
+  { number: '5', label: 'Note moyenne' },
+  { number: '100%', label: 'Personnalisé' },
+]
+pagesFr.testimonials.cta.title = 'Prêt pour votre propre histoire ?'
+pagesFr.testimonials.cta.subtitle =
+  'Rejoignez des centaines de voyageurs qui ont vécu des voyages inoubliables conçus spécialement pour eux.'
+pagesFr.testimonials.cta.button = 'COMMENCEZ VOTRE AVENTURE'
+pagesFr.blog.hero.badge = 'JOURNAL DE VOYAGE'
+pagesFr.blog.hero.title = 'Blog'
+pagesFr.blog.hero.subtitle =
+  'Histoires, conseils et guides pour vous aider à planifier votre aventure parfaite au Costa Rica.'
+pagesFr.blog.hero.alt = 'Blog'
+pagesFr.blog.featured = 'ARTICLE EN VEDETA'
+pagesFr.blog.readSuffix = 'de lecture'
+pagesFr.blog.readArticle = 'Lire l’article'
+pagesFr.blog.readMore = 'Lire la suite'
+pagesFr.blog.newsletterTitle = 'Abonnez-vous à notre newsletter'
+pagesFr.blog.newsletterSubtitle =
+  'Recevez des conseils de voyage, des histoires de jungle et des offres exclusives dans votre boîte mail.'
+pagesFr.blog.emailPlaceholder = 'vous@email.com'
+pagesFr.blog.subscribe = 'S’ABONNER'
+pagesFr.blog.categories = ['Tout', 'Conseils de voyage', 'Nature', 'Faune', 'Culture', 'Aventure']
+pagesFr.blogPost.notFoundTitle = 'Article introuvable'
+pagesFr.blogPost.notFoundBody = 'L’article que vous recherchez n’existe pas ou a été déplacé.'
+pagesFr.blogPost.backToBlog = 'Retour au blog'
+pagesFr.blogPost.authorLabel = 'Auteur'
+pagesFr.blogPost.share = 'Partager :'
+pagesFr.blogPost.related = 'Articles liés'
+pagesFr.terms.heroBadge = 'INFORMATIONS LÉGALES'
+pagesFr.terms.title = 'Conditions générales'
+pagesFr.terms.s1h = '1. Réservations et paiements'
+pagesFr.terms.s1p1 =
+  'Pour confirmer une réservation, un acompte de 30 % de la valeur totale de l’itinéraire est requis. Le solde est dû au plus tard 15 jours avant le début de l’expérience.'
+pagesFr.terms.s1p2 =
+  'Nous acceptons les virements bancaires, SINPE Móvil et les espèces. Les paiements internationaux peuvent entraîner des frais bancaires.'
+pagesFr.terms.s2h = '2. Ce qui est inclus dans les itinéraires'
+pagesFr.terms.s2p1 = 'Nos itinéraires personnalisés incluent :'
+pagesFr.terms.s3h = '3. Non inclus'
+pagesFr.terms.s3p1 = 'Sauf indication contraire, les éléments suivants ne sont pas inclus :'
+pagesFr.terms.s4h = '4. Responsabilités du voyageur'
+pagesFr.terms.s4p1 = 'Le voyageur est responsable de :'
+pagesFr.terms.s5h = '5. Sécurité'
+pagesFr.terms.s5p1 =
+  'La sécurité de nos voyageurs est notre priorité. Nous pouvons modifier ou annuler des activités si les conditions météorologiques ou de sécurité l’exigent.'
+pagesFr.terms.s6h = '6. Modifications de l’itinéraire'
+pagesFr.terms.s6p1 =
+  'Wild Path Costa Rica peut apporter des modifications mineures à l’itinéraire lorsque cela est nécessaire pour des raisons opérationnelles, climatiques ou sécuritaires.'
+pagesFr.terms.updated = 'Dernière mise à jour : février 2025'
+pagesFr.terms.questions = 'Des questions sur ces conditions ? Contactez-nous à'
+
+const pagesDe = structuredClone(pagesEn)
+pagesDe.experiences.hero.badge = 'BAJOS DEL TORO UND UMGEBUNG'
+pagesDe.experiences.hero.title = 'Tageserlebnisse'
+pagesDe.experiences.hero.subtitle =
+  'Entdecken Sie die Naturwunder Costa Ricas mit Erlebnissen, die Ihnen helfen, authentisch mit der Natur in Verbindung zu treten.'
+pagesDe.experiences.hero.alt = 'Erlebnisse'
+pagesDe.experiences.bookCta = 'Dieses Erlebnis buchen'
+pagesDe.experiences.cta.title = 'Möchten Sie etwas Persönlicheres?'
+pagesDe.experiences.cta.subtitle =
+  'Wir können mehrere Erlebnisse kombinieren oder etwas völlig Neues basierend auf Ihren Interessen und Ihrer Zeit gestalten.'
+pagesDe.experiences.cta.button = 'GESTALTEN SIE IHRE ERFAHRUNG'
+pagesDe.gallery.hero.badge = 'ECHTE MOMENTE'
+pagesDe.gallery.hero.title = 'Galerie'
+pagesDe.gallery.hero.subtitle =
+  'Echte Fotos aus unseren Erlebnissen – Tierwelt, Pflanzen und Landschaften aus unseren Reisen durch Costa Rica.'
+pagesDe.gallery.hero.alt = 'Galerie'
+pagesDe.gallery.categories = ['Alle', 'Tierwelt', 'Vögel', 'Natur', 'Pflanzen', 'Landschaften']
+pagesDe.gallery.imageCategories = ['Tierwelt', 'Vögel', 'Natur', 'Vögel', 'Natur', 'Tierwelt', 'Vögel', 'Natur', 'Tierwelt', 'Pflanzen', 'Pflanzen', 'Landschaften']
+pagesDe.gallery.imageAlts = [
+  'Faultier in seinem natürlichen Lebensraum',
+  'Leuchtender Quetzal',
+  'Maskenfrosch',
+  'Regenbogen-Schnabeltukan',
+  'Costa-Rica-Wolkenwald',
+  'Rotaugenfrosch',
+  'Kolibri im Flug',
+  'Waldpfad',
+  'Weißgesicht-Kapuzineraffe',
+  'Wilde Orchidee',
+  'Farne im Wald',
+  'Sonnenaufgang im Gebirge',
+]
+pagesDe.gallery.lightboxAlt = 'Galeriebild'
+pagesDe.gallery.cta.title = 'Möchten Sie diese Erlebnisse selbst erleben?'
+pagesDe.gallery.cta.subtitle =
+  'Wir gestalten Ihren individuellen Reiseplan, damit Sie Ihre eigenen unvergesslichen Momente festhalten können.'
+pagesDe.gallery.cta.button = 'KONTAKTIEREN SIE UNS PER WHATSAPP'
+pagesDe.contact.hero.badge = 'STARTEN SIE IHR ABENTEUER'
+pagesDe.contact.hero.title = 'Kontakt'
+pagesDe.contact.hero.subtitle =
+  'Buchen Sie Ihren kostenlosen Anruf und wir zeigen Ihnen, wie wir Ihr perfektes Erlebnis in Costa Rica gestalten können.'
+pagesDe.contact.hero.alt = 'Kontakt'
+pagesDe.contact.sectionTitle = 'Lassen Sie uns über Ihre Reise sprechen'
+pagesDe.contact.sectionIntro =
+  'Wir hören Ihnen zu und verwandeln Ihre Ideen in ein unvergessliches Erlebnis. Kontaktieren Sie uns über Ihr bevorzugtes Medium.'
+pagesDe.contact.whatsapp = 'WhatsApp'
+pagesDe.contact.callUs = 'Rufen Sie uns an'
+pagesDe.contact.email = 'E-Mail'
+pagesDe.contact.locationTitle = 'Standort'
+pagesDe.contact.locationLine = 'Bajos del Toro, Costa Rica'
+pagesDe.contact.locationNote = 'Wir operieren in ganz Costa Rica mit Sitz in der zentralen Region.'
+pagesDe.contact.hoursTitle = 'Öffnungszeiten'
+pagesDe.contact.hoursLine = 'Montag–Sonntag: 7:00–20:00'
+pagesDe.contact.hoursNote = 'Wir antworten innerhalb von 24 Stunden.'
+pagesDe.contact.followUs = 'Folgen Sie uns'
+pagesDe.contact.formTitle = 'Erzählen Sie uns von Ihrer Traumreise'
+pagesDe.contact.formNamePlaceholder = 'Vollständiger Name'
+pagesDe.contact.formEmailPlaceholder = 'E-Mail-Adresse'
+pagesDe.contact.formMessagePlaceholder = 'Ihre Nachricht'
+pagesDe.contact.formButton = 'Formular senden'
+pagesDe.contact.formLoading = 'Lädt…'
+pagesDe.contact.formDisclaimer =
+  'Dieses Formular wird von FormSubmit.co verarbeitet. Durch das Absenden akzeptieren Sie unsere Datenschutzerklärung.'
+pagesDe.contact.privacyLink = 'Datenschutzerklärung'
+pagesDe.about.hero.badge = 'UNSERE ESSENZ'
+pagesDe.about.hero.title = 'Über uns'
+pagesDe.about.hero.subtitle =
+  'Wir sind ein Team, das sich für Costa Rica begeistert und authentische Erlebnisse schafft, die Menschen mit der Natur verbinden.'
+pagesDe.about.hero.alt = 'Über uns'
+pagesDe.about.storyTitle = 'Unsere Geschichte'
+pagesDe.about.storyP1 =
+  'Mambo ist der Spitzname von Daniel Sibaja und Isaac Sánchez (bekannt als Canito). Sie lernten sich 2014 an der Universität von Costa Rica im Bereich Ökotourismus kennen und begannen darüber zu sprechen, ein Tourismusunternehmen zu gründen, das positive Auswirkungen auf ländliche Gemeinden haben würde.'
+pagesDe.about.storyP2 =
+  'Ihr Ziel ist es, lokale Unternehmerfamilien zu unterstützen und Orte zu besuchen, die durch ihre Schönheit und Authentizität herausragen. Mit tiefem Wissen über die lokale Umwelt teilen sie die Geheimnisse der Flora und Fauna Costa Ricas.'
+pagesDe.about.storyP3 =
+  'Sie genießen es, neue Verbindungen mit Reisenden zu knüpfen – oft werden daraus Freundschaften – und gestalten jedes Erlebnis so, dass es einzigartig, persönlich und auf die Wünsche der Gäste abgestimmt ist.'
+pagesDe.about.storyP4 =
+  'Unsere Werte umfassen die Unterstützung von Gemeinschaften durch Umwelterziehung, Zusammenarbeit mit Schutzgebieten, die Präsentation des verborgenen Costa Rica und die Stärkung lokaler Unternehmer, indem wir Reisende mit authentischen lokalen Aktivitäten verbinden.'
+pagesDe.about.teamAlt = 'Wild Path Team'
+pagesDe.about.valuesBadge = 'WAS UNS DEFINIERT'
+pagesDe.about.valuesTitle = 'Unsere Werte'
+pagesDe.about.valuesSubtitle = 'Prinzipien hinter jeder Entscheidung und jedem Erlebnis, das wir gestalten.'
+pagesDe.about.sustainabilityBadge = 'UMWELTVERPFLICHTUNG'
+pagesDe.about.sustainabilityTitle = 'Verantwortungsvoller Tourismus'
+pagesDe.about.sustainabilityP1 =
+  'Wir glauben, dass Tourismus den Naturschutz und die Gemeinden unterstützen kann. Jedes Wild-Path-Erlebnis wird mit Blick auf die Umwelt gestaltet.'
+pagesDe.about.sustainabilityP2 =
+  'Wir arbeiten mit zertifizierten lokalen Guides, Gastgeberfamilien und Naturschutzprojekten in den von uns besuchten Gebieten zusammen.'
+pagesDe.about.sustainabilityAlt = 'Nachhaltigkeit'
+pagesDe.about.whyTitle = 'Warum Wild Path wählen?'
+pagesDe.about.stat1 = 'Maßgeschneidert'
+pagesDe.about.stat1Label = 'Auf Sie zugeschnitten'
+pagesDe.about.stat2 = 'Lokal'
+pagesDe.about.stat2Label = 'Erfahrene Guides'
+pagesDe.about.stat3 = 'Echt'
+pagesDe.about.stat3Label = 'Authentische Erlebnisse'
+pagesDe.about.ctaTitle = 'Treffen Sie das Team hinter Ihrem Abenteuer'
+pagesDe.about.ctaSubtitle =
+  'Wir sind bereit, Ihre Träume anzuhören und in ein unvergessliches Erlebnis in Costa Rica zu verwandeln.'
+pagesDe.about.ctaButton = 'CHATTE PER WHATSAPP'
+pagesDe.about.values.sustainability.title = 'Nachhaltigkeit'
+pagesDe.about.values.sustainability.description =
+  'Jedes Erlebnis minimiert die Umweltbelastung und unterstützt den Schutz der Ökosysteme, die wir besuchen.'
+pagesDe.about.values.authenticity.title = 'Authentizität'
+pagesDe.about.values.authenticity.description =
+  'Echte Verbindungen mit der Natur, den lokalen Gemeinschaften und den Traditionen Costa Ricas – nichts Künstliches.'
+pagesDe.about.values.local.title = 'Lokaler Tourismus'
+pagesDe.about.values.local.description =
+  'Wir arbeiten nur mit lokalen Guides, Gastgeberfamilien und kleinen Gemeinschaftsunternehmen zusammen.'
+pagesDe.about.values.responsibility.title = 'Verantwortung'
+pagesDe.about.values.responsibility.description =
+  'Wir setzen uns für Tourismus ein, der Gemeinden stärkt und die Biodiversität Costa Ricas schützt.'
+pagesDe.about.commitments.conservation.title = 'Naturschutz'
+pagesDe.about.commitments.conservation.description =
+  'Ein Teil jeder Buchung fließt in Wiederaufforstungs- und Schutzprojektprojekte.'
+pagesDe.about.commitments.plastic.title = 'Plastikfrei'
+pagesDe.about.commitments.plastic.description =
+  'Unsere Erlebnisse vermeiden Einwegkunststoffe. Wir verwenden wiederverwendbare und biologisch abbaubare Produkte.'
+pagesDe.testimonials.hero.badge = 'Echte Geschichten'
+pagesDe.testimonials.hero.title = 'Erfahrungsberichte'
+pagesDe.testimonials.hero.subtitle =
+  'Was Reisende über ihre personalisierten Erlebnisse mit Wild Path Costa Rica sagen.'
+pagesDe.testimonials.hero.alt = 'Erfahrungsberichte'
+pagesDe.testimonials.stats = [
+  { number: '500+', label: 'Zufriedene Reisende' },
+  { number: '98%', label: 'würden weiterempfehlen' },
+  { number: '5', label: 'Durchschnittsbewertung' },
+  { number: '100%', label: 'Personalisiert' },
+]
+pagesDe.testimonials.cta.title = 'Bereit für Ihre eigene Geschichte?'
+pagesDe.testimonials.cta.subtitle =
+  'Schließen Sie sich Hunderten von Reisenden an, deren unvergessliche Reisen genau auf sie zugeschnitten wurden.'
+pagesDe.testimonials.cta.button = 'STARTEN SIE IHR ABENTEUER'
+pagesDe.blog.hero.badge = 'REISEJOURNAL'
+pagesDe.blog.hero.title = 'Blog'
+pagesDe.blog.hero.subtitle =
+  'Geschichten, Tipps und Leitfäden, die Ihnen bei der Planung Ihres perfekten Abenteuers in Costa Rica helfen.'
+pagesDe.blog.hero.alt = 'Blog'
+pagesDe.blog.featured = 'HERVORGEHOBENER ARTIKEL'
+pagesDe.blog.readSuffix = 'lesen'
+pagesDe.blog.readArticle = 'Artikel lesen'
+pagesDe.blog.readMore = 'Mehr lesen'
+pagesDe.blog.newsletterTitle = 'Abonnieren Sie unseren Newsletter'
+pagesDe.blog.newsletterSubtitle =
+  'Erhalten Sie Reisetipps, Dschungelgeschichten und exklusive Angebote in Ihrem Postfach.'
+pagesDe.blog.emailPlaceholder = 'sie@email.com'
+pagesDe.blog.subscribe = 'ABONNIEREN'
+pagesDe.blog.categories = ['Alle', 'Reisetipps', 'Natur', 'Tierwelt', 'Kultur', 'Abenteuer']
+pagesDe.blogPost.notFoundTitle = 'Artikel nicht gefunden'
+pagesDe.blogPost.notFoundBody = 'Der Artikel, den Sie suchen, existiert nicht oder wurde verschoben.'
+pagesDe.blogPost.backToBlog = 'Zurück zum Blog'
+pagesDe.blogPost.authorLabel = 'Autor'
+pagesDe.blogPost.share = 'Teilen:'
+pagesDe.blogPost.related = 'Verwandte Artikel'
+pagesDe.terms.heroBadge = 'RECHTLICHE INFORMATIONEN'
+pagesDe.terms.title = 'Allgemeine Geschäftsbedingungen'
+pagesDe.terms.s1h = '1. Buchungen und Zahlungen'
+pagesDe.terms.s1p1 =
+  'Zur Bestätigung einer Buchung ist eine Anzahlung in Höhe von 30 % des Gesamtwertes der Reiseroute erforderlich. Der Restbetrag ist spätestens 15 Tage vor Beginn des Erlebnisses fällig.'
+pagesDe.terms.s1p2 =
+  'Wir akzeptieren Banküberweisungen, SINPE Móvil und Bargeld. Internationale Zahlungen können Bankgebühren verursachen.'
+pagesDe.terms.s2h = '2. Was in den Reiserouten enthalten ist'
+pagesDe.terms.s2p1 = 'Unsere individuellen Reiserouten beinhalten:'
+pagesDe.terms.s3h = '3. Nicht enthalten'
+pagesDe.terms.s3p1 = 'Sofern nicht anders angegeben, sind die folgenden Punkte nicht enthalten:'
+pagesDe.terms.s4h = '4. Verantwortlichkeiten des Reisenden'
+pagesDe.terms.s4p1 = 'Der Reisende ist verantwortlich für:'
+pagesDe.terms.s5h = '5. Sicherheit'
+pagesDe.terms.s5p1 =
+  'Die Sicherheit unserer Reisenden hat für uns oberste Priorität. Wir können Aktivitäten ändern oder absagen, wenn Wetter- oder Sicherheitsbedingungen dies erforderlich machen.'
+pagesDe.terms.s6h = '6. Änderungen der Reiseroute'
+pagesDe.terms.s6p1 =
+  'Wild Path Costa Rica kann kleinere Änderungen an der Reiseroute vornehmen, wenn dies aus betrieblichen, wetterbedingten oder Sicherheitsgründen notwendig ist.'
+pagesDe.terms.updated = 'Letzte Aktualisierung: Februar 2025'
+pagesDe.terms.questions = 'Fragen zu diesen Bedingungen? Kontaktieren Sie uns unter'
+
 export function mergeExtraPages(locale: string) {
-  return locale.startsWith('en') ? pagesEn : pagesEs
+  if (locale.startsWith('en')) return pagesEn
+  if (locale.startsWith('es')) return pagesEs
+  if (locale.startsWith('fr')) return pagesFr
+  if (locale.startsWith('de')) return pagesDe
+  return pagesEn
 }
