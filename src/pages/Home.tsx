@@ -26,6 +26,41 @@ export default function Home() {
     description: t('hero.subtitle'),
     image: 'https://wildpath.lat/images/logo-wildpath.png',
     canonicalPath: '/',
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: 'Wild Path',
+      description: t('hero.subtitle'),
+      url: 'https://wildpath.lat',
+      telephone: '+506 8985 7750',
+      email: 'wildpathcr@gmail.com',
+      image: 'https://wildpath.lat/images/logo-wildpath.png',
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: 'Bajos del Toro',
+        addressCountry: 'CR'
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 10.233489254130383,
+        longitude: -84.30337070608336
+      },
+      areaServed: 'Costa Rica',
+      priceRange: '$$',
+      sameAs: [
+        'https://www.instagram.com/wildpath.cr/',
+        'https://www.facebook.com/people/Wild-Path-Costa-Rica/61561795049271/',
+        'https://www.tiktok.com/@wildpathcostarica'
+      ],
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: '+50689857750',
+          contactType: 'customer service',
+          availableLanguage: ['es','en']
+        }
+      ]
+    }
   })
   const heroRef = useRef<HTMLDivElement>(null)
   const processRef = useRef<HTMLDivElement>(null)

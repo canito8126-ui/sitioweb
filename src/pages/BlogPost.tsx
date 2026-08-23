@@ -54,6 +54,41 @@ export default function BlogPost() {
     image: post?.image,
     canonicalPath: slug ? `/blog/${slug}` : '/blog',
     keywords: post?.tags?.join(', '),
+    structuredData: post
+      ? [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: post.title,
+            description: seoDescription,
+            url: typeof window !== 'undefined' ? window.location.href : (slug ? `https://wildpath.lat/blog/${slug}` : 'https://wildpath.lat/blog')
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: 'Inicio',
+                item: 'https://wildpath.lat/'
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: 'Blog',
+                item: 'https://wildpath.lat/blog'
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: post.title,
+                item: typeof window !== 'undefined' ? window.location.href : (slug ? `https://wildpath.lat/blog/${slug}` : 'https://wildpath.lat/blog')
+              }
+            ]
+          }
+        ]
+      : undefined,
   })
 
   if (!post) {

@@ -32,12 +32,6 @@ const EXP_META: { key: ExpKey; image: string; icon: typeof Moon }[] = [
 export default function Experiences() {
   const { t } = useTranslation()
 
-  useSeo({
-    title: t('pages.experiences.hero.title'),
-    description: t('pages.experiences.hero.subtitle'),
-    image: 'https://wildpath.lat/images/exp-bosque.jpg',
-    canonicalPath: '/experiencias',
-  })
 
   const experiences = useMemo(
     () =>
@@ -54,6 +48,39 @@ export default function Experiences() {
       }),
     [t]
   )
+
+  // Structured data: TouristAttraction for each experience (no Offer — booking via contacto)
+  useSeo({
+    title: t('pages.experiences.hero.title'),
+    description: t('pages.experiences.hero.subtitle'),
+    image: 'https://wildpath.lat/images/exp-bosque.jpg',
+    canonicalPath: '/experiencias',
+    structuredData: [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: t('pages.experiences.hero.title'),
+        description: t('pages.experiences.hero.subtitle'),
+        url: new URL('/experiencias', window.location.origin).toString()
+      },
+      ...EXP_META.map(({ key, image }) => {
+        const data = t(`pages.experiences.items.${key}`, { returnObjects: true }) as any
+        return {
+          "@context": "https://schema.org",
+          "@type": "TouristAttraction",
+          name: data.title,
+          description: data.description,
+          image: `https://wildpath.lat${image}`,
+          url: new URL('/experiencias', window.location.origin).toString() + `#${key}`,
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 10.233489254130383,
+            longitude: -84.30337070608336
+          }
+        }
+      })
+    ]
+  })
 
   useEffect(() => {
     const ctx = gsap.context(() => {
