@@ -313,6 +313,11 @@
     "email": "wildpathcr@gmail.com",
     "location": "Bajos del Toro, Costa Rica",
     "hours": "Montag bis Sonntag: 7:00 – 20:00 Uhr",
-    "findUs": "Finden Sie uns auf Google Maps"
+    "findUs": "Finden Sie uns auf Google Maps",
+    "pages": {
+      "experiences": {
+        "viewDetails": "Mehr erfahren"
+      }
+    }
   }
 }

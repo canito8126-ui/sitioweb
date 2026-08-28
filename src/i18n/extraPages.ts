@@ -92,6 +92,7 @@ const pagesEn = {
       alt: 'Experiences',
     },
     bookCta: 'Book this experience',
+    viewDetails: 'Read more',
     cta: {
       title: 'Want something more personalized?',
       subtitle:
@@ -657,6 +658,7 @@ const pagesEs = {
       alt: 'Experiencias',
     },
     bookCta: 'Reservar esta experiencia',
+    viewDetails: 'Leer más',
     cta: {
       title: '¿Quieres algo más personalizado?',
       subtitle:
