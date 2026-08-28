@@ -5,6 +5,7 @@ import './App.css'
 
 const Home = lazy(() => import('./pages/Home'))
 const Experiences = lazy(() => import('./pages/Experiences'))
+const Tour = lazy(() => import('./pages/Tour'))
 const Inspiration = lazy(() => import('./pages/Inspiration'))
 const Gallery = lazy(() => import('./pages/Gallery'))
 const Blog = lazy(() => import('./pages/Blog'))
@@ -37,6 +38,7 @@ function App() {
           <Route path="/" element={<Layout />}>
            <Route index element={<Home />} />
            <Route path="experiencias" element={<Experiences />} />
+           <Route path="experiencias/:slug" element={<Tour />} />
            <Route path="inspiracion" element={<Inspiration />} />
            <Route path="galeria" element={<Gallery />} />
            <Route path="blog" element={<Blog />} />

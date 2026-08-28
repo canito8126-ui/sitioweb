@@ -177,13 +177,23 @@ export default function Experiences() {
                     ))}
                   </ul>
 
-                  <Link 
-                    to="/contacto"
-                    className="inline-flex items-center gap-2 text-wp-yellow font-medium hover:underline"
-                  >
-                    {t('pages.experiences.bookCta')}
-                    <ArrowRight size={18} />
-                  </Link>
+                  <div className="flex items-center gap-4">
+                    <Link 
+                      to={`/experiencias/${exp.key}`}
+                      className="inline-flex items-center gap-2 text-wp-forest font-medium hover:underline"
+                    >
+                      {t('pages.experiences.viewDetails') || 'Ver detalles'}
+                      <ArrowRight size={18} />
+                    </Link>
+
+                    <Link 
+                      to="/contacto"
+                      className="inline-flex items-center gap-2 text-wp-yellow font-medium hover:underline"
+                    >
+                      {t('pages.experiences.bookCta')}
+                      <ArrowRight size={18} />
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}

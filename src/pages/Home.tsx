@@ -47,19 +47,20 @@ export default function Home() {
       },
       areaServed: 'Costa Rica',
       priceRange: '$$',
-      sameAs: [
-        'https://www.instagram.com/wildpath.cr/',
-        'https://www.facebook.com/people/Wild-Path-Costa-Rica/61561795049271/',
-        'https://www.tiktok.com/@wildpathcostarica'
-      ],
-      contactPoint: [
-        {
-          "@type": "ContactPoint",
-          telephone: '+50689857750',
-          contactType: 'customer service',
-          availableLanguage: ['es','en']
-        }
-      ]
+    openingHours: ['Mo-Su 07:00-20:00'],
+    sameAs: [
+      'https://www.instagram.com/wildpath.cr/',
+      'https://www.facebook.com/people/Wild-Path-Costa-Rica/61561795049271/',
+      'https://www.tiktok.com/@wildpathcostarica'
+    ],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: '+50689857750',
+        contactType: 'customer service',
+        availableLanguage: ['es','en']
+      }
+    ]
     }
   })
   const heroRef = useRef<HTMLDivElement>(null)
