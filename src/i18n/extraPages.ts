@@ -102,7 +102,7 @@ const pagesEn = {
       nocturnal: {
         title: 'Night hikes',
         seoTitle: 'Night Hikes in Bajos del Toro | Wild Path Costa Rica',
-        seoDescription: 'Guided night hikes in Bajos del Toro: discover nocturnal wildlife, bioluminescent insects and unique forest sounds. Small groups, expert naturalists. Book now.',
+        seoDescription: 'Night hikes in Bajos del Toro—see frogs, bioluminescent insects and nocturnal wildlife. Small groups and expert naturalists. Book your night tour.',
         description:
           'Discover the world that wakes when the sun goes down. See frogs, bioluminescent insects, and nocturnal mammals in their natural habitat.',
         longDescription: 'Explore Bajos del Toro after dark on a focused 2‑hour night hike. See frogs, bioluminescent insects and nocturnal mammals with minimal‑impact methods. Small groups, red‑filtered lights, and expert naturalist commentary. Finish with a local snack and a quick species recap.',
@@ -142,7 +142,7 @@ const pagesEn = {
       birds: {
         title: 'Bird watching',
         seoTitle: 'Bird Watching Tours in Bajos del Toro | Wild Path Costa Rica',
-        seoDescription: 'Private birding tours led by certified guides. Spot quetzals, toucans and hummingbirds in Bajos del Toro—small groups, expert equipment included.',
+        seoDescription: 'Birding tours in Bajos del Toro—spot quetzals, toucans and hummingbirds with certified guides. Scopes and binoculars provided. Reserve now.',
         description:
           'Costa Rica hosts more than 10% of the world’s bird species. Join us to spot quetzals, toucans, hummingbirds, and hundreds more.',
         longDescription: 'Early‑morning birding in Bajos del Toro with certified guides. Spot quetzals, toucans and hummingbirds using scopes and binoculars. Small groups, species checklist and a local breakfast included.',
@@ -182,7 +182,7 @@ const pagesEn = {
       waterfalls: {
         title: 'Waterfall hikes',
         seoTitle: 'Waterfall Hikes in Bajos del Toro | Wild Path Costa Rica',
-        seoDescription: 'Full‑day waterfall hikes visiting multiple hidden cascades in Bajos del Toro. Swim in natural pools, picnic and enjoy immersive forest hikes with expert guides.',
+        seoDescription: 'Full‑day waterfall hikes in Bajos del Toro—swim in hidden pools, enjoy a local picnic and expert guides. Book your adventure.',
         description:
           'Explore hidden waterfalls in the jungle. Walk pristine trails, cross rivers, and marvel at the waterfalls.',
         longDescription: 'Full‑day waterfall hike to hidden cascades and crystal pools. Moderate trails with swimming breaks and a local picnic. Guides focus on safety and conservation; routes can be adapted for families or more adventurous groups.',
@@ -222,7 +222,7 @@ const pagesEn = {
       forest: {
         title: 'Mature forest hikes',
         seoTitle: 'Mature Forest Hikes in Bajos del Toro | Wild Path Costa Rica',
-        seoDescription: 'Guided mature forest hikes exploring ancient trees, orchids and cloud forest biodiversity in Bajos del Toro. Small groups and expert interpretation.',
+        seoDescription: 'Mature forest hikes in Bajos del Toro—explore ancient trees, orchids and cloud forest biodiversity with expert guides. Book today.',
         description:
           'Immerse yourself in primary ecosystems where nature evolved without human intervention. Ancient trees, wild orchids, and incredible biodiversity.',
         longDescription: 'Walk old‑growth forest with expert naturalists. Short interpretive stops explain trees, orchids and ecosystem links. Pacing allows photography and close observation; we follow low‑impact practices throughout.',
@@ -261,7 +261,7 @@ const pagesEn = {
       naturalist: {
         title: 'Naturalist walks',
         seoTitle: 'Naturalist Walks in Bajos del Toro | Wild Path Costa Rica',
-        seoDescription: 'Educational naturalist walks for families and curious travelers. Learn about Costa Rica’s ecosystems with expert guides and hands‑on activities.',
+        seoDescription: 'Naturalist walks for families in Bajos del Toro—hands‑on activities, expert guides and kid‑friendly learning. Reserve your spot.',
         description:
           'Learn about Costa Rica’s flora, fauna, and ecosystems with an expert naturalist—a fun, educational experience for families.',
         longDescription: 'Hands‑on naturalist walks for families and curious travelers. Interactive activities, specimens and clear explanations make learning fun for all ages. Learn practical conservation steps and local ecological context in a short, guided walk.',
@@ -299,7 +299,7 @@ const pagesEn = {
       cooking: {
         title: 'Traditional Costa Rican cooking',
         seoTitle: 'Traditional Costa Rican Cooking Class | Wild Path Costa Rica',
-        seoDescription: 'Hands‑on cooking classes on a local farm—learn traditional recipes, source local ingredients, and enjoy a shared meal. Cultural and sustainable.',
+        seoDescription: 'Hands‑on Costa Rican cooking class on a local farm—learn recipes, tour the garden and share a meal. Book now; places limited.',
         description:
           'Learn to cook traditional dishes with local ingredients and ancestral techniques—an authentic culinary experience.',
         longDescription: 'Hands‑on cooking class on a local farm. Learn seasonal recipes, prepare a shared meal and tour the garden. Sustainable sourcing and a recipe booklet included.',
@@ -667,7 +667,7 @@ const pagesEs = {
       nocturnal: {
         title: 'Caminatas Nocturnas',
         seoTitle: 'Caminatas Nocturnas en Bajos del Toro | Wild Path Costa Rica',
-        seoDescription: 'Caminatas nocturnas guiadas en Bajos del Toro para descubrir ranas, insectos bioluminiscentes y mamíferos. Grupos pequeños y guías naturalistas. Reserva hoy.',
+        seoDescription: 'Caminata nocturna en Bajos del Toro—observa ranas, insectos bioluminiscentes y mamíferos con guías expertos. Grupos pequeños. Reserva ya.',
         description:
           'Descubre el mundo que despierta cuando el sol se oculta. Observa ranas, insectos bioluminiscentes y mamíferos nocturnos en su hábitat natural.',
         longDescription: 'Vive Bajos del Toro de noche en una caminata de 2 horas. Observa ranas, insectos bioluminiscentes y mamíferos con técnicas de bajo impacto. Grupos pequeños, guías naturalistas y snack local al final.',
@@ -707,7 +707,7 @@ const pagesEs = {
       birds: {
         title: 'Avistamiento de Aves',
         seoTitle: 'Avistamiento de Aves en Bajos del Toro | Wild Path Costa Rica',
-        seoDescription: 'Tours privados de observación de aves con guías certificados. Ve quetzales, tucanes y colibríes en Bajos del Toro—grupos pequeños y equipo incluido.',
+        seoDescription: 'Avistamiento de aves en Bajos del Toro—ve quetzales, tucanes y colibríes con guías certificados. Telescopios incluidos. Reserva ahora.',
         description:
           'Costa Rica alberga más del 10% de las especies de aves del mundo. Acompáñanos a descubrir quetzales, tucanes, colibríes y cientos de especies más.',
         longDescription: 'Avistamiento matutino con guías certificados. Ve quetzales, tucanes y colibríes con telescopios y binoculares. Grupo reducido, desayuno local y lista de especies incluida.',
@@ -747,7 +747,7 @@ const pagesEs = {
       waterfalls: {
         title: 'Caminatas a Cataratas',
         seoTitle: 'Caminatas a Cataratas en Bajos del Toro | Wild Path Costa Rica',
-        seoDescription: 'Excursiones de día completo a cascadas escondidas en Bajos del Toro. Nada en pozas naturales, disfruta un picnic y explora senderos vírgenes con guías expertos.',
+        seoDescription: 'Excursión de día a cascadas en Bajos del Toro—baños en pozas, picnic local y guías expertos. Reserva tu lugar.',
         description:
           'Explora cascadas escondidas en medio de la selva. Camina por senderos vírgenes, cruza ríos cristalinos y déjate sorprender por la majestuosidad de las cataratas.',
         longDescription: 'Excursión de día completo a cascadas escondidas y pozas cristalinas. Senderos moderados, baños en piscinas naturales y picnic local. Se adapta según la capacidad del grupo.',
@@ -787,7 +787,7 @@ const pagesEs = {
       forest: {
         title: 'Caminatas en Bosque Maduro',
         seoTitle: 'Caminatas en Bosque Maduro en Bajos del Toro | Wild Path Costa Rica',
-        seoDescription: 'Explora bosques primarios de Bajos del Toro con guías naturalistas. Observa orquídeas, árboles centenarios y aprende sobre la ecología del bosque nuboso.',
+        seoDescription: 'Caminata por bosque maduro en Bajos del Toro—árboles centenarios, orquídeas y guía experto. Experiencia de bajo impacto. Reserva hoy.',
         description:
           'Sumérgete en ecosistemas primarios donde la naturaleza ha evolucionado sin intervención humana. Árboles centenarios, orquídeas silvestres y biodiversidad impresionante.',
         longDescription: 'Caminata por bosque antiguo con guías expertos. Paradas interpretativas para conocer árboles, orquídeas y redes ecológicas. Enfoque de bajo impacto y tiempo para fotos.',
@@ -826,7 +826,7 @@ const pagesEs = {
       naturalist: {
         title: 'Caminatas Naturalistas',
         seoTitle: 'Caminatas Naturalistas en Bajos del Toro | Wild Path Costa Rica',
-        seoDescription: 'Caminatas naturalistas educativas para familias y viajeros curiosos. Aprende sobre ecosistemas locales con guías expertos y actividades prácticas.',
+        seoDescription: 'Caminata naturalista para familias en Bajos del Toro—actividades interactivas y guía experto. Ideal para niños. Reserva.',
         description:
           'Aprende sobre la flora, fauna y ecosistemas de Costa Rica de la mano de un naturalista experto. Una experiencia educativa para toda la familia.',
         longDescription: 'Caminata naturalista práctica para familias y curiosos. Actividades interactivas y explicaciones accesibles para todas las edades. Aprende sobre ecosistemas y acciones de conservación.',
@@ -864,7 +864,7 @@ const pagesEs = {
       cooking: {
         title: 'Cocina Típica Costarricense',
         seoTitle: 'Clase de Cocina Costarricense en Bajos del Toro | Wild Path Costa Rica',
-        seoDescription: 'Clase práctica de cocina en una finca local: aprende recetas tradicionales, visita la huerta y comparte una comida con los anfitriones. Cultural y sostenible.',
+        seoDescription: 'Clase de cocina en finca local—aprende recetas de temporada, visita la huerta y comparte la comida. Plazas limitadas. Reserva.',
         description:
           'Aprende a preparar platillos tradicionales costarricenses con ingredientes locales y técnicas ancestrales. Una experiencia gastronómica auténtica.',
         longDescription: 'Clase práctica de cocina en una finca local. Aprende recetas de temporada, visita la huerta y comparte la comida. Recetario incluido y enfoque sostenible.',
