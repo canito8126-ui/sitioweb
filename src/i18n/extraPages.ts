@@ -118,7 +118,8 @@ Explore Bajos del Toro after dark on a focused 2‑hour night hike.
 **Includes**
 - Local snack and a brief safety briefing
 
-**Duration:** 2 hours`,}
+**Duration:** 2 hours`,
+
         duration: '2 hours',
         groupSize: '2–8 people',
         location: 'Bajos del Toro',
@@ -170,7 +171,8 @@ Early‑morning birding in Bajos del Toro with certified guides.
 **Includes**
 - Certified birding guide, spotting scope and binoculars
 
-**Duration:** 2 hours`,}
+**Duration:** 2 hours`,
+
         duration: '2 hours',
         groupSize: '2–6 people',
         location: 'Private reserves',
@@ -222,7 +224,8 @@ Full‑day waterfall hike to hidden cascades and crystal pools.
 **Includes**
 - Bilingual naturalist guide, picnic lunch, and safety briefing
 
-**Duration:** 5–6 hours`,}
+**Duration:** 5–6 hours`,
+
         duration: '5–6 hours',
         groupSize: '2–10 people',
         location: 'Multiple waterfalls',
@@ -274,7 +277,8 @@ Walk old‑growth forest with expert naturalists.
 **Includes**
 - Naturalist guide and interpretive materials
 
-**Duration:** 4–6 hours`,}
+**Duration:** 4–6 hours`,
+
         duration: '4–6 hours',
         groupSize: '2–8 people',
         location: 'Primary forests',
@@ -325,7 +329,8 @@ Hands‑on naturalist walks for families and curious travelers.
 **Includes**
 - Naturalist guide and educational materials
 
-**Duration:** 2 hours`,}
+**Duration:** 2 hours`,
+
         duration: '2 hours',
         groupSize: '2–12 people',
         location: 'Local trails',
@@ -375,7 +380,8 @@ Hands‑on cooking class on a local farm.
 **Includes**
 - Ingredients, cooking equipment, recipe booklet, and shared meal
 
-**Duration:** 3–4 hours`,}
+**Duration:** 3–4 hours`,
+
         duration: '3–4 hours',
         groupSize: '2–8 people',
         location: 'Local farm',
@@ -756,7 +762,8 @@ Vive Bajos del Toro de noche en una caminata de 2 horas.
 **Incluye**
 - Snack local y breve charla de seguridad
 
-**Duración:** 2 horas`,}
+**Duración:** 2 horas`,
+
         duration: '2 horas',
         groupSize: '2-8 personas',
         location: 'Bajos del Toro',
@@ -808,7 +815,8 @@ Avistamiento matutino con guías certificados.
 **Incluye**
 - Guía ornitólogo certificado, telescopio y binoculares
 
-**Duración:** 2 horas`,}
+**Duración:** 2 horas`,
+
         duration: '2 horas',
         groupSize: '2-6 personas',
         location: 'Reservas privadas',
@@ -860,7 +868,8 @@ Excursión de día completo a cascadas escondidas y pozas cristalinas.
 **Incluye**
 - Guía naturalista bilingüe, almuerzo picnic y briefing de seguridad
 
-**Duración:** 5–6 horas`,}
+**Duración:** 5–6 horas`,
+
         duration: '5-6 horas',
         groupSize: '2-10 personas',
         location: 'Múltiples cataratas',
@@ -912,7 +921,8 @@ Caminata por bosque antiguo con guías expertos.
 **Incluye**
 - Guía naturalista y materiales interpretativos
 
-**Duración:** 4–6 horas`,}
+**Duración:** 4–6 horas`,
+
         duration: '4-6 horas',
         groupSize: '2-8 personas',
         location: 'Bosques primarios',
@@ -963,7 +973,8 @@ Caminata naturalista práctica para familias y curiosos.
 **Incluye**
 - Guía naturalista y materiales educativos
 
-**Duración:** 2 horas`,}
+**Duración:** 2 horas`,
+
         duration: '2 horas',
         groupSize: '2-12 personas',
         location: 'Senderos locales',
@@ -1013,7 +1024,8 @@ Clase práctica de cocina en una finca local.
 **Incluye**
 - Ingredientes, equipo de cocina, recetario y comida compartida
 
-**Duración:** 3–4 horas`,}
+**Duración:** 3–4 horas`,
+
         duration: '3-4 horas',
         groupSize: '2-8 personas',
         location: 'Finca local',
