@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import useSeo from '../hooks/useSeo'
 import { Clock, Users, MapPin, ArrowRight } from 'lucide-react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 type ExpKey = 'nocturnal' | 'birds' | 'waterfalls' | 'forest' | 'naturalist' | 'cooking'
 
@@ -127,7 +129,7 @@ export default function Tour() {
           </div>
 
           <div className="prose max-w-none prose-lg prose-headings:font-display prose-headings:text-wp-forest prose-p:text-graytext">
-            <p>{longDescription}</p>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{longDescription}</ReactMarkdown>
 
             <h2>{i18n.language?.startsWith('es') ? '¿Qué aprenderás?' : "What you'll learn"}</h2>
             <p>
