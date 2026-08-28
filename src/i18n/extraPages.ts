@@ -106,7 +106,19 @@ const pagesEn = {
         seoDescription: 'Night hikes in Bajos del Toro—see frogs, bioluminescent insects and nocturnal wildlife. Small groups and expert naturalists. Book your night tour.',
         description:
           'Discover the world that wakes when the sun goes down. See frogs, bioluminescent insects, and nocturnal mammals in their natural habitat.',
-        longDescription: 'Explore Bajos del Toro after dark on a focused 2‑hour night hike. See frogs, bioluminescent insects and nocturnal mammals with minimal‑impact methods. Small groups, red‑filtered lights, and expert naturalist commentary. Finish with a local snack and a quick species recap.',
+        longDescription: `## Night Hike — Bajos del Toro
+
+Explore Bajos del Toro after dark on a focused 2‑hour night hike.
+
+**What to expect**
+- Observations of frogs, bioluminescent insects, and nocturnal mammals
+- Small groups (2–8), red‑filtered lights, and expert naturalist commentary
+- Minimal‑impact techniques and a short species recap
+
+**Includes**
+- Local snack and a brief safety briefing
+
+**Duration:** 2 hours`,}
         duration: '2 hours',
         groupSize: '2–8 people',
         location: 'Bajos del Toro',
@@ -146,7 +158,19 @@ const pagesEn = {
         seoDescription: 'Birding tours in Bajos del Toro—spot quetzals, toucans and hummingbirds with certified guides. Scopes and binoculars provided. Reserve now.',
         description:
           'Costa Rica hosts more than 10% of the world’s bird species. Join us to spot quetzals, toucans, hummingbirds, and hundreds more.',
-        longDescription: 'Early‑morning birding in Bajos del Toro with certified guides. Spot quetzals, toucans and hummingbirds using scopes and binoculars. Small groups, species checklist and a local breakfast included.',
+        longDescription: `## Bird Watching — Bajos del Toro
+
+Early‑morning birding in Bajos del Toro with certified guides.
+
+**What to expect**
+- Spot quetzals, toucans, and hummingbirds using spotting scopes and binoculars
+- Small groups (2–6) and a species checklist
+- Local breakfast included
+
+**Includes**
+- Certified birding guide, spotting scope and binoculars
+
+**Duration:** 2 hours`,}
         duration: '2 hours',
         groupSize: '2–6 people',
         location: 'Private reserves',
@@ -186,7 +210,19 @@ const pagesEn = {
         seoDescription: 'Full‑day waterfall hikes in Bajos del Toro—swim in hidden pools, enjoy a local picnic and expert guides. Book your adventure.',
         description:
           'Explore hidden waterfalls in the jungle. Walk pristine trails, cross rivers, and marvel at the waterfalls.',
-        longDescription: 'Full‑day waterfall hike to hidden cascades and crystal pools. Moderate trails with swimming breaks and a local picnic. Guides focus on safety and conservation; routes can be adapted for families or more adventurous groups.',
+        longDescription: `## Waterfall Hike — Hidden Cascades
+
+Full‑day waterfall hike to hidden cascades and crystal pools.
+
+**What to expect**
+- Moderate trails with opportunities to swim in natural pools
+- Picnic lunch and rest breaks
+- Routes adapted for families or more adventurous groups
+
+**Includes**
+- Bilingual naturalist guide, picnic lunch, and safety briefing
+
+**Duration:** 5–6 hours`,}
         duration: '5–6 hours',
         groupSize: '2–10 people',
         location: 'Multiple waterfalls',
@@ -226,7 +262,19 @@ const pagesEn = {
         seoDescription: 'Mature forest hikes in Bajos del Toro—explore ancient trees, orchids and cloud forest biodiversity with expert guides. Book today.',
         description:
           'Immerse yourself in primary ecosystems where nature evolved without human intervention. Ancient trees, wild orchids, and incredible biodiversity.',
-        longDescription: 'Walk old‑growth forest with expert naturalists. Short interpretive stops explain trees, orchids and ecosystem links. Pacing allows photography and close observation; we follow low‑impact practices throughout.',
+        longDescription: `## Mature Forest Hike — Old‑Growth Ecosystems
+
+Walk old‑growth forest with expert naturalists.
+
+**What to expect**
+- Interpretive stops about ancient trees, orchids, and ecosystem connections
+- Time for photography and close observation
+- Low‑impact practices throughout the hike
+
+**Includes**
+- Naturalist guide and interpretive materials
+
+**Duration:** 4–6 hours`,}
         duration: '4–6 hours',
         groupSize: '2–8 people',
         location: 'Primary forests',
@@ -265,7 +313,19 @@ const pagesEn = {
         seoDescription: 'Naturalist walks for families in Bajos del Toro—hands‑on activities, expert guides and kid‑friendly learning. Reserve your spot.',
         description:
           'Learn about Costa Rica’s flora, fauna, and ecosystems with an expert naturalist—a fun, educational experience for families.',
-        longDescription: 'Hands‑on naturalist walks for families and curious travelers. Interactive activities, specimens and clear explanations make learning fun for all ages. Learn practical conservation steps and local ecological context in a short, guided walk.',
+        longDescription: `## Naturalist Walk — Family‑friendly Learning
+
+Hands‑on naturalist walks for families and curious travelers.
+
+**What to expect**
+- Interactive activities and close observation of plants and insects
+- Age‑appropriate explanations and hands‑on moments for kids
+- Practical conservation steps to take home
+
+**Includes**
+- Naturalist guide and educational materials
+
+**Duration:** 2 hours`,}
         duration: '2 hours',
         groupSize: '2–12 people',
         location: 'Local trails',
@@ -303,7 +363,19 @@ const pagesEn = {
         seoDescription: 'Hands‑on Costa Rican cooking class on a local farm—learn recipes, tour the garden and share a meal. Book now; places limited.',
         description:
           'Learn to cook traditional dishes with local ingredients and ancestral techniques—an authentic culinary experience.',
-        longDescription: 'Hands‑on cooking class on a local farm. Learn seasonal recipes, prepare a shared meal and tour the garden. Sustainable sourcing and a recipe booklet included.',
+        longDescription: `## Traditional Costa Rican Cooking — Farm‑to‑Table
+
+Hands‑on cooking class on a local farm.
+
+**What to expect**
+- Tour of the garden and introduction to seasonal ingredients
+- Hands‑on cooking session with local hosts and shared meal
+- Cultural conversation and sustainable sourcing practices
+
+**Includes**
+- Ingredients, cooking equipment, recipe booklet, and shared meal
+
+**Duration:** 3–4 hours`,}
         duration: '3–4 hours',
         groupSize: '2–8 people',
         location: 'Local farm',
@@ -672,7 +744,19 @@ const pagesEs = {
         seoDescription: 'Caminata nocturna en Bajos del Toro—observa ranas, insectos bioluminiscentes y mamíferos con guías expertos. Grupos pequeños. Reserva ya.',
         description:
           'Descubre el mundo que despierta cuando el sol se oculta. Observa ranas, insectos bioluminiscentes y mamíferos nocturnos en su hábitat natural.',
-        longDescription: 'Vive Bajos del Toro de noche en una caminata de 2 horas. Observa ranas, insectos bioluminiscentes y mamíferos con técnicas de bajo impacto. Grupos pequeños, guías naturalistas y snack local al final.',
+        longDescription: `## Caminata Nocturna — Bajos del Toro
+
+Vive Bajos del Toro de noche en una caminata de 2 horas.
+
+**Qué esperar**
+- Observación de ranas, insectos bioluminiscentes y mamíferos nocturnos
+- Grupos pequeños (2–8), iluminación con filtro rojo y guía naturalista experto
+- Técnicas de bajo impacto y recapitulación breve de especies
+
+**Incluye**
+- Snack local y breve charla de seguridad
+
+**Duración:** 2 horas`,}
         duration: '2 horas',
         groupSize: '2-8 personas',
         location: 'Bajos del Toro',
@@ -712,7 +796,19 @@ const pagesEs = {
         seoDescription: 'Avistamiento de aves en Bajos del Toro—ve quetzales, tucanes y colibríes con guías certificados. Telescopios incluidos. Reserva ahora.',
         description:
           'Costa Rica alberga más del 10% de las especies de aves del mundo. Acompáñanos a descubrir quetzales, tucanes, colibríes y cientos de especies más.',
-        longDescription: 'Avistamiento matutino con guías certificados. Ve quetzales, tucanes y colibríes con telescopios y binoculares. Grupo reducido, desayuno local y lista de especies incluida.',
+        longDescription: `## Avistamiento de Aves — Bajos del Toro
+
+Avistamiento matutino con guías certificados.
+
+**Qué esperar**
+- Observa quetzales, tucanes y colibríes con telescopios y binoculares
+- Grupo reducido (2–6) y lista de especies
+- Desayuno local incluido
+
+**Incluye**
+- Guía ornitólogo certificado, telescopio y binoculares
+
+**Duración:** 2 horas`,}
         duration: '2 horas',
         groupSize: '2-6 personas',
         location: 'Reservas privadas',
@@ -752,7 +848,19 @@ const pagesEs = {
         seoDescription: 'Excursión de día a cascadas en Bajos del Toro—baños en pozas, picnic local y guías expertos. Reserva tu lugar.',
         description:
           'Explora cascadas escondidas en medio de la selva. Camina por senderos vírgenes, cruza ríos cristalinos y déjate sorprender por la majestuosidad de las cataratas.',
-        longDescription: 'Excursión de día completo a cascadas escondidas y pozas cristalinas. Senderos moderados, baños en piscinas naturales y picnic local. Se adapta según la capacidad del grupo.',
+        longDescription: `## Caminata a Cataratas — Cascadas Escondidas
+
+Excursión de día completo a cascadas escondidas y pozas cristalinas.
+
+**Qué esperar**
+- Senderos moderados con oportunidades para bañarse en pozas naturales
+- Almuerzo tipo picnic y descansos
+- Rutas adaptables para familias o grupos aventureros
+
+**Incluye**
+- Guía naturalista bilingüe, almuerzo picnic y briefing de seguridad
+
+**Duración:** 5–6 horas`,}
         duration: '5-6 horas',
         groupSize: '2-10 personas',
         location: 'Múltiples cataratas',
@@ -792,7 +900,19 @@ const pagesEs = {
         seoDescription: 'Caminata por bosque maduro en Bajos del Toro—árboles centenarios, orquídeas y guía experto. Experiencia de bajo impacto. Reserva hoy.',
         description:
           'Sumérgete en ecosistemas primarios donde la naturaleza ha evolucionado sin intervención humana. Árboles centenarios, orquídeas silvestres y biodiversidad impresionante.',
-        longDescription: 'Caminata por bosque antiguo con guías expertos. Paradas interpretativas para conocer árboles, orquídeas y redes ecológicas. Enfoque de bajo impacto y tiempo para fotos.',
+        longDescription: `## Caminata en Bosque Maduro — Ecosistemas Antiguos
+
+Caminata por bosque antiguo con guías expertos.
+
+**Qué esperar**
+- Paradas interpretativas sobre árboles centenarios, orquídeas y conexiones ecológicas
+- Tiempo para fotografía y observación detallada
+- Prácticas de bajo impacto durante toda la caminata
+
+**Incluye**
+- Guía naturalista y materiales interpretativos
+
+**Duración:** 4–6 horas`,}
         duration: '4-6 horas',
         groupSize: '2-8 personas',
         location: 'Bosques primarios',
@@ -831,7 +951,19 @@ const pagesEs = {
         seoDescription: 'Caminata naturalista para familias en Bajos del Toro—actividades interactivas y guía experto. Ideal para niños. Reserva.',
         description:
           'Aprende sobre la flora, fauna y ecosistemas de Costa Rica de la mano de un naturalista experto. Una experiencia educativa para toda la familia.',
-        longDescription: 'Caminata naturalista práctica para familias y curiosos. Actividades interactivas y explicaciones accesibles para todas las edades. Aprende sobre ecosistemas y acciones de conservación.',
+        longDescription: `## Caminata Naturalista — Aprendizaje Familiar
+
+Caminata naturalista práctica para familias y curiosos.
+
+**Qué esperar**
+- Actividades interactivas y observación de plantas e insectos
+- Momentos prácticos adaptados a edades y explicaciones accesibles
+- Acciones prácticas de conservación para llevar a casa
+
+**Incluye**
+- Guía naturalista y materiales educativos
+
+**Duración:** 2 horas`,}
         duration: '2 horas',
         groupSize: '2-12 personas',
         location: 'Senderos locales',
@@ -869,7 +1001,19 @@ const pagesEs = {
         seoDescription: 'Clase de cocina en finca local—aprende recetas de temporada, visita la huerta y comparte la comida. Plazas limitadas. Reserva.',
         description:
           'Aprende a preparar platillos tradicionales costarricenses con ingredientes locales y técnicas ancestrales. Una experiencia gastronómica auténtica.',
-        longDescription: 'Clase práctica de cocina en una finca local. Aprende recetas de temporada, visita la huerta y comparte la comida. Recetario incluido y enfoque sostenible.',
+        longDescription: `## Cocina Típica Costarricense — De la Finca a la Mesa
+
+Clase práctica de cocina en una finca local.
+
+**Qué esperar**
+- Recorrido por la huerta y presentación de ingredientes de temporada
+- Sesión práctica de cocina con anfitriones locales y comida compartida
+- Conversación cultural y prácticas de abastecimiento sostenible
+
+**Incluye**
+- Ingredientes, equipo de cocina, recetario y comida compartida
+
+**Duración:** 3–4 horas`,}
         duration: '3-4 horas',
         groupSize: '2-8 personas',
         location: 'Finca local',
