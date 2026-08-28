@@ -39,10 +39,60 @@ export default function Tour() {
     )
   }
 
-  const title = exp.title
-  const description = exp.description
+  const title = exp.seoTitle ?? exp.title
+  const description = exp.seoDescription ?? exp.description
+  const longDescription = exp.longDescription ?? exp.description
   const image = `https://wildpath.lat${exp.image}`
   const canonical = new URL(`/experiencias/${exp.key}`, window.location.origin).toString()
+
+  // Build structured data array
+  const sd: any[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      description,
+      url: canonical
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristAttraction",
+      name: exp.title,
+      description: exp.description,
+      image,
+      url: canonical,
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 10.233489254130383,
+        longitude: -84.30337070608336
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: 'Inicio', item: 'https://wildpath.lat/' },
+        { "@type": "ListItem", position: 2, name: 'Experiencias', item: 'https://wildpath.lat/experiencias' },
+        { "@type": "ListItem", position: 3, name: exp.title, item: canonical }
+      ]
+    }
+  ]
+
+  // If FAQ items exist, add FAQPage schema
+  if (exp.faqs && Array.isArray(exp.faqs)) {
+    sd.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: exp.faqs.map((f: any) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: f.a
+        }
+      }))
+    })
+  }
 
   // SEO + JSON-LD
   useSeo({
@@ -50,38 +100,7 @@ export default function Tour() {
     description,
     image,
     canonicalPath: `/experiencias/${exp.key}`,
-    structuredData: [
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        name: title,
-        description,
-        url: canonical
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "TouristAttraction",
-        name: title,
-        description,
-        image,
-        url: canonical,
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 10.233489254130383,
-          longitude: -84.30337070608336
-        },
-        // breadcrumb will be provided site-wide via WebPage + breadcrumb on listing pages
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: 'Inicio', item: 'https://wildpath.lat/' },
-          { "@type": "ListItem", position: 2, name: 'Experiencias', item: 'https://wildpath.lat/experiencias' },
-          { "@type": "ListItem", position: 3, name: title, item: canonical }
-        ]
-      }
-    ]
+    structuredData: sd
   })
 
   return (
@@ -108,42 +127,74 @@ export default function Tour() {
           </div>
 
           <div className="prose max-w-none prose-lg prose-headings:font-display prose-headings:text-wp-forest prose-p:text-graytext">
-            <p>{description}</p>
+            <p>{longDescription}</p>
 
-            <h2>¿Qué aprenderás?</h2>
+            <h2>{i18n.language?.startsWith('es') ? '¿Qué aprenderás?' : "What you'll learn"}</h2>
             <p>
-              Disfruta de una experiencia guiada por naturalistas locales enfocada en la observación de la naturaleza,
-              aprendizaje sobre ecosistemas y prácticas regenerativas. Nuestro enfoque combina interpretación naturalista con
-              esfuerzos de conservación y apoyo a la comunidad local.
+              {i18n.language?.startsWith('es')
+                ? 'Esta experiencia está guiada por naturalistas locales y se centra en la observación atenta, la interpretación ecológica y la conexión con las prácticas de conservación locales.'
+                : 'This experience is led by local naturalists and focuses on attentive observation, ecological interpretation, and connections to local conservation practices.'}
             </p>
 
-            <h2>Itinerario aproximado</h2>
-            <p>
-              El itinerario se adapta según condiciones climáticas y el interés del grupo. Por lo general incluye transporte local,
-              caminatas guiadas, paradas para observación y una conclusión con materiales interpretativos.
-            </p>
+            <h2>{i18n.language?.startsWith('es') ? 'Itinerario aproximado' : 'Approximate itinerary'}</h2>
+            {exp.itinerary ? (
+              <ol>
+                {exp.itinerary.map((step: string, i: number) => (
+                  <li key={i}>{step}</li>
+                ))}
+              </ol>
+            ) : (
+              <p>{i18n.language?.startsWith('es') ? 'El itinerario se adapta según condiciones climáticas y el interés del grupo.' : 'The itinerary is adapted to weather and the group’s interests.'}</p>
+            )}
 
-            <h3>Highlights</h3>
+            <h3>{i18n.language?.startsWith('es') ? 'Highlights' : 'Highlights'}</h3>
             <ul>
               {exp.highlights?.map((h: string, i: number) => (
                 <li key={i}>{h}</li>
               ))}
             </ul>
 
-            <h2>Incluye</h2>
-            <ul>
-              <li>Guía naturalista bilingüe</li>
-              <li>Transporte local (según tour)</li>
-              <li>Equipo básico para observación</li>
-              <li>Apoyo a iniciativas locales</li>
-            </ul>
+            <h2>{i18n.language?.startsWith('es') ? 'Incluye' : 'Includes'}</h2>
+            {exp.included ? (
+              <ul>
+                {exp.included.map((inc: string, i: number) => (
+                  <li key={i}>{inc}</li>
+                ))}
+              </ul>
+            ) : (
+              <ul>
+                <li>{i18n.language?.startsWith('es') ? 'Guía naturalista bilingüe' : 'Bilingual naturalist guide'}</li>
+              </ul>
+            )}
 
-            <h2>Preguntas frecuentes</h2>
-            <p>¿Necesito experiencia previa? No. Nuestros tours están diseñados para todos los niveles.</p>
+            {exp.notIncluded && (
+              <>
+                <h2>{i18n.language?.startsWith('es') ? 'No incluye' : 'Not included'}</h2>
+                <ul>
+                  {exp.notIncluded.map((ni: string, i: number) => (
+                    <li key={i}>{ni}</li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+            <h2>{i18n.language?.startsWith('es') ? 'Preguntas frecuentes' : 'Frequently Asked Questions'}</h2>
+            {exp.faqs ? (
+              <div>
+                {exp.faqs.map((f: any, i: number) => (
+                  <div key={i} className="mb-4">
+                    <p className="font-semibold">{f.q}</p>
+                    <p>{f.a}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p>{i18n.language?.startsWith('es') ? '¿Necesitas ayuda? Contáctanos para más detalles.' : 'Need help? Contact us for more details.'}</p>
+            )}
 
             <div className="mt-8">
               <Link to="/contacto" className="btn-primary inline-flex items-center gap-2">
-                Planifica Tu Experiencia
+                {i18n.language?.startsWith('es') ? 'Planifica Tu Experiencia' : 'Plan Your Experience'}
                 <ArrowRight size={18} />
               </Link>
             </div>

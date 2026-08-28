@@ -101,88 +101,240 @@ const pagesEn = {
     items: {
       nocturnal: {
         title: 'Night hikes',
+        seoTitle: 'Night Hikes in Bajos del Toro | Wild Path Costa Rica',
+        seoDescription: 'Guided night hikes in Bajos del Toro: discover nocturnal wildlife, bioluminescent insects and unique forest sounds. Small groups, expert naturalists. Book now.',
         description:
           'Discover the world that wakes when the sun goes down. See frogs, bioluminescent insects, and nocturnal mammals in their natural habitat.',
+        longDescription: 'Experience Bajos del Toro after dark with a guided night hike designed for curious, nature‑minded travelers. The cloud forest transforms at night: calls, flashing insects, frog choruses and shy mammals emerge from the understory. Wild Path’s night hikes focus on low‑impact observation and interpretation—guides use red‑filtered lights and techniques that minimize disturbance while maximizing sightings. These walks are ideal for photographers looking to capture rare nocturnal behavior, families wanting an educational and safe night adventure, or travelers seeking a different perspective of Costa Rica’s biodiversity. Expect an intimate group (max 8), hands‑on naturalist commentary, and local stories that connect the life of the forest to community conservation efforts. Trails are selected for safety and diversity of habitats, and guides adapt pace to your interests and fitness. The night hike finishes with a small local snack and a debrief about species seen and conservation actions you can support.',
         duration: '2 hours',
         groupSize: '2–8 people',
         location: 'Bajos del Toro',
+        itinerary: [
+          'Meet at the agreed meeting point in Bajos del Toro and short safety briefing',
+          'Guided trail walk with focused stops for observation and photography',
+          'Spotlight sessions to observe frogs, moths and small mammals',
+          'Return and local snack while sharing sightings and conservation notes'
+        ],
+        included: [
+          'Bilingual naturalist guide',
+          'Red‑filtered lighting and equipment',
+          'Local snack',
+          'Basic first aid kit and safety briefing'
+        ],
+        notIncluded: [
+          'Transport to/from meeting point',
+          'Professional camera equipment (bring your own)',
+          'Gratuities'
+        ],
         highlights: [
           'Nocturnal wildlife viewing',
           'Specialized guide',
           'Lighting equipment included',
-          'Local snack',
+          'Local snack'
         ],
+        faqs: [
+          { q: 'Is the night hike suitable for children?', a: 'Yes—children are welcome but must be accompanied by an adult. Please mention ages when booking.' },
+          { q: 'What should I bring?', a: 'Sturdy closed‑toe shoes, a rain jacket, insect repellent, and a small headlamp (we provide red‑filtered lighting).' },
+          { q: 'Is the trail difficult?', a: 'Trails are easy to moderate; we adapt the pace to the group and provide guidance for less experienced walkers.' }
+        ]
       },
+
       birds: {
         title: 'Bird watching',
+        seoTitle: 'Bird Watching Tours in Bajos del Toro | Wild Path Costa Rica',
+        seoDescription: 'Private birding tours led by certified guides. Spot quetzals, toucans and hummingbirds in Bajos del Toro—small groups, expert equipment included.',
         description:
           'Costa Rica hosts more than 10% of the world’s bird species. Join us to spot quetzals, toucans, hummingbirds, and hundreds more.',
+        longDescription: 'Bajos del Toro is a hidden birding gem. Our tailored bird‑watching tours bring you to the best microhabitats where highland and mid‑elevation species converge. Led by certified ornithologists and experienced local guides, these walks balance patient observation with expert identification and interpretation. We provide spotting scopes, high‑quality binoculars, and a quiet field etiquette to increase sighting chances. Ideal for photographers, life‑list birders, and curious nature lovers, our tours prioritize rare and endemic species while supporting local conservation initiatives. Expect early starts to catch peak activity, flexible routes based on seasonal movements, and a small group size to reduce disturbance. Each tour concludes with a local breakfast and a species list shared with participants.',
         duration: '2 hours',
         groupSize: '2–6 people',
         location: 'Private reserves',
+        itinerary: [
+          'Early morning meet and short briefing',
+          'Guided birding sessions with scope setup and silent observation',
+          'Short breaks for photography and notes',
+          'Wrap up with breakfast and a species checklist'
+        ],
+        included: [
+          'Certified birding guide',
+          'Spotting scope and binoculars',
+          'Light breakfast',
+          'Species checklist after the tour'
+        ],
+        notIncluded: [
+          'Transport to meeting point',
+          'Professional camera gear',
+          'Park permits (if applicable)'
+        ],
         highlights: [
           'Certified birding guide',
           'Spotting scope and binoculars',
           '200+ species possible',
-          'Typical breakfast included',
+          'Typical breakfast included'
         ],
+        faqs: [
+          { q: 'When is the best time to bird watch?', a: 'Early morning is the most active period. We schedule tours at sunrise for best sightings.' },
+          { q: 'Do you provide binoculars?', a: 'Yes—we provide binoculars and a spotting scope. Bring your own if you prefer.' },
+          { q: 'Are tours suitable for beginners?', a: 'Absolutely. Guides adapt the pace and explanations for all levels.' }
+        ]
       },
+
       waterfalls: {
         title: 'Waterfall hikes',
+        seoTitle: 'Waterfall Hikes in Bajos del Toro | Wild Path Costa Rica',
+        seoDescription: 'Full‑day waterfall hikes visiting multiple hidden cascades in Bajos del Toro. Swim in natural pools, picnic and enjoy immersive forest hikes with expert guides.',
         description:
           'Explore hidden waterfalls in the jungle. Walk pristine trails, cross rivers, and marvel at the waterfalls.',
+        longDescription: 'Discover some of Bajos del Toro’s most spectacular waterfalls on a full‑day immersive hike. These experiences combine moderate trail walking, river crossings, and rewarding swims in crystal pools beneath towering cascades. Routes are chosen for scenery and biodiversity, giving opportunities to see endemic plants, orchids, and diverse birdlife along the way. Our guides prioritize safety and conservation: we brief groups on river crossings, avoid sensitive vegetation, and support local communities that manage access to these sites. Ideal for adventurous travelers seeking authentic nature moments, the day includes a locally prepared picnic using seasonal ingredients and time for photography and relaxation. Difficulty can be adapted—ask about easier or more challenging options when booking.',
         duration: '5–6 hours',
         groupSize: '2–10 people',
         location: 'Multiple waterfalls',
+        itinerary: [
+          'Pickup and short orientation',
+          'Hike to the first waterfall with interpretive stops',
+          'Continue to additional cascades with swimming breaks and picnic lunch',
+          'Return to meeting point and debrief'
+        ],
+        included: [
+          'Bilingual naturalist guide',
+          'Picnic lunch and water',
+          'Safety briefing and basic first aid',
+          'Permits where required'
+        ],
+        notIncluded: [
+          'Transport to meeting point (can be arranged)',
+          'Towels and change of clothes',
+          'Gratuities'
+        ],
         highlights: [
           '3–5 different waterfalls',
           'Swimming in natural pools',
           'Picnic lunch',
-          'Adjustable difficulty',
+          'Adjustable difficulty'
         ],
+        faqs: [
+          { q: 'Can I swim in the waterfalls?', a: 'Yes—many sites have safe swimming pools; guides will advise on where it’s secure.' },
+          { q: 'What level of fitness is required?', a: 'Moderate fitness is recommended; we can adjust difficulty for families or less experienced walkers.' },
+          { q: 'Do you provide towels?', a: 'No—we recommend bringing a towel and dry clothes. We can arrange transport for belongings if needed.' }
+        ]
       },
+
       forest: {
         title: 'Mature forest hikes',
+        seoTitle: 'Mature Forest Hikes in Bajos del Toro | Wild Path Costa Rica',
+        seoDescription: 'Guided mature forest hikes exploring ancient trees, orchids and cloud forest biodiversity in Bajos del Toro. Small groups and expert interpretation.',
         description:
           'Immerse yourself in primary ecosystems where nature evolved without human intervention. Ancient trees, wild orchids, and incredible biodiversity.',
+        longDescription: 'Our mature forest hikes bring participants deep into old‑growth sections of Bajos del Toro where centuries‑old trees, abundant epiphytes, and rich understory life create unforgettable encounters. Led by experienced naturalists, these hikes focus on ecological storytelling—understanding nutrient cycles, fungal networks, and the interdependence between flora and fauna. Photographers and botanists will appreciate the diversity of orchids, bromeliads and mosses; birders can listen for canopy species unique to these elevations. Walks are paced to allow time for interpretation, macro observation, and respectful photography. Wild Path emphasizes minimal impact: we follow established trails and support reforestation partners in the region.',
         duration: '4–6 hours',
         groupSize: '2–8 people',
         location: 'Primary forests',
+        itinerary: [
+          'Meet and ecological briefing',
+          'Guided hike with interpretive stops focused on plants and ecosystems',
+          'Time for photography and close‑up observation',
+          'Return and conservation conversation with local partners'
+        ],
+        included: [
+          'Naturalist guide',
+          'Interpretive materials',
+          'Light refreshments',
+          'Support of local conservation initiatives'
+        ],
+        notIncluded: [
+          'Transport to meeting point',
+          'Specialized photography gear',
+          'Park entrance fees if applicable'
+        ],
         highlights: [
           'Ancient primary forest',
           'Expert naturalist guide',
           'Ecological interpretation',
-          'Nature photography',
+          'Nature photography'
         ],
+        faqs: [
+          { q: 'Are trails suitable for photographers?', a: 'Yes—trail sections allow for careful stops and macro photography. We recommend compact gear for easier mobility.' },
+          { q: 'Is there shade/rest areas?', a: 'Yes—walks include calm areas to rest and enjoy the forest safely.' }
+        ]
       },
+
       naturalist: {
         title: 'Naturalist walks',
+        seoTitle: 'Naturalist Walks in Bajos del Toro | Wild Path Costa Rica',
+        seoDescription: 'Educational naturalist walks for families and curious travelers. Learn about Costa Rica’s ecosystems with expert guides and hands‑on activities.',
         description:
           'Learn about Costa Rica’s flora, fauna, and ecosystems with an expert naturalist—a fun, educational experience for families.',
+        longDescription: 'Designed for families, students, and curious travelers, our naturalist walks are guided learning experiences that introduce participants to the complexity of tropical ecosystems. Guides use storytelling, hands‑on specimens, and simple scientific tools to explain food webs, species interactions, and local conservation practices. Walks include age‑appropriate activities for children and deeper ecological context for adults. Wild Path integrates local community knowledge—farmers and conservationists share how traditional practices shape the landscape. These walks are excellent for schools, families, and anyone who wants a meaningful, educational encounter with nature.',
         duration: '2 hours',
         groupSize: '2–12 people',
         location: 'Local trails',
+        itinerary: [
+          'Welcome and learning goals',
+          'Guided observation with interactive moments for kids',
+          'Hands‑on demonstrations (seeds, soils, insect life)',
+          'Reflection and recommended next steps for learning'
+        ],
+        included: [
+          'Naturalist guide',
+          'Educational materials',
+          'Family‑friendly activities',
+          'Recommendations for further learning'
+        ],
+        notIncluded: [
+          'Transport to meeting point',
+          'Special educational group facilitation (available on request)'
+        ],
         highlights: [
           'Educational focus',
           'Great for families',
           'Hands-on materials',
-          'Interactive activities',
+          'Interactive activities'
         ],
+        faqs: [
+          { q: 'Are these walks good for kids?', a: 'Yes—they are designed with children in mind and include interactive, age‑appropriate activities.' },
+          { q: 'Can schools book a group?', a: 'Yes—we offer tailored programs for schools and educational groups—contact us for details.' }
+        ]
       },
+
       cooking: {
         title: 'Traditional Costa Rican cooking',
+        seoTitle: 'Traditional Costa Rican Cooking Class | Wild Path Costa Rica',
+        seoDescription: 'Hands‑on cooking classes on a local farm—learn traditional recipes, source local ingredients, and enjoy a shared meal. Cultural and sustainable.',
         description:
           'Learn to cook traditional dishes with local ingredients and ancestral techniques—an authentic culinary experience.',
+        longDescription: 'Join local hosts on a working farm to learn authentic Costa Rican recipes passed down through generations. The cooking class emphasizes seasonal ingredients, sustainable sourcing, and traditional techniques—from preparing fresh tortillas to cooking sauces and local specialties. Participants roll up their sleeves to prepare a multi‑course meal, learn about local agriculture, and share the final meal family‑style. This experience connects culinary traditions with community livelihoods and supports small farmers. It is perfect for food lovers, culture seekers, and families who want a hands‑on cultural exchange.',
         duration: '3–4 hours',
         groupSize: '2–8 people',
         location: 'Local farm',
+        itinerary: [
+          'Welcome and ingredient tour on the farm',
+          'Hands‑on cooking session with local hosts',
+          'Shared meal and cultural conversation',
+          'Recipe booklet and farewell'
+        ],
+        included: [
+          'All ingredients and cooking equipment',
+          'Local hosts and instruction',
+          'Shared meal and recipe booklet',
+          'Farm visit and context about ingredients'
+        ],
+        notIncluded: [
+          'Transport to/from the farm',
+          'Alcoholic beverages',
+          'Special dietary accommodations unless requested in advance'
+        ],
         highlights: [
           '100% local ingredients',
           'Traditional recipes',
           'Tasting included',
-          'Recipe booklet to take home',
+          'Recipe booklet to take home'
         ],
+        faqs: [
+          { q: 'Can you accommodate dietary restrictions?', a: 'Yes—please inform us in advance and we will do our best to accommodate vegetarian, vegan, and common allergies.' },
+          { q: 'Is this suitable for children?', a: 'Yes—children can participate with parental supervision and hands‑on activities tailored to their age.' }
+        ]
       },
+
     },
   },
   gallery: {
@@ -514,88 +666,240 @@ const pagesEs = {
     items: {
       nocturnal: {
         title: 'Caminatas Nocturnas',
+        seoTitle: 'Caminatas Nocturnas en Bajos del Toro | Wild Path Costa Rica',
+        seoDescription: 'Caminatas nocturnas guiadas en Bajos del Toro para descubrir ranas, insectos bioluminiscentes y mamíferos. Grupos pequeños y guías naturalistas. Reserva hoy.',
         description:
           'Descubre el mundo que despierta cuando el sol se oculta. Observa ranas, insectos bioluminiscentes y mamíferos nocturnos en su hábitat natural.',
+        longDescription: 'Vive Bajos del Toro en la noche con una caminata guiada diseñada para viajeros curiosos y amantes de la naturaleza. El bosque nuboso se transforma: cantos, destellos de insectos y la actividad de mamíferos nocturnos emergen en la penumbra. Las caminatas Night Path priorizan la observación de bajo impacto: usamos luces con filtro rojo y técnicas que minimizan la perturbación, maximizando las oportunidades de avistamiento. Son ideales para fotógrafos nocturnos, familias que buscan una experiencia educativa segura o viajeros que desean una perspectiva distinta de la biodiversidad costarricense. Los senderos se eligen por seguridad y diversidad, y los guías adaptan el ritmo según el grupo. Al finalizar, compartimos un snack local y un resumen de las especies observadas y acciones de conservación.',
         duration: '2 horas',
         groupSize: '2-8 personas',
         location: 'Bajos del Toro',
+        itinerary: [
+          'Encuentro y breve charla de seguridad en Bajos del Toro',
+          'Caminata guiada con paradas para observación y fotografía',
+          'Sesiones de iluminación para observar ranas, insectos y pequeños mamíferos',
+          'Regreso y snack local mientras compartimos los avistamientos y notas de conservación'
+        ],
+        included: [
+          'Guía naturalista bilingüe',
+          'Iluminación con filtro rojo y equipo básico',
+          'Snack local',
+          'Kit básico de primeros auxilios'
+        ],
+        notIncluded: [
+          'Transporte hacia/desde el punto de encuentro',
+          'Equipo fotográfico profesional',
+          'Propinas'
+        ],
         highlights: [
           'Observación de fauna nocturna',
           'Guía especializado',
           'Equipo de iluminación incluido',
-          'Snack local',
+          'Snack local'
         ],
+        faqs: [
+          { q: '¿Es apta para niños?', a: 'Sí—los niños son bienvenidos pero deben ir acompañados por un adulto. Indica las edades al reservar.' },
+          { q: '¿Qué debo llevar?', a: 'Zapatos cerrados, impermeable, repelente y una linterna pequeña (proporcionamos iluminación con filtro rojo).' },
+          { q: '¿Es difícil el sendero?', a: 'Los senderos son de fácil a moderado; el guía adapta el ritmo y ofrece apoyo a quienes lo necesiten.' }
+        ]
       },
+
       birds: {
         title: 'Avistamiento de Aves',
+        seoTitle: 'Avistamiento de Aves en Bajos del Toro | Wild Path Costa Rica',
+        seoDescription: 'Tours privados de observación de aves con guías certificados. Ve quetzales, tucanes y colibríes en Bajos del Toro—grupos pequeños y equipo incluido.',
         description:
           'Costa Rica alberga más del 10% de las especies de aves del mundo. Acompáñanos a descubrir quetzales, tucanes, colibríes y cientos de especies más.',
+        longDescription: 'Bajos del Toro es un destino privilegiado para la observación de aves. Nuestros tours de avifauna combinan acceso a microhábitats clave con la guía de ornitólogos certificados y guías locales experimentados. Proveemos telescopios, binoculares y enseñamos técnicas de observación silenciosa para optimizar avistamientos. Recomendamos un inicio temprano para aprovechar las horas de mayor actividad y adaptamos las rutas según movimientos estacionales. Los tours son ideales para fotógrafos, birders y amantes de la naturaleza; además, cada salida apoya iniciativas locales de conservación. Finalizamos con un desayuno típico y una lista de especies observadas.',
         duration: '2 horas',
         groupSize: '2-6 personas',
         location: 'Reservas privadas',
+        itinerary: [
+          'Encuentro temprano y breve introducción',
+          'Sesiones de observación con montaje de telescopio',
+          'Pausas para fotografía y registros de especies',
+          'Cierre con desayuno y checklist de aves'
+        ],
+        included: [
+          'Guía ornitólogo certificado',
+          'Telescopio y binoculares',
+          'Desayuno ligero',
+          'Checklist de especies al finalizar'
+        ],
+        notIncluded: [
+          'Transporte al punto de encuentro',
+          'Equipo fotográfico profesional',
+          'Permisos de parque si aplican'
+        ],
         highlights: [
           'Guía ornitólogo certificado',
           'Telescopio y binoculares',
           'Más de 200 especies posibles',
-          'Desayuno típico incluido',
+          'Desayuno típico incluido'
         ],
+        faqs: [
+          { q: '¿Cuál es la mejor hora para avistar aves?', a: 'Temprano en la mañana, al amanecer, cuando la actividad es más alta. Programamos las salidas para esa franja.' },
+          { q: '¿Proveen binoculares?', a: 'Sí—proporcionamos binoculares y un telescopio para grupos. Puedes traer los tuyos si lo prefieres.' },
+          { q: '¿Es apto para principiantes?', a: 'Sí—los guías adaptan la salida a todos los niveles y ofrecen identificación y contexto durante la observación.' }
+        ]
       },
+
       waterfalls: {
         title: 'Caminatas a Cataratas',
+        seoTitle: 'Caminatas a Cataratas en Bajos del Toro | Wild Path Costa Rica',
+        seoDescription: 'Excursiones de día completo a cascadas escondidas en Bajos del Toro. Nada en pozas naturales, disfruta un picnic y explora senderos vírgenes con guías expertos.',
         description:
           'Explora cascadas escondidas en medio de la selva. Camina por senderos vírgenes, cruza ríos cristalinos y déjate sorprender por la majestuosidad de las cataratas.',
+        longDescription: 'Vive una jornada completa explorando las cataratas más impresionantes de Bajos del Toro. Estas excursiones combinan caminatas por senderos cuidadosos con tramos de río y recompensas naturales—piscinas limpias para nadar, miradores dramáticos y oportunidades fotográficas únicas. Nuestros guías priorizan tu seguridad y la conservación: se ofrece orientación para cruces de río y respetamos las normas de acceso local para proteger los ecosistemas. El almuerzo es un picnic preparado con ingredientes locales y el ritmo se adapta a familias o grupos más aventureros. Estas salidas son perfectas para quienes buscan naturaleza activa y momentos para conectar profundamente con el entorno natural.',
         duration: '5-6 horas',
         groupSize: '2-10 personas',
         location: 'Múltiples cataratas',
+        itinerary: [
+          'Recogida y orientación inicial',
+          'Caminata hacia la primera catarata con paradas interpretativas',
+          'Continuación a cascadas adicionales con tiempo para baño y picnic',
+          'Regreso y cierre en el punto de encuentro'
+        ],
+        included: [
+          'Guía naturalista bilingüe',
+          'Almuerzo picnic y agua',
+          'Briefing de seguridad y primeros auxilios básicos',
+          'Permisos cuando aplican'
+        ],
+        notIncluded: [
+          'Transporte al punto de encuentro (se puede coordinar)',
+          'Toalla y ropa seca',
+          'Propinas'
+        ],
         highlights: [
           '3-5 cataratas diferentes',
           'Baño en pozas naturales',
           'Almuerzo picnic',
-          'Nivel de dificultad adaptable',
+          'Nivel de dificultad adaptable'
         ],
+        faqs: [
+          { q: '¿Puedo bañarme en las cataratas?', a: 'Sí—en muchos sitios es seguro nadar; el guía indicará los lugares permitidos y seguros.' },
+          { q: '¿Qué nivel físico se requiere?', a: 'Se recomienda buena condición física moderada; ofrecemos opciones más fáciles para familias o quienes lo soliciten.' },
+          { q: '¿Proveen toallas?', a: 'No—recomendamos llevar una toalla y ropa seca. Podemos ayudar a coordinar transporte para pertenencias si es necesario.' }
+        ]
       },
+
       forest: {
         title: 'Caminatas en Bosque Maduro',
+        seoTitle: 'Caminatas en Bosque Maduro en Bajos del Toro | Wild Path Costa Rica',
+        seoDescription: 'Explora bosques primarios de Bajos del Toro con guías naturalistas. Observa orquídeas, árboles centenarios y aprende sobre la ecología del bosque nuboso.',
         description:
           'Sumérgete en ecosistemas primarios donde la naturaleza ha evolucionado sin intervención humana. Árboles centenarios, orquídeas silvestres y biodiversidad impresionante.',
+        longDescription: 'Nuestras caminatas en bosque maduro llevan a los participantes a secciones de bosque antiguo en Bajos del Toro donde los árboles centenarios y la riqueza de epífitas crean un paisaje único. Guiados por naturalistas expertos, los recorridos ofrecen interpretación ecológica profunda: redes tróficas, hongos, y la relación entre plantas y animales. Fotógrafos y botánicos apreciarán la variedad de orquídeas y musgos; los observadores de aves disfrutarán de las llamadas de especies de dosel. Caminamos con respeto al entorno, en senderos establecidos, y colaboramos con proyectos locales de reforestación y conservación. Es una experiencia para entender cómo funciona el bosque y cómo protegerlo.',
         duration: '4-6 horas',
         groupSize: '2-8 personas',
         location: 'Bosques primarios',
+        itinerary: [
+          'Encuentro y charla ecológica inicial',
+          'Caminata guiada con paradas interpretativas sobre flora y ecosistemas',
+          'Tiempo para fotografía y observación de cerca',
+          'Regreso y conversación sobre conservación con socios locales'
+        ],
+        included: [
+          'Guía naturalista',
+          'Materiales interpretativos',
+          'Refrescos ligeros',
+          'Apoyo a iniciativas de conservación local'
+        ],
+        notIncluded: [
+          'Transporte al punto de encuentro',
+          'Equipo fotográfico especializado',
+          'Entrada a parques si aplica'
+        ],
         highlights: [
           'Bosque primario milenario',
           'Guía naturalista experto',
           'Interpretación ecológica',
-          'Fotografía de naturaleza',
+          'Fotografía de naturaleza'
         ],
+        faqs: [
+          { q: '¿Los senderos son aptos para fotógrafos?', a: 'Sí—hay tramos que permiten paradas cuidadosas y fotografía macro. Recomendamos equipo compacto para mayor movilidad.' },
+          { q: '¿Hay zonas de sombra y descanso?', a: 'Sí—las caminatas incluyen áreas tranquilas para descansar y disfrutar del bosque.' }
+        ]
       },
+
       naturalist: {
         title: 'Caminatas Naturalistas',
+        seoTitle: 'Caminatas Naturalistas en Bajos del Toro | Wild Path Costa Rica',
+        seoDescription: 'Caminatas naturalistas educativas para familias y viajeros curiosos. Aprende sobre ecosistemas locales con guías expertos y actividades prácticas.',
         description:
           'Aprende sobre la flora, fauna y ecosistemas de Costa Rica de la mano de un naturalista experto. Una experiencia educativa para toda la familia.',
-        duration: '3-4 horas',
+        longDescription: 'Pensadas para familias, estudiantes y viajeros curiosos, las caminatas naturalistas de Wild Path ofrecen experiencias de aprendizaje en la naturaleza. Los guías combinan relato, muestras y actividades prácticas para explicar cadenas tróficas, interacción entre especies y prácticas de conservación. Se incluyen momentos interactivos para niños, material didáctico y demostraciones de campo que fomentan la observación activa. Además, integramos saberes locales y explicamos cómo prácticas agrícolas tradicionales se relacionan con la biodiversidad. Estas salidas son ideales para escuelas, familias y cualquier persona que busque una experiencia educativa con impacto local.',
+        duration: '2 horas',
         groupSize: '2-12 personas',
         location: 'Senderos locales',
+        itinerary: [
+          'Bienvenida y objetivos de aprendizaje',
+          'Observación guiada con momentos interactivos para niños',
+          'Demostraciones prácticas (semillas, suelos, insectos)',
+          'Reflexión final y recomendaciones para seguir aprendiendo'
+        ],
+        included: [
+          'Guía naturalista',
+          'Materiales educativos',
+          'Actividades familiares',
+          'Recomendaciones para aprendizaje continuo'
+        ],
+        notIncluded: [
+          'Transporte al punto de encuentro',
+          'Facilitación educativa especializada (disponible a pedido)'
+        ],
         highlights: [
           'Enfoque educativo',
           'Ideal para familias',
           'Material didáctico',
-          'Actividades interactivas',
+          'Actividades interactivas'
         ],
+        faqs: [
+          { q: '¿Son aptas para niños?', a: 'Sí—están diseñadas con actividades adaptadas para niños y momentos prácticos.' },
+          { q: '¿Pueden reservar escuelas?', a: 'Sí—ofrecemos programas para grupos escolares. Contacta para coordinar contenidos y logística.' }
+        ]
       },
+
       cooking: {
         title: 'Cocina Típica Costarricense',
+        seoTitle: 'Clase de Cocina Costarricense en Bajos del Toro | Wild Path Costa Rica',
+        seoDescription: 'Clase práctica de cocina en una finca local: aprende recetas tradicionales, visita la huerta y comparte una comida con los anfitriones. Cultural y sostenible.',
         description:
           'Aprende a preparar platillos tradicionales costarricenses con ingredientes locales y técnicas ancestrales. Una experiencia gastronómica auténtica.',
+        longDescription: 'Participa en una clase de cocina auténtica en una finca local donde conocerás el origen de los ingredientes y las técnicas culinarias tradicionales. La experiencia combina una breve visita a la huerta, una sesión práctica de cocina con los anfitriones y una comida compartida al final. Se enfatiza la sostenibilidad—uso de ingredientes de temporada y apoyo a pequeños productores locales. Ideal para amantes de la gastronomía, familias y viajeros que buscan conexiones culturales genuinas. Los participantes se llevan un recetario y conocimiento sobre cómo replicar los platos en casa.',
         duration: '3-4 horas',
         groupSize: '2-8 personas',
         location: 'Finca local',
+        itinerary: [
+          'Recorrido por la finca y presentación de ingredientes',
+          'Sesión práctica de cocina con los anfitriones locales',
+          'Comida compartida y conversación cultural',
+          'Entrega de recetario y despedida'
+        ],
+        included: [
+          'Todos los ingredientes y equipo',
+          'Instrucción por anfitriones locales',
+          'Comida compartida y recetario',
+          'Visita a la huerta'
+        ],
+        notIncluded: [
+          'Transporte hacia/desde la finca',
+          'Bebidas alcohólicas',
+          'Dietas especiales sin previa solicitud'
+        ],
         highlights: [
           'Ingredientes 100% locales',
           'Recetas tradicionales',
           'Degustación incluida',
-          'Recetario de regalo',
+          'Recetario de regalo'
         ],
+        faqs: [
+          { q: '¿Pueden acomodarse restricciones dietarias?', a: 'Sí—indícanos con anticipación y haremos lo posible por adaptar el menú (vegetariano, vegano, alergias comunes).'},
+          { q: '¿Es apto para niños?', a: 'Sí—los niños pueden participar con supervisión de un adulto, y se adaptan actividades según la edad.' }
+        ]
       },
+
     },
   },
   gallery: {
