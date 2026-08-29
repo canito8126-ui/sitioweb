@@ -7,6 +7,7 @@ type SeoParams = {
   image?: string
   canonicalPath?: string
   keywords?: string
+  noindex?: boolean
 }
 
 function upsertMetaTag(attrName: string, attrValue: string, content: string) {
@@ -44,9 +45,13 @@ export default function useSeo({
   image,
   canonicalPath,
   keywords,
+  noindex = false,
 }: SeoParams) {
   useLayoutEffect(() => {
-    const finalUrl = url ?? (canonicalPath ? new URL(canonicalPath, window.location.origin).toString() : window.location.href)
+    // Prefer a build-time configured canonical host when available (Vite env):
+    // set VITE_SITE_URL=https://wildpath.lat in production build env
+    const siteBase = (import.meta.env && (import.meta.env.VITE_SITE_URL as string)) || window.location.origin
+    const finalUrl = url ?? (canonicalPath ? new URL(canonicalPath, siteBase).toString() : window.location.href)
 
     // Ensure non-empty values to avoid SEO “empty title/description/H1” mismatches.
     const safeTitle = normalizeNonEmpty(title, 'Wild Path | Tailor-Made Travel Experiences in Costa Rica')
@@ -65,6 +70,9 @@ export default function useSeo({
       upsertMetaTag('name', 'keywords', keywords)
     }
 
+    // Robots directive (index/noindex)
+    upsertMetaTag('name', 'robots', noindex ? 'noindex, nofollow' : 'index, follow')
+
     // Canonical
     if (finalUrl) {
       upsertLinkTag('canonical', finalUrl)
@@ -82,5 +90,5 @@ export default function useSeo({
     upsertMetaTag('name', 'twitter:description', safeDescription)
     if (image) upsertMetaTag('name', 'twitter:image', image)
     upsertMetaTag('name', 'twitter:card', 'summary_large_image')
-  }, [title, description, url, image, canonicalPath, keywords])
+  }, [title, description, url, image, canonicalPath, keywords, noindex])
 }

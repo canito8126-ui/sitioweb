@@ -11,6 +11,7 @@ const Blog = lazy(() => import('./pages/Blog'))
 const BlogPost = lazy(() => import('./pages/BlogPost'))
 const About = lazy(() => import('./pages/About'))
 const Contact = lazy(() => import('./pages/Contact'))
+const Testimonials = lazy(() => import('./pages/Testimonials'))
 const Terms = lazy(() => import('./pages/Terms'))
 const Cancellation = lazy(() => import('./pages/Cancellation'))
 
@@ -41,6 +42,7 @@ function App() {
            <Route path="galeria" element={<Gallery />} />
            <Route path="blog" element={<Blog />} />
            <Route path="blog/:slug" element={<BlogPost />} />
+           <Route path="testimonios" element={<Testimonials />} />
            <Route path="nosotros" element={<About />} />
            <Route path="contacto" element={<Contact />} />
            <Route path="terminos" element={<Terms />} />

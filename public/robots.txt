@@ -1,0 +1,25 @@
+# robots.txt for Wild Path (production)
+# Allow major bots, explicitly reference the XML sitemap, and block common private or duplicate paths
+
+User-agent: *
+Allow: /
+
+# Disallow admin/backoffice and common sensitive endpoints
+Disallow: /admin
+Disallow: /wp-admin
+Disallow: /wp-login.php
+Disallow: /login
+Disallow: /logout
+Disallow: /checkout
+Disallow: /cart
+Disallow: /orders
+Disallow: /search
+Disallow: /api/
+Disallow: /preview
+Disallow: /staging
+
+# Prevent crawl of query-based search result pages (may generate lots of duplicates)
+Disallow: /*?*
+
+# Sitemap location
+Sitemap: https://wildpath.lat/sitemap.xml

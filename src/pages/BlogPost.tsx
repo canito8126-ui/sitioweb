@@ -54,6 +54,7 @@ export default function BlogPost() {
     image: post?.image,
     canonicalPath: slug ? `/blog/${slug}` : '/blog',
     keywords: post?.tags?.join(', '),
+    noindex: !post,
   })
 
   if (!post) {
