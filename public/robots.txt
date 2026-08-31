@@ -19,7 +19,7 @@ Disallow: /preview
 Disallow: /staging
 
 # Prevent crawl of query-based search result pages (may generate lots of duplicates)
-Disallow: /*?*
+Disallow: /*?
 
 # Sitemap location
 Sitemap: https://wildpath.lat/sitemap.xml
