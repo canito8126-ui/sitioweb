@@ -110,13 +110,27 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-4 mb-10">
-                <MapPin size={24} className="text-wp-yellow flex-shrink-0 mt-1" />
+                <a
+                  href="https://share.google/J5r0jYtvQVgZMQ4v7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-shrink-0"
+                >
+                  <MapPin size={24} className="text-wp-yellow flex-shrink-0 mt-1" />
+                </a>
                 <div>
                   <p className="font-display font-semibold text-wp-forest mb-1">
                     {t('pages.contact.locationTitle')}
                   </p>
                   <p className="text-graytext">
-                    {t('pages.contact.locationLine')}
+                    <a
+                      href="https://share.google/J5r0jYtvQVgZMQ4v7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {t('pages.contact.locationLine')}
+                    </a>
                   </p>
                   <p className="text-sm text-graytext/70 mt-1">
                     {t('pages.contact.locationNote')}
