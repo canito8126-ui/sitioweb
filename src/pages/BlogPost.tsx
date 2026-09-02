@@ -5,6 +5,7 @@ import {
   Calendar, 
   Clock, 
   ArrowLeft,
+  ArrowRight,
   Share2,
   Facebook,
   Twitter,
@@ -55,6 +56,8 @@ export default function BlogPost() {
     canonicalPath: slug ? `/blog/${slug}` : '/blog',
     keywords: post?.tags?.join(', '),
     noindex: !post,
+    targetKeyword: post?.title,
+    benefit: post?.excerpt,
   })
 
   if (!post) {
@@ -76,6 +79,10 @@ export default function BlogPost() {
     .filter((k: string) => k !== slug)
     .slice(0, 2)
     .map((key: string) => ({ key, ...blogPosts[key] }))
+
+  const idx = BLOG_SLUG_ORDER.indexOf(slug ?? '')
+  const prevSlug = idx > 0 ? BLOG_SLUG_ORDER[idx - 1] : null
+  const nextSlug = idx >= 0 && idx < BLOG_SLUG_ORDER.length - 1 ? BLOG_SLUG_ORDER[idx + 1] : null
 
   return (
     <div className="pt-24 lg:pt-32">
@@ -136,12 +143,13 @@ export default function BlogPost() {
           <div className="mt-12 pt-8 border-t border-wp-forest/10">
             <div className="flex flex-wrap gap-2">
               {post.tags.map((tag: string) => (
-                <span 
+                <Link
                   key={tag}
-                  className="bg-wp-cream text-wp-forest text-sm px-3 py-1 border border-wp-forest/20"
+                  to={`/blog?tag=${encodeURIComponent(tag)}`}
+                  className="bg-wp-cream text-wp-forest text-sm px-3 py-1 border border-wp-forest/20 hover:bg-wp-yellow hover:text-white transition-colors"
                 >
                   #{tag}
-                </span>
+                </Link>
               ))}
             </div>
           </div>
@@ -165,6 +173,28 @@ export default function BlogPost() {
           </div>
         </div>
       </article>
+
+      <nav className="py-8 px-6 lg:px-12 bg-wp-cream">
+        <div className="max-w-4xl mx-auto flex justify-between items-center">
+          {prevSlug ? (
+            <Link to={`/blog/${prevSlug}`} className="flex items-center gap-2 text-wp-forest hover:text-wp-yellow">
+              <ArrowLeft size={18} />
+              <span className="text-sm">Anterior</span>
+            </Link>
+          ) : (
+            <div />
+          )}
+
+          {nextSlug ? (
+            <Link to={`/blog/${nextSlug}`} className="flex items-center gap-2 text-wp-forest hover:text-wp-yellow">
+              <span className="text-sm">Siguiente</span>
+              <ArrowRight size={18} />
+            </Link>
+          ) : (
+            <div />
+          )}
+        </div>
+      </nav>
 
       <section className="py-16 lg:py-24 px-6 lg:px-12 bg-wp-cream border-t border-wp-forest/10">
         <div className="max-w-4xl mx-auto">

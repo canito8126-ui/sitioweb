@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { 
   Calendar, 
@@ -23,15 +23,24 @@ export default function Blog() {
     description: t('pages.blog.hero.subtitle'),
     image: 'https://wildpath.lat/images/blog-hero.jpg',
     canonicalPath: '/blog',
+    targetKeyword: t('pages.blog.hero.title'),
+    benefit: t('pages.blog.hero.subtitle'),
   })
 
+  const { search } = useLocation()
   const blogPosts = useMemo((): Array<{ slug: string } & BlogPostData> => {
     const posts = getBlogPosts(i18n.language)
-    return BLOG_SLUG_ORDER.map((slug: string) => ({
+    const arr = BLOG_SLUG_ORDER.map((slug: string) => ({
       slug,
       ...posts[slug],
     }))
-  }, [i18n.language])
+    const params = new URLSearchParams(search)
+    const tagFilter = params.get('tag')
+    if (tagFilter) {
+      return arr.filter((p) => p.tags && p.tags.includes(tagFilter))
+    }
+    return arr
+  }, [i18n.language, search])
 
   const categories = t('pages.blog.categories', { returnObjects: true }) as string[]
   const allLabel = categories[0] ?? 'All'

@@ -8,6 +8,9 @@ type SeoParams = {
   canonicalPath?: string
   keywords?: string
   noindex?: boolean
+  // Optional title-building pieces per site SEO formula
+  targetKeyword?: string
+  benefit?: string
 }
 
 function upsertMetaTag(attrName: string, attrValue: string, content: string) {
@@ -46,6 +49,8 @@ export default function useSeo({
   canonicalPath,
   keywords,
   noindex = false,
+  targetKeyword,
+  benefit,
 }: SeoParams) {
   useLayoutEffect(() => {
     // Prefer a build-time configured canonical host when available (Vite env):
@@ -53,8 +58,26 @@ export default function useSeo({
     const siteBase = (import.meta.env && (import.meta.env.VITE_SITE_URL as string)) || window.location.origin
     const finalUrl = url ?? (canonicalPath ? new URL(canonicalPath, siteBase).toString() : window.location.href)
 
-    // Ensure non-empty values to avoid SEO “empty title/description/H1” mismatches.
-    const safeTitle = normalizeNonEmpty(title, 'Wild Path | Tailor-Made Travel Experiences in Costa Rica')
+    // Brand name preference (Vite env or fallback)
+    const siteName = (import.meta.env && (import.meta.env.VITE_SITE_NAME as string)) || 'Wild Path'
+
+    // Build title according to formula: Target keyword — Clear benefit | Brand name
+    // Prefer explicit pieces if provided; otherwise fall back to title/description.
+    const keywordPart = normalizeNonEmpty((targetKeyword as string) || title, '')
+    const benefitRaw = normalizeNonEmpty((benefit as string) || description || '', '')
+
+    // Shorten benefit to a single concise phrase (max 80 chars) to keep titles readable
+    const benefitPart = benefitRaw.length > 80 ? benefitRaw.slice(0, 77).trim() + '…' : benefitRaw
+
+    const composedTitle = [
+      keywordPart,
+      benefitPart,
+    ]
+      .filter(Boolean)
+      .join(' — ')
+
+    const safeTitle = normalizeNonEmpty(composedTitle ? `${composedTitle} | ${siteName}` : title, `${siteName} | Tailor-Made Travel Experiences in Costa Rica`)
+
     const safeDescription = normalizeNonEmpty(
       description,
       'Wild Path offers tailor-made travel in Costa Rica — private wildlife, waterfall & cloud forest tours in Bajos del Toro.'
@@ -90,5 +113,5 @@ export default function useSeo({
     upsertMetaTag('name', 'twitter:description', safeDescription)
     if (image) upsertMetaTag('name', 'twitter:image', image)
     upsertMetaTag('name', 'twitter:card', 'summary_large_image')
-  }, [title, description, url, image, canonicalPath, keywords, noindex])
+  }, [title, description, url, image, canonicalPath, keywords, noindex, targetKeyword, benefit])
 }
