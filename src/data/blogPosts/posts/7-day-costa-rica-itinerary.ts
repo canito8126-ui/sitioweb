@@ -429,7 +429,7 @@ export const en: BlogPostData = {
       <p><strong>Ready to explore Costa Rica with local experts?</strong> Let's talk about making your trip even more special.</p>
       
       <div style="text-align: center; margin: 40px 0;">
-        <a class="button" href="/contact" style="display: inline-block; padding: 15px 40px; background-color: #2d7a3e; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px;">
+        <a class="button" href="/contacto" style="display: inline-block; padding: 15px 40px; background-color: #2d7a3e; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px;">
           Book Your Adventure Today
         </a>
       </div>
