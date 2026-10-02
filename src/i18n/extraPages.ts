@@ -13,6 +13,10 @@ export const homeExtra = {
     ctaForm: 'FILL OUT THE FORM',
     heroAltMountain: 'Mountain and beach Costa Rica',
     heroAltCta: 'Nature Costa Rica',
+    mapEyebrow: 'VISIT US',
+    mapTitle: 'How to get there',
+    mapLocation: 'Bajos del Toro, Costa Rica',
+    mapDirections: 'GET DIRECTIONS',
   },
   es: {
     previewQuote:
@@ -26,6 +30,10 @@ export const homeExtra = {
     ctaForm: 'LLENAR FORMULARIO',
     heroAltMountain: 'Montaña y playa Costa Rica',
     heroAltCta: 'Naturaleza Costa Rica',
+    mapEyebrow: 'VISÍTANOS',
+    mapTitle: 'Cómo llegar',
+    mapLocation: 'Bajos del Toro, Costa Rica',
+    mapDirections: 'CÓMO LLEGAR',
   },
   fr: {
     previewQuote:
@@ -39,6 +47,10 @@ export const homeExtra = {
     ctaForm: 'REMPLIR LE FORMULAIRE',
     heroAltMountain: 'Montagne et plage du Costa Rica',
     heroAltCta: 'Nature du Costa Rica',
+    mapEyebrow: 'RENDEZ-NOUS VISITE',
+    mapTitle: 'Comment s’y rendre',
+    mapLocation: 'Bajos del Toro, Costa Rica',
+    mapDirections: 'ITINÉRAIRE',
   },
   de: {
     previewQuote:
@@ -52,6 +64,10 @@ export const homeExtra = {
     ctaForm: 'FORMULAR AUSFÜLLEN',
     heroAltMountain: 'Berg und Strand in Costa Rica',
     heroAltCta: 'Natur in Costa Rica',
+    mapEyebrow: 'BESUCHEN SIE UNS',
+    mapTitle: 'So kommen Sie zu uns',
+    mapLocation: 'Bajos del Toro, Costa Rica',
+    mapDirections: 'ROUTE ANZEIGEN',
   },
 }
 

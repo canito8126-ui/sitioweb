@@ -398,6 +398,46 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Location */}
+      <section className="py-16 lg:py-20 px-6 lg:px-12 bg-wp-cream">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="micro-label text-wp-yellow mb-4 tracking-[0.15em]">
+              {t('home.mapEyebrow')}
+            </p>
+            <h2 className="headline-lg text-wp-forest mb-4">
+              {t('home.mapTitle')}
+            </h2>
+            <p className="body-text text-graytext">
+              {t('home.mapLocation')}
+            </p>
+          </div>
+
+          <div className="overflow-hidden border border-wp-forest/10 shadow-card">
+            <iframe
+              title={`${t('home.mapTitle')} - Wild Path`}
+              src="https://www.google.com/maps?q=10.2332253,-84.3037033&z=15&output=embed"
+              className="block h-64 w-full sm:h-80"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+
+          <div className="mt-6 text-center">
+            <a
+              href="https://share.google/iHZijzNVzEOdAo1wp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-flex items-center gap-2"
+            >
+              {t('home.mapDirections')}
+              <ArrowRight size={18} />
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
