@@ -4,6 +4,7 @@ import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 import { inspectAttr } from 'kimi-plugin-inspect-react'
 import Sitemap from 'vite-plugin-sitemap'
+import { viteSSG } from 'vite-plugin-ssg'
 
 // https://vite.dev/config/
 
@@ -23,6 +24,28 @@ export default defineConfig({
   plugins: [
     inspectAttr(),
     react(),
+    viteSSG({
+      // The entry point for SSG
+      entry: './src/main.tsx',
+      // Include all routes for prerendering
+      includedRoutes: (router) => {
+        return [
+          '/',
+          '/experiencias',
+          '/inspiracion',
+          '/galeria',
+          '/blog',
+          '/testimonios',
+          '/nosotros',
+          '/contacto',
+          '/terminos',
+          '/cancelacion',
+          ...blogRoutes,
+        ]
+      },
+      // Format: static for prerendered, dynamic for SSR
+      formatting: 'static',
+    }),
     Sitemap({
       hostname: 'https://wildpath.lat',
       dynamicRoutes: [

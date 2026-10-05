@@ -236,7 +236,7 @@ export default function Contact() {
 
               <p className="text-xs text-graytext text-center mt-4">
                 {t('pages.contact.formDisclaimer')}{' '}
-                <a href="/privacidad" className="text-wp-yellow hover:underline">
+                <a href="/terminos" className="text-wp-yellow hover:underline">
                   {t('pages.contact.privacyLink')}
                 </a>
               </p>
