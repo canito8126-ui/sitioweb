@@ -26,11 +26,13 @@ function upsertMetaTag(attrName: string, attrValue: string, content: string) {
   document.head.appendChild(meta)
 }
 
-function upsertLinkTag(rel: string, href: string) {
-  let el = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement | null
+function upsertLinkTag(rel: string, href: string, hreflang?: string) {
+  const selector = hreflang ? `link[rel="${rel}"][hreflang="${hreflang}"]` : `link[rel="${rel}"]:not([hreflang])`
+  let el = document.querySelector(selector) as HTMLLinkElement | null
   if (!el) {
     el = document.createElement('link')
     el.setAttribute('rel', rel)
+    if (hreflang) el.setAttribute('hreflang', hreflang)
     document.head.appendChild(el)
   }
   el.setAttribute('href', href)
@@ -101,12 +103,24 @@ export default function useSeo({
       upsertLinkTag('canonical', finalUrl)
     }
 
+    // Hreflang for multilingual support
+    const languages = ['es', 'en', 'fr', 'de']
+    const baseOrigin = siteBase
+    if (canonicalPath) {
+      languages.forEach((lang) => {
+        const langUrl = new URL(canonicalPath, baseOrigin).toString()
+        upsertLinkTag('alternate', langUrl, lang)
+      })
+      upsertLinkTag('alternate', new URL(canonicalPath, baseOrigin).toString(), 'x-default')
+    }
+
     // Open Graph
     upsertMetaTag('property', 'og:title', safeTitle)
     upsertMetaTag('property', 'og:description', safeDescription)
     if (image) upsertMetaTag('property', 'og:image', image)
     if (finalUrl) upsertMetaTag('property', 'og:url', finalUrl)
     upsertMetaTag('property', 'og:type', 'website')
+    upsertMetaTag('property', 'og:site_name', siteName)
 
     // Twitter
     upsertMetaTag('name', 'twitter:title', safeTitle)

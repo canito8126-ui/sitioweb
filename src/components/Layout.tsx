@@ -43,6 +43,13 @@ export default function Layout() {
   const changeLanguage = (code: string) => {
     i18n.changeLanguage(code);
     setShowLangMenu(false);
+    if (typeof document !== 'undefined') {
+      try {
+        document.documentElement.setAttribute('lang', code)
+      } catch {
+        /* ignore */
+      }
+    }
     if (typeof window !== 'undefined') {
       try {
         window.localStorage.setItem('i18nextLng', code);
