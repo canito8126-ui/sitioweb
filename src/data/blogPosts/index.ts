@@ -5,6 +5,8 @@
  *   - order: number            (position in the listing, lower = first)
  *   - es?: BlogPostData        (Spanish version, optional)
  *   - en?: BlogPostData        (English version, optional)
+ *   - fr?: BlogPostData        (French version, optional)
+ *   - de?: BlogPostData        (German version, optional)
  * Nothing else to update — it's picked up automatically at build time.
  *
  * NOTE: import.meta.glob is Vite-only. If you're on webpack/Next.js,
@@ -17,6 +19,8 @@ type PostModule = {
   order: number
   es?: BlogPostData
   en?: BlogPostData
+  fr?: BlogPostData
+  de?: BlogPostData
 }
 
 const modules = import.meta.glob<PostModule>('./posts/*.ts', { eager: true })
@@ -32,11 +36,18 @@ export const BLOG_SLUG_ORDER = entries.map((e) => e.slug)
 
 const es: Record<string, BlogPostData> = {}
 const en: Record<string, BlogPostData> = {}
+const fr: Record<string, BlogPostData> = {}
+const de: Record<string, BlogPostData> = {}
 for (const { slug, mod } of entries) {
   if (mod.es) es[slug] = mod.es
   if (mod.en) en[slug] = mod.en
+  if (mod.fr) fr[slug] = mod.fr
+  if (mod.de) de[slug] = mod.de
 }
 
 export function getBlogPosts(locale: string): Record<string, BlogPostData> {
-  return locale.startsWith('en') ? en : es
+  if (locale.startsWith('en')) return en
+  if (locale.startsWith('fr')) return fr
+  if (locale.startsWith('de')) return de
+  return es
 }

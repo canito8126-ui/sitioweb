@@ -60,3 +60,61 @@ export const en: BlogPostData = {
   readTime: '5 min',
   tags: ['hiking', 'safety', 'adventure', 'tips'],
 }
+
+export const fr: BlogPostData = {
+  title: 'Conseils pour randonner en toute sécurité au Costa Rica',
+  excerpt:
+    'Préparation, équipement essentiel et précautions pour profiter des randonnées en forêt tropicale en toute sécurité et de manière responsable.',
+  content: `
+        <p>La randonnée est l’un des meilleurs moyens de découvrir la biodiversité du Costa Rica. Cependant, la forêt tropicale présente des défis particuliers qu’il faut connaître.</p>
+        
+        <h2>Équipement essentiel</h2>
+        <ul>
+          <li><strong>Chaussures :</strong> bottes imperméables avec une bonne adhérence</li>
+          <li><strong>Vêtements :</strong> couches légères, couleurs neutres</li>
+          <li><strong>Protection :</strong> répulsif, crème solaire, chapeau</li>
+          <li><strong>Hydratation :</strong> au moins 2 litres d’eau</li>
+        </ul>
+        
+        <h2>Sécurité en forêt tropicale</h2>
+        <p>Ne partez jamais seul. Faites toujours appel à un guide local qui connaît la région. Emportez un sifflet de détresse et restez sur les sentiers balisés.</p>
+        
+        <h2>Que faire si vous vous perdez</h2>
+        <p>Restez sur place, utilisez votre sifflet et attendez les secours. Ne continuez jamais à marcher sans savoir où vous vous trouvez.</p>
+      `,
+  image: '/images/blog-senderismo.jpg',
+  category: 'Aventure',
+  author: 'Pedro Sánchez',
+  date: '20 janvier 2025',
+  readTime: '5 min',
+  tags: ['randonnée', 'sécurité', 'aventure', 'conseils'],
+}
+
+export const de: BlogPostData = {
+  title: 'Tipps für sicheres Wandern in Costa Rica',
+  excerpt:
+    'Vorbereitung, wichtige Ausrüstung und Vorsichtsmaßnahmen für sichere und verantwortungsvolle Wanderungen im Regenwald.',
+  content: `
+        <p>Wandern ist eine der besten Möglichkeiten, die Artenvielfalt Costa Ricas zu erleben. Der tropische Regenwald bringt jedoch besondere Herausforderungen mit sich, die Sie kennen sollten.</p>
+        
+        <h2>Wichtige Ausrüstung</h2>
+        <ul>
+          <li><strong>Schuhe:</strong> wasserdichte Stiefel mit gutem Profil</li>
+          <li><strong>Kleidung:</strong> leichte Schichten, neutrale Farben</li>
+          <li><strong>Schutz:</strong> Insektenschutzmittel, Sonnencreme, Hut</li>
+          <li><strong>Flüssigkeit:</strong> mindestens 2 Liter Wasser</li>
+        </ul>
+        
+        <h2>Sicherheit im Regenwald</h2>
+        <p>Wandern Sie niemals allein. Engagieren Sie immer einen ortskundigen lokalen Guide. Nehmen Sie eine Signalpfeife mit und bleiben Sie auf markierten Wegen.</p>
+        
+        <h2>Was tun, wenn Sie sich verirren?</h2>
+        <p>Bleiben Sie stehen, benutzen Sie Ihre Pfeife und warten Sie auf Hilfe. Gehen Sie nicht weiter, ohne zu wissen, wo Sie sind.</p>
+      `,
+  image: '/images/blog-senderismo.jpg',
+  category: 'Abenteuer',
+  author: 'Pedro Sánchez',
+  date: '20. Januar 2025',
+  readTime: '5 min',
+  tags: ['Wandern', 'Sicherheit', 'Abenteuer', 'Tipps'],
+}

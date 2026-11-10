@@ -1280,6 +1280,308 @@ pagesDe.terms.s6p1 =
 pagesDe.terms.updated = 'Letzte Aktualisierung: Februar 2025'
 pagesDe.terms.questions = 'Fragen zu diesen Bedingungen? Kontaktieren Sie uns unter'
 
+pagesFr.experiences.items.nocturnal = {
+  title: 'Randonnées nocturnes',
+  description:
+    'Découvrez le monde qui s’éveille après le coucher du soleil : grenouilles, insectes bioluminescents et mammifères nocturnes dans leur habitat naturel.',
+  duration: '2 heures',
+  groupSize: '2–8 personnes',
+  location: 'Bajos del Toro',
+  highlights: [
+    'Observation de la faune nocturne',
+    'Guide spécialisé',
+    'Équipement d’éclairage inclus',
+    'Collation locale',
+  ],
+}
+pagesFr.experiences.items.birds = {
+  title: 'Observation des oiseaux',
+  description:
+    'Le Costa Rica abrite plus de 10 % des espèces d’oiseaux du monde. Partez à la découverte des quetzals, toucans, colibris et de centaines d’autres espèces.',
+  duration: '2 heures',
+  groupSize: '2–6 personnes',
+  location: 'Réserves privées',
+  highlights: [
+    'Guide ornithologique certifié',
+    'Longue-vue et jumelles',
+    'Plus de 200 espèces possibles',
+    'Petit-déjeuner typique inclus',
+  ],
+}
+pagesFr.experiences.items.waterfalls = {
+  title: 'Randonnées aux cascades',
+  description:
+    'Explorez des cascades cachées dans la jungle. Parcourez des sentiers préservés, traversez des rivières cristallines et admirez de magnifiques chutes d’eau.',
+  duration: '5–6 heures',
+  groupSize: '2–10 personnes',
+  location: 'Plusieurs cascades',
+  highlights: [
+    '3 à 5 cascades différentes',
+    'Baignade dans des bassins naturels',
+    'Déjeuner pique-nique',
+    'Difficulté adaptable',
+  ],
+}
+pagesFr.experiences.items.forest = {
+  title: 'Randonnées en forêt ancienne',
+  description:
+    'Plongez dans des écosystèmes primaires où la nature a évolué sans intervention humaine. Arbres centenaires, orchidées sauvages et biodiversité exceptionnelle.',
+  duration: '4–6 heures',
+  groupSize: '2–8 personnes',
+  location: 'Forêts primaires',
+  highlights: [
+    'Forêt primaire ancienne',
+    'Guide naturaliste expert',
+    'Interprétation écologique',
+    'Photographie de nature',
+  ],
+}
+pagesFr.experiences.items.naturalist = {
+  title: 'Balades naturalistes',
+  description:
+    'Découvrez la flore, la faune et les écosystèmes du Costa Rica avec un naturaliste expérimenté. Une activité ludique et éducative pour toute la famille.',
+  duration: '2 heures',
+  groupSize: '2–12 personnes',
+  location: 'Sentiers locaux',
+  highlights: [
+    'Approche pédagogique',
+    'Idéal pour les familles',
+    'Matériel pédagogique',
+    'Activités interactives',
+  ],
+}
+pagesFr.experiences.items.cooking = {
+  title: 'Cuisine traditionnelle costaricienne',
+  description:
+    'Apprenez à préparer des plats traditionnels avec des ingrédients locaux et des techniques ancestrales : une expérience culinaire authentique.',
+  duration: '3–4 heures',
+  groupSize: '2–8 personnes',
+  location: 'Ferme locale',
+  highlights: [
+    'Ingrédients 100 % locaux',
+    'Recettes traditionnelles',
+    'Dégustation incluse',
+    'Livret de recettes à emporter',
+  ],
+}
+pagesFr.contact.hero.title = 'Contact'
+pagesFr.contact.hero.alt = 'Contact'
+pagesFr.contact.whatsapp = 'WhatsApp'
+pagesFr.contact.locationLine = 'Bajos del Toro, Costa Rica'
+pagesFr.about.stat2 = 'Local'
+pagesFr.about.commitments.conservation.title = 'Conservation'
+pagesFr.testimonials.items = [
+  {
+    name: 'María et Carlos',
+    location: 'Espagne',
+    trip: 'Voyage de 10 jours',
+    text: 'Wild Path a conçu exactement le voyage dont je rêvais. Chaque détail était pensé pour nous. Ce n’était pas un circuit générique, c’était NOTRE aventure.',
+  },
+  {
+    name: 'Famille Rodríguez',
+    location: 'Mexique',
+    trip: 'Voyage familial de 7 jours',
+    text: 'Nous avons voyagé avec nos enfants de 8 et 12 ans et tout était parfait. Les activités convenaient à toute la famille. Les guides étaient patients et pédagogues. Nos enfants ont beaucoup appris sur la nature.',
+  },
+  {
+    name: 'Sarah Johnson',
+    location: 'États-Unis',
+    trip: 'Observation des oiseaux',
+    text: 'En tant que photographe de nature, je cherchais une expérience précise. Wild Path a compris mes attentes et les a dépassées. Nous avons observé des quetzals, des toucans et plus de 80 espèces d’oiseaux en une journée.',
+  },
+  {
+    name: 'Thomas et Emma',
+    location: 'Allemagne',
+    trip: 'Lune de miel de 14 jours',
+    text: 'Notre lune de miel a été magique grâce à Wild Path. L’aventure et les moments romantiques étaient parfaitement équilibrés. Chaque hôtel, restaurant et activité avait été soigneusement choisi.',
+  },
+  {
+    name: 'Ana Patricia',
+    location: 'Colombie',
+    trip: 'Voyage en solo de 5 jours',
+    text: 'Voyager seule peut être intimidant, mais je me suis sentie en sécurité et accompagnée à chaque instant. L’équipe de Wild Path a veillé à chaque détail. Je me suis fait des amis, j’ai vécu de belles aventures et renoué avec la nature.',
+  },
+  {
+    name: 'Jean-Pierre',
+    location: 'France',
+    trip: 'Expérience de 3 jours',
+    text: 'La randonnée nocturne a été l’une des expériences les plus incroyables de ma vie. Voir la jungle s’éveiller la nuit, entendre ses sons et observer les grenouilles bioluminescentes… tout simplement magique.',
+  },
+]
+pagesFr.blog.hero.title = 'Blog'
+pagesFr.blog.hero.alt = 'Blog'
+pagesFr.terms.s2li = [
+  'Transport pendant les activités prévues',
+  'Guide local spécialisé',
+  'Droits d’entrée aux parcs et réserves',
+  'Repas indiqués dans l’itinéraire',
+  'Équipement nécessaire aux activités',
+]
+pagesFr.terms.s3li = [
+  'Vols internationaux ou intérieurs',
+  'Assurance voyage (obligatoire)',
+  'Boissons alcoolisées',
+  'Dépenses personnelles',
+  'Pourboires (facultatifs)',
+]
+pagesFr.terms.s4li = [
+  'Avoir un passeport valide (au moins 6 mois)',
+  'Obtenir les visas nécessaires',
+  'Souscrire une assurance voyage avec couverture médicale',
+  'Signaler toute condition médicale pertinente',
+  'Suivre les consignes des guides',
+]
+
+pagesDe.experiences.items.nocturnal = {
+  title: 'Nachtwanderungen',
+  description:
+    'Entdecken Sie die Welt, die nach Sonnenuntergang erwacht: Frösche, biolumineszente Insekten und nachtaktive Säugetiere in ihrem natürlichen Lebensraum.',
+  duration: '2 Stunden',
+  groupSize: '2–8 Personen',
+  location: 'Bajos del Toro',
+  highlights: [
+    'Beobachtung nachtaktiver Tiere',
+    'Spezialisierter Guide',
+    'Beleuchtung inklusive',
+    'Lokaler Snack',
+  ],
+}
+pagesDe.experiences.items.birds = {
+  title: 'Vogelbeobachtung',
+  description:
+    'Costa Rica beheimatet mehr als 10 % aller Vogelarten der Welt. Entdecken Sie mit uns Quetzale, Tukane, Kolibris und Hunderte weitere Arten.',
+  duration: '2 Stunden',
+  groupSize: '2–6 Personen',
+  location: 'Private Reservate',
+  highlights: [
+    'Zertifizierter Vogelguide',
+    'Spektiv und Fernglas',
+    'Über 200 Arten möglich',
+    'Typisches Frühstück inklusive',
+  ],
+}
+pagesDe.experiences.items.waterfalls = {
+  title: 'Wasserfallwanderungen',
+  description:
+    'Erkunden Sie versteckte Wasserfälle im Dschungel. Folgen Sie unberührten Wegen, überqueren Sie klare Flüsse und bestaunen Sie die Wasserfälle.',
+  duration: '5–6 Stunden',
+  groupSize: '2–10 Personen',
+  location: 'Mehrere Wasserfälle',
+  highlights: [
+    '3–5 verschiedene Wasserfälle',
+    'Schwimmen in natürlichen Becken',
+    'Picknick-Mittagessen',
+    'Anpassbarer Schwierigkeitsgrad',
+  ],
+}
+pagesDe.experiences.items.forest = {
+  title: 'Wanderungen im alten Wald',
+  description:
+    'Tauchen Sie in ursprüngliche Ökosysteme ein, in denen sich die Natur ohne menschlichen Einfluss entwickelt hat. Jahrhundertealte Bäume, wilde Orchideen und eine beeindruckende Artenvielfalt.',
+  duration: '4–6 Stunden',
+  groupSize: '2–8 Personen',
+  location: 'Primärwälder',
+  highlights: [
+    'Uralter Primärwald',
+    'Erfahrener Naturguide',
+    'Ökologische Erläuterungen',
+    'Naturfotografie',
+  ],
+}
+pagesDe.experiences.items.naturalist = {
+  title: 'Naturkundliche Spaziergänge',
+  description:
+    'Lernen Sie mit einem erfahrenen Naturguide die Flora, Fauna und Ökosysteme Costa Ricas kennen. Ein lehrreiches und unterhaltsames Erlebnis für die ganze Familie.',
+  duration: '2 Stunden',
+  groupSize: '2–12 Personen',
+  location: 'Lokale Wanderwege',
+  highlights: [
+    'Lehrreicher Schwerpunkt',
+    'Ideal für Familien',
+    'Lernmaterialien',
+    'Interaktive Aktivitäten',
+  ],
+}
+pagesDe.experiences.items.cooking = {
+  title: 'Traditionelle costa-ricanische Küche',
+  description:
+    'Lernen Sie, mit lokalen Zutaten und traditionellen Techniken typische Gerichte zuzubereiten – ein authentisches kulinarisches Erlebnis.',
+  duration: '3–4 Stunden',
+  groupSize: '2–8 Personen',
+  location: 'Lokaler Bauernhof',
+  highlights: [
+    '100 % lokale Zutaten',
+    'Traditionelle Rezepte',
+    'Verkostung inklusive',
+    'Rezeptheft zum Mitnehmen',
+  ],
+}
+pagesDe.contact.whatsapp = 'WhatsApp'
+pagesDe.contact.locationLine = 'Bajos del Toro, Costa Rica'
+pagesDe.about.stat2 = 'Lokal'
+pagesDe.about.commitments.conservation.title = 'Naturschutz'
+pagesDe.testimonials.items = [
+  {
+    name: 'María und Carlos',
+    location: 'Spanien',
+    trip: '10-tägige Reise',
+    text: 'Wild Path hat genau die Reise geplant, von der ich geträumt habe. Jedes Detail war auf uns abgestimmt. Es war keine Standardtour – es war UNSER Abenteuer.',
+  },
+  {
+    name: 'Familie Rodríguez',
+    location: 'Mexiko',
+    trip: '7-tägige Familienreise',
+    text: 'Wir waren mit unseren 8 und 12 Jahre alten Kindern unterwegs und es war perfekt. Die Aktivitäten waren für die ganze Familie geeignet. Die Guides waren geduldig und lehrreich. Unsere Kinder haben viel über die Natur gelernt.',
+  },
+  {
+    name: 'Sarah Johnson',
+    location: 'Vereinigte Staaten',
+    trip: 'Vogelbeobachtung',
+    text: 'Als Naturfotografin suchte ich ein ganz bestimmtes Erlebnis. Wild Path hat meine Wünsche verstanden und sogar übertroffen. An einem Tag sahen wir Quetzale, Tukane und über 80 Vogelarten.',
+  },
+  {
+    name: 'Thomas und Emma',
+    location: 'Deutschland',
+    trip: '14-tägige Hochzeitsreise',
+    text: 'Dank Wild Path war unsere Hochzeitsreise magisch. Abenteuer und romantische Momente waren perfekt kombiniert. Jedes Hotel, Restaurant und jede Aktivität war sorgfältig ausgewählt.',
+  },
+  {
+    name: 'Ana Patricia',
+    location: 'Kolumbien',
+    trip: '5-tägige Alleinreise',
+    text: 'Allein zu reisen kann einschüchternd sein, aber ich fühlte mich jederzeit sicher und begleitet. Das Team von Wild Path kümmerte sich um jedes Detail. Ich fand Freunde, erlebte Abenteuer und fand wieder zur Natur.',
+  },
+  {
+    name: 'Jean-Pierre',
+    location: 'Frankreich',
+    trip: '3-tägiges Erlebnis',
+    text: 'Die Nachtwanderung war eines der unglaublichsten Erlebnisse meines Lebens. Den Dschungel nachts erwachen zu sehen, seine Geräusche zu hören und biolumineszente Frösche zu entdecken – einfach magisch.',
+  },
+]
+pagesDe.blog.hero.title = 'Blog'
+pagesDe.blog.hero.alt = 'Reiseblog'
+pagesDe.terms.s2li = [
+  'Transport während der geplanten Aktivitäten',
+  'Spezialisierter lokaler Guide',
+  'Eintritt zu Parks und Reservaten',
+  'Im Reiseplan angegebene Mahlzeiten',
+  'Für die Aktivitäten benötigte Ausrüstung',
+]
+pagesDe.terms.s3li = [
+  'Internationale oder nationale Flüge',
+  'Reiseversicherung (obligatorisch)',
+  'Alkoholische Getränke',
+  'Persönliche Ausgaben',
+  'Trinkgelder (freiwillig)',
+]
+pagesDe.terms.s4li = [
+  'Einen gültigen Reisepass besitzen (mindestens 6 Monate)',
+  'Erforderliche Visa einholen',
+  'Eine Reiseversicherung mit Krankenversicherungsschutz abschließen',
+  'Über relevante gesundheitliche Beschwerden informieren',
+  'Den Anweisungen der Guides folgen',
+]
+
 export function mergeExtraPages(locale: string) {
   if (locale.startsWith('en')) return pagesEn
   if (locale.startsWith('es')) return pagesEs

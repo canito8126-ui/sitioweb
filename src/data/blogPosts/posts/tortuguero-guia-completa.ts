@@ -70,3 +70,71 @@ export const en: BlogPostData = {
   readTime: '7 min',
   tags: ['turtles', 'tortuguero', 'wildlife', 'conservation'],
 }
+
+export const fr: BlogPostData = {
+  title: 'Tortuguero : guide complet pour observer les tortues marines',
+  excerpt:
+    'Tout sur la ponte des tortues au Costa Rica : quand partir, quelles espèces observer, à quoi s’attendre et comment visiter les lieux de manière responsable.',
+  content: `
+        <p>Tortuguero est l’une des destinations les plus remarquables du Costa Rica. Ce parc national est le site de nidification le plus important des Caraïbes pour les tortues vertes.</p>
+        
+        <h2>Quand partir ?</h2>
+        <p>La saison de ponte varie selon l’espèce :</p>
+        <ul>
+          <li><strong>Tortues vertes :</strong> de juillet à octobre (pic en août)</li>
+          <li><strong>Tortues luths :</strong> de février à juillet</li>
+          <li><strong>Tortues imbriquées :</strong> de juillet à octobre</li>
+        </ul>
+        
+        <h2>Comment s’y rendre</h2>
+        <p>Tortuguero n’est accessible qu’en bateau ou en petit avion. La plupart des visiteurs arrivent en bateau depuis Caño Blanco ou La Pavona.</p>
+        
+        <h2>Règles importantes</h2>
+        <ul>
+          <li>N’utilisez pas le flash de votre appareil photo</li>
+          <li>Parlez à voix basse</li>
+          <li>Suivez les consignes du guide</li>
+          <li>Ne touchez pas les tortues</li>
+        </ul>
+      `,
+  image: '/images/blog-tortuguero.jpg',
+  category: 'Faune',
+  author: 'Équipe Wild Path',
+  date: '28 janvier 2025',
+  readTime: '7 min',
+  tags: ['tortues', 'Tortuguero', 'faune', 'conservation'],
+}
+
+export const de: BlogPostData = {
+  title: 'Tortuguero: Der umfassende Guide zur Beobachtung von Meeresschildkröten',
+  excerpt:
+    'Alles zur Eiablage der Schildkröten in Costa Rica: beste Reisezeit, Arten, Erwartungen und ein verantwortungsvoller Besuch.',
+  content: `
+        <p>Tortuguero zählt zu den außergewöhnlichsten Reisezielen Costa Ricas. Dieser Nationalpark ist der wichtigste Nistplatz der Grünen Meeresschildkröte in der Karibik.</p>
+        
+        <h2>Wann sollte man reisen?</h2>
+        <p>Die Nistsaison variiert je nach Art:</p>
+        <ul>
+          <li><strong>Grüne Meeresschildkröten:</strong> Juli bis Oktober (Höhepunkt im August)</li>
+          <li><strong>Lederschildkröten:</strong> Februar bis Juli</li>
+          <li><strong>Echte Karettschildkröten:</strong> Juli bis Oktober</li>
+        </ul>
+        
+        <h2>Anreise</h2>
+        <p>Tortuguero ist nur per Boot oder Kleinflugzeug erreichbar. Die meisten Besucher kommen mit dem Boot von Caño Blanco oder La Pavona.</p>
+        
+        <h2>Wichtige Regeln</h2>
+        <ul>
+          <li>Verwenden Sie keinen Kamerablitz</li>
+          <li>Sprechen Sie leise</li>
+          <li>Befolgen Sie die Anweisungen des Guides</li>
+          <li>Berühren Sie die Schildkröten nicht</li>
+        </ul>
+      `,
+  image: '/images/blog-tortuguero.jpg',
+  category: 'Wildtiere',
+  author: 'Wild Path Team',
+  date: '28. Januar 2025',
+  readTime: '7 min',
+  tags: ['Schildkröten', 'Tortuguero', 'Wildtiere', 'Naturschutz'],
+}
